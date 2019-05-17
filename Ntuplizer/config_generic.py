@@ -11,8 +11,8 @@ process.TFileService = cms.Service("TFileService",
                                     fileName = cms.string('flatTuple.root')
                                    )
 
-#from EXOVVNtuplizerRunII.Ntuplizer.ntuplizerOptions_data_cfi import config
-from EXOVVNtuplizerRunII.Ntuplizer.ntuplizerOptions_generic_cfi import config
+#from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data_cfi import config
+from VgammaTuplizer.Ntuplizer.ntuplizerOptions_generic_cfi import config
 
 				   
 ####### Config parser ##########
@@ -26,7 +26,8 @@ options.maxEvents = -1
 #data file
 
 
-options.inputFiles = '/store/mc/RunIIFall17MiniAOD/ZZTo4L_13TeV_powheg_pythia8/MINIAODSIM/94X_mc2017_realistic_v10-v2/60000/EA783E89-8AD9-E711-AFFE-0CC47A7C3458.root'
+#root://cmseos.fnal.gov//store/user/jhakala/ZpAnomalonHZ_
+options.inputFiles = 'root://cmseos.fnal.gov//store/user/jhakala/ZpAnomalonHZ_Zp2000-ND500-NS200/ZpAnomalonHZ_UFO-Zp2000-ND500-NS200_miniAOD_0.root'
 
 #options.inputFiles = '/store/data/Run2017F/JetHT/MINIAOD/17Nov2017-v1/70000/F6F6E56A-8ADF-E711-BF89-02163E01A25E.root'
 #options.inputFiles = '/store/data/Run2017D/SingleMuon/MINIAOD/17Nov2017-v1/60000/42E72A07-36E4-E711-9E0B-7845C4FAEFE9.root'
@@ -339,7 +340,7 @@ if config["ADDAK8GENJETS"]:
   # process.substructureSequenceGen += process.ak8GenJetsSoftDrop + process.ak8GenJetsSoftDropMass
   # process.substructureSequenceGen += process.ak8GenJetsPruned + process.ak8GenJetsPrunedMass
 
-  from EXOVVNtuplizerRunII.Ntuplizer.redoPatJets_cff import patJetCorrFactorsAK8, patJetsAK8, selectedPatJetsAK8
+  from VgammaTuplizer.Ntuplizer.redoPatJets_cff import patJetCorrFactorsAK8, patJetsAK8, selectedPatJetsAK8
 
   # Redo pat jets from gen AK8
 
@@ -670,7 +671,7 @@ if config["DOHLTFILTERS"]:
  ##___________________________BadChargedCandidate_Noise_Filter________________________________|| 
  process.load('Configuration.StandardSequences.Services_cff')
  process.load('RecoMET.METFilters.BadChargedCandidateFilter_cfi')
- # process.load('EXOVVNtuplizerRunII.Ntuplizer.BadChargedCandidateFilter_cfi')
+ # process.load('VgammaTuplizer.Ntuplizer.BadChargedCandidateFilter_cfi')
  process.BadChargedCandidateFilter.muons = cms.InputTag("slimmedMuons")
  process.BadChargedCandidateFilter.PFCandidates = cms.InputTag("packedPFCandidates")
  process.BadChargedCandidateFilter.debug = cms.bool(False)

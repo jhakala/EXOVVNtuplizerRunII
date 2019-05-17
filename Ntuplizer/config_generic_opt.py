@@ -13,8 +13,8 @@ process.TFileService = cms.Service("TFileService",
                                     fileName = cms.string('flatTuple.root')
                                    )
 
-#from EXOVVNtuplizerRunII.Ntuplizer.ntuplizerOptions_data_cfi import config
-from EXOVVNtuplizerRunII.Ntuplizer.ntuplizerOptions_generic_cfi import config
+#from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data_cfi import config
+from VgammaTuplizer.Ntuplizer.ntuplizerOptions_generic_cfi import config
 
 
 
@@ -369,7 +369,7 @@ if config["ADDAK8GENJETS"]:
   # process.substructureSequenceGen += process.ak8GenJetsSoftDrop + process.ak8GenJetsSoftDropMass
   # process.substructureSequenceGen += process.ak8GenJetsPruned + process.ak8GenJetsPrunedMass
 
-  from EXOVVNtuplizerRunII.Ntuplizer.redoPatJets_cff import patJetCorrFactorsAK8, patJetsAK8, selectedPatJetsAK8
+  from VgammaTuplizer.Ntuplizer.redoPatJets_cff import patJetCorrFactorsAK8, patJetsAK8, selectedPatJetsAK8
 
   # Redo pat jets from gen AK8
 
@@ -699,7 +699,7 @@ if config["DOHLTFILTERS"]:
  ##___________________________BadChargedCandidate_Noise_Filter________________________________|| 
  process.load('Configuration.StandardSequences.Services_cff')
  process.load('RecoMET.METFilters.BadChargedCandidateFilter_cfi')
- # process.load('EXOVVNtuplizerRunII.Ntuplizer.BadChargedCandidateFilter_cfi')
+ # process.load('VgammaTuplizer.Ntuplizer.BadChargedCandidateFilter_cfi')
  process.BadChargedCandidateFilter.muons = cms.InputTag("slimmedMuons")
  process.BadChargedCandidateFilter.PFCandidates = cms.InputTag("packedPFCandidates")
  process.BadChargedCandidateFilter.debug = cms.bool(False)

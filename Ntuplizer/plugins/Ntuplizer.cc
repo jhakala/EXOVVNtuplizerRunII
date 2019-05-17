@@ -113,7 +113,7 @@ Ntuplizer::Ntuplizer(const edm::ParameterSet& iConfig):
   }
 
   std::string jecpath = iConfig.getParameter<std::string>("jecpath");
-  jecpath = "EXOVVNtuplizerRunII/Ntuplizer/data/" + jecpath;
+  jecpath = "VgammaTuplizer/Ntuplizer/data/" + jecpath;
   //jecpath = std::string("data/") + jecpath;
  
   nBranches_ = new NtupleBranches( runFlags, tree );
