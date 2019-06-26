@@ -18,30 +18,30 @@ void NtupleBranches::branch( std::map< std::string, bool >& runFlags ){
   if ( runFlags["runOnMC"] ){
     if ( runFlags["doGenParticles"] ){
       /** genParticles */
-      tree_->Branch( "genParticle_N"	     , &genParticle_N	       );
-      tree_->Branch( "genParticle_pt"	     , &genParticle_pt	       ); 
-//      tree_->Branch( "genParticle_px"	     , &genParticle_px	       ); 
-//      tree_->Branch( "genParticle_py"	     , &genParticle_py	       ); 
-//      tree_->Branch( "genParticle_pz"	     , &genParticle_pz	       ); 
-//      tree_->Branch( "genParticle_e" 	     , &genParticle_e	       ); 
-      tree_->Branch( "genParticle_eta"	     , &genParticle_eta        ); 
-      tree_->Branch( "genParticle_phi"	     , &genParticle_phi        ); 
-      tree_->Branch( "genParticle_mass"	     , &genParticle_mass       ); 
-      tree_->Branch( "genParticle_pdgId"     , &genParticle_pdgId      );
-      tree_->Branch( "genParticle_status"    , &genParticle_status     );
-      tree_->Branch( "genParticle_isPrompt"  , &genParticle_isPrompt   );
-      tree_->Branch( "genParticle_isDirectPromptTauDecayProduct"  , &genParticle_isDirectPromptTauDecayProduct);
+      tree_->Branch( "genParticle_N"	                                         , &genParticle_N	       );
+      tree_->Branch( "genParticle_pt"	                                         , &genParticle_pt	       ); 
+//      tree_->Branch( "genParticle_px"	                                         , &genParticle_px	       ); 
+//      tree_->Branch( "genParticle_py"	                                         , &genParticle_py	       ); 
+//      tree_->Branch( "genParticle_pz"	                                         , &genParticle_pz	       ); 
+//      tree_->Branch( "genParticle_e" 	                                         , &genParticle_e	       ); 
+      tree_->Branch( "genParticle_eta"	                                         , &genParticle_eta        ); 
+      tree_->Branch( "genParticle_phi"	                                         , &genParticle_phi        ); 
+      tree_->Branch( "genParticle_mass"	                                         , &genParticle_mass       ); 
+      tree_->Branch( "genParticle_pdgId"                                         , &genParticle_pdgId      );
+      tree_->Branch( "genParticle_status"                                        , &genParticle_status     );
+      tree_->Branch( "genParticle_isPrompt"                                      , &genParticle_isPrompt   );
+      tree_->Branch( "genParticle_isDirectPromptTauDecayProduct"                 , &genParticle_isDirectPromptTauDecayProduct);
       tree_->Branch( "genParticle_isDirectHardProcessTauDecayProductFinalState"  , &genParticle_isDirectHardProcessTauDecayProductFinalState);
-      tree_->Branch( "genParticle_fromHardProcessFinalState"  , &genParticle_fromHardProcessFinalState   );
-      tree_->Branch( "genParticle_mother"    , &genParticle_mother     );
-      tree_->Branch( "genParticle_nMoth"     , &genParticle_nMoth      );
-      tree_->Branch( "genParticle_nDau"	     , &genParticle_nDau       ); 
-      tree_->Branch( "genParticle_dau"	     , &genParticle_dau        );
-      tree_->Branch( "genParticle_tauvispt"	     , &genParticle_tauvispt        );
-      tree_->Branch( "genParticle_tauviseta"	     , &genParticle_tauviseta        );
-      tree_->Branch( "genParticle_tauvisphi"	     , &genParticle_tauvisphi       );
-      tree_->Branch( "genParticle_tauvismass"	     , &genParticle_tauvismass        );
-      tree_->Branch( "genParticle_taudecay"	     , &genParticle_taudecay        );
+      tree_->Branch( "genParticle_fromHardProcessFinalState"                     , &genParticle_fromHardProcessFinalState   );
+      tree_->Branch( "genParticle_mother"                                        , &genParticle_mother     );
+      tree_->Branch( "genParticle_nMoth"                                         , &genParticle_nMoth      );
+      tree_->Branch( "genParticle_nDau"	                                         , &genParticle_nDau       ); 
+      tree_->Branch( "genParticle_dau"	                                         , &genParticle_dau        );
+      tree_->Branch( "genParticle_tauvispt"	                                 , &genParticle_tauvispt        );
+      tree_->Branch( "genParticle_tauviseta"	                                 , &genParticle_tauviseta        );
+      tree_->Branch( "genParticle_tauvisphi"	                                 , &genParticle_tauvisphi       );
+      tree_->Branch( "genParticle_tauvismass"	                                 , &genParticle_tauvismass        );
+      tree_->Branch( "genParticle_taudecay"	                                 , &genParticle_taudecay        );
 
 
     } //doGenParticles
@@ -53,22 +53,51 @@ void NtupleBranches::branch( std::map< std::string, bool >& runFlags ){
       tree_->Branch( "lheNj"	             , &lheNj                  );
       tree_->Branch( "lheNb"	             , &lheNb                  );
       tree_->Branch( "lheNl"	             , &lheNl                  );
-      tree_->Branch( "lheV_mass"           , &lheV_mass              ); 
-      tree_->Branch( "genWeight"	         , &genWeight              );
+      tree_->Branch( "lheV_mass"             , &lheV_mass              ); 
+      tree_->Branch( "genWeight"	     , &genWeight              );
       tree_->Branch( "genFacWeightUp"	     , &genFacWeightUp         );
-      tree_->Branch( "genFacWeightDown"	   , &genFacWeightDown       );
+      tree_->Branch( "genFacWeightDown"	     , &genFacWeightDown       );
       tree_->Branch( "genRenWeightUp"	     , &genRenWeightUp         );
-      tree_->Branch( "genRenWeightDown"	   , &genRenWeightDown       );
-      tree_->Branch( "genFacRenWeightUp"	 , &genFacRenWeightUp      );
-      tree_->Branch( "genFacRenWeightDown" , &genFacRenWeightDown    );
+      tree_->Branch( "genRenWeightDown"	     , &genRenWeightDown       );
+      tree_->Branch( "genFacRenWeightUp"     , &genFacRenWeightUp      );
+      tree_->Branch( "genFacRenWeightDown"   , &genFacRenWeightDown    );
       tree_->Branch( "qScale"	             , &qScale                 );
-      tree_->Branch( "PDF_rms"	           , &PDF_rms                );
+      tree_->Branch( "PDF_rms"	             , &PDF_rms                );
       tree_->Branch( "PDF_x"	             , &PDF_x                  );
-      tree_->Branch( "PDF_xPDF"	           , &PDF_xPDF               );
+      tree_->Branch( "PDF_xPDF"	             , &PDF_xPDF               );
       tree_->Branch( "PDF_id"	             , &PDF_id                 );
 
     } //doGenEvent
   } //runOnMC
+
+  
+  if ( runFlags["doPhotons"] ){
+    /** photons */
+    tree_->Branch( "ph_N"                                              , &ph_N                                          );
+    tree_->Branch( "ph_pdgId"                                          , &ph_pdgId                                      );
+    tree_->Branch( "ph_charge"                                         , &ph_charge                                     );
+    tree_->Branch( "ph_e"                                              , &ph_e                                          );
+    tree_->Branch( "ph_eta"                                            , &ph_eta                                        );
+    tree_->Branch( "ph_phi"                                            , &ph_phi                                        );
+    tree_->Branch( "ph_mass"                                           , &ph_mass                                       );
+    tree_->Branch( "ph_pt"                                             , &ph_pt                                         );
+    tree_->Branch( "ph_et"                                             , &ph_et                                         );
+    tree_->Branch( "ph_rho"                                            , &ph_rho                                        );
+    //tree_->Branch( "ph_fixedGridRho"                                   , &ph_fixedGridRho                               );
+    tree_->Branch( "ph_superCluster_eta"                               , &ph_superCluster_eta                           );
+    tree_->Branch( "ph_superCluster_phi"                               , &ph_superCluster_phi                           );
+    tree_->Branch( "ph_sigmaIetaIeta"                                  , &ph_sigmaIetaIeta                              );
+    tree_->Branch( "ph_hOverE"                                         , &ph_hOverE                                     );
+    tree_->Branch( "ph_isoGamma"                                       , &ph_isoGamma                                   );
+    tree_->Branch( "ph_isoCh"                                          , &ph_isoCh                                      );
+    tree_->Branch( "ph_passEleVeto"                                    , &ph_passEleVeto                                );
+    tree_->Branch( "ph_passLooseId"                                    , &ph_passLooseId                                );
+    tree_->Branch( "ph_passMediumId"                                   , &ph_passMediumId                               );
+    tree_->Branch( "ph_passTightId"                                    , &ph_passTightId                                );
+    tree_->Branch( "ph_mvaVal"                                         , &ph_mvaValue                                   );
+    tree_->Branch( "ph_mvaCat"                                         , &ph_mvaCategory                                );
+
+  } ////doPhotons
   
   if ( runFlags["doElectrons"] ){
     /** electrons */
@@ -748,6 +777,31 @@ void NtupleBranches::reset( void ){
   lheNj = 0;
   lheNb = 0;
   lheV_mass = 0;
+
+  /** photons */
+  ph_N = 0;
+  ph_pdgId.clear();
+  ph_charge.clear();
+  ph_e.clear();
+  ph_eta.clear();
+  ph_phi.clear();
+  ph_mass.clear();
+  ph_pt.clear();
+  ph_et.clear();
+  ph_superCluster_eta.clear();
+  ph_superCluster_phi.clear();
+  ph_passLooseId.clear();
+  ph_passMediumId.clear();
+  ph_passTightId.clear();
+  ph_mvaValue.clear();
+  ph_mvaCategory.clear();
+  ph_rho.clear();
+  ph_sigmaIetaIeta.clear();    
+  ph_hOverE.clear();    
+  ph_isoGamma.clear();    
+  ph_isoCh.clear();    
+  ph_passEleVeto.clear();    
+  //ph_fixedGridRho.clear();
     
   /** electrons */
   el_N        = 0;

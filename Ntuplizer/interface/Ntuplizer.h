@@ -81,6 +81,14 @@ private:
 
   edm::EDGetTokenT<reco::JetFlavourMatchingCollection> 	    flavourToken_	;
 
+  edm::EDGetToken                                   	    photonToken_	;
+  edm::EDGetTokenT<edm::ValueMap<bool> >                    phoLooseIdMapToken_ ;
+  edm::EDGetTokenT<edm::ValueMap<bool> >                    phoMediumIdMapToken_;
+  edm::EDGetTokenT<edm::ValueMap<bool> >                    phoTightIdMapToken_ ;
+  edm::EDGetTokenT<edm::ValueMap<float> >                   phoMvaValuesMapToken_;
+  edm::EDGetTokenT<edm::ValueMap<int> >                     phoMvaCategoriesMapToken_;
+  bool                                                      phoVerboseIdFlag_;
+
   edm::EDGetTokenT<pat::MuonCollection>     		    muonToken_  	;	
   edm::EDGetTokenT<edm::View<pat::Electron> >		    electronToken_	;
   edm::EDGetTokenT<edm::ValueMap<bool> >                    eleVetoIdMapToken_  ;

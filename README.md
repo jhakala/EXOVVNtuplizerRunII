@@ -1,4 +1,4 @@
-	# EXOVVNtuplizerRunII
+# EXO VGammaNtuplizerRunII
 
 Ntuplizer for searches for heavy resonances decaying to dibosons
 
@@ -13,19 +13,16 @@ cmsenv
 git cms-init
 ```
 
-
-
 ### getting the ntuplizer codes
 ```
 cd $CMSSW_BASE/src
-export GITUSER=`git config user.github`
-git clone https://github.com/${GITUSER}/EXOVVNtuplizerRunII 
-cd EXOVVNtuplizerRunII
-git remote add UZHCMS https://github.com/UZHCMS/EXOVVNtuplizerRunII
-git fetch UZHCMS
-git checkout -b DevelopmentBranch_9_4_0 UZHCMS/94X_ntuplizer
+git clone https://github.com/xuliyan/VgammaTuplizer.git
+cd VgammaTuplizer
+git remote add 94XWgam https://github.com/xuliyan/VgammaTuplizer
+git fetch 94XWgam
+git checkout -b 94XWgam_dev 94XWgam/94X_ntuplizer
 cd $CMSSW_BASE/src
-scram b -j 8
+scram b -j 16
 ```
 
 

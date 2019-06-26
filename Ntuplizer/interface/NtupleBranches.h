@@ -51,10 +51,10 @@ public:
   /** genParticles */
   int                             genParticle_N;
   std::vector<float>              genParticle_pt       ;
-//  std::vector<float>              genParticle_px       ;
-//  std::vector<float>              genParticle_py       ;
-//  std::vector<float>              genParticle_pz       ;
-//  std::vector<float>              genParticle_e        ;
+  std::vector<float>              genParticle_px       ;
+  std::vector<float>              genParticle_py       ;
+  std::vector<float>              genParticle_pz       ;
+  std::vector<float>              genParticle_e        ;
   std::vector<float>              genParticle_eta      ;
   std::vector<float>              genParticle_phi      ;
   std::vector<float>              genParticle_mass     ;
@@ -72,7 +72,7 @@ public:
   std::vector<float >  genParticle_tauviseta      ;
   std::vector<float >  genParticle_tauvisphi      ;
   std::vector<float >  genParticle_tauvismass      ;
-  std::vector<int >  genParticle_taudecay      ;
+  std::vector<int >    genParticle_taudecay      ;
 
   /** generator info */
   float                           lheV_pt              ;
@@ -93,6 +93,55 @@ public:
   std::vector<int  >              PDF_id               ;
   std::vector<float>              PDF_x                ;
   std::vector<float>              PDF_xPDF             ;
+
+  /** photons */
+  int                                  ph_N                         ;
+  std::vector<int>                     ph_pdgId                     ;
+  std::vector<float>                   ph_charge                    ;
+  std::vector<float>                   ph_e                         ;
+  std::vector<float>                   ph_eta                       ;
+  std::vector<float>                   ph_phi                       ;
+  std::vector<float>                   ph_superCluster_eta          ;
+  std::vector<float>                   ph_superCluster_phi          ;
+  std::vector<float>                   ph_mass                      ;
+  std::vector<float>                   ph_px                        ;
+  std::vector<float>                   ph_py                        ;
+  std::vector<float>                   ph_pz                        ;
+  std::vector<float>                   ph_pt                        ;
+  std::vector<float>                   ph_et                        ;   
+  std::vector<float>                   ph_mvaValue                  ;
+  std::vector<float>                   ph_mvaCategory               ;
+  
+  // Variables typically used for cut based photon ID
+  //std::vector<Float_t>               ph_full5x5_sigmaIetaIeta_    ;
+  //std::vector<Float_t>               ph_hOverE_                   ;
+  //std::vector<Int_t>                 ph_hasPixelSeed_             ;
+    
+  //std::vector<Float_t>               ph_isoChargedHadrons_        ;
+  //std::vector<Float_t>               ph_isoNeutralHadrons_        ;
+  //std::vector<Float_t>               ph_isoPhotons_               ;
+    
+  //std::vector<Float_t>               ph_isoChargedHadronsWithEA_  ;
+  //std::vector<Float_t>               ph_isoNeutralHadronsWithEA_  ;
+  //std::vector<Float_t>               ph_isoPhotonsWithEA_         ;
+    
+  //std::vector<Int_t>                 ph_isTrue_                   ;
+    
+  // Effective area constants for a    ll isolation types
+  //EffectiveAreas                     ph_effAreaChHadrons_         ;
+  //EffectiveAreas                     ph_effAreaNeuHadrons_        ;
+  //EffectiveAreas                     ph_effAreaPhotons_           ;
+    
+  std::vector<float>                   ph_sigmaIetaIeta             ;
+  std::vector<float>                   ph_hOverE                    ;
+  std::vector<float>                   ph_isoGamma                  ;
+  std::vector<float>                   ph_isoCh                     ;
+  std::vector<bool>                    ph_passEleVeto               ;
+  std::vector<int>                     ph_passLooseId               ;
+  std::vector<int>                     ph_passMediumId              ;
+  std::vector<int>                     ph_passTightId               ;
+  std::vector<float>                   ph_rho                       ;
+  //std::vector<float>                 ph_fixedGridRho              ;
 
           
   /** electrons */

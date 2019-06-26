@@ -3,6 +3,7 @@
 #include "../interface/JetsNtuplizer.h"
 #include "../interface/GenJetsNtuplizer.h"
 #include "../interface/MuonsNtuplizer.h"
+#include "../interface/PhotonsNtuplizer.h"
 #include "../interface/ElectronsNtuplizer.h"
 #include "../interface/TausNtuplizer.h"
 #include "../interface/METsNtuplizer.h"
@@ -11,7 +12,6 @@
 #include "../interface/GenParticlesNtuplizer.h"
 #include "../interface/TriggersNtuplizer.h"
 #include "../interface/VerticesNtuplizer.h"
-
 #include "DataFormats/PatCandidates/interface/TriggerObjectStandAlone.h"
 #include "DataFormats/PatCandidates/interface/PackedTriggerPrescales.h"
 
@@ -42,6 +42,14 @@ Ntuplizer::Ntuplizer(const edm::ParameterSet& iConfig):
         genJetAK8Token_	      	    (consumes<pat::JetCollection>(iConfig.getParameter<edm::InputTag>("genJetsAK8"))),
 	
 	flavourToken_	      	    (consumes<reco::JetFlavourMatchingCollection>(iConfig.getParameter<edm::InputTag>("subjetflavour"))),
+
+	photonToken_                      (consumes<edm::View<pat::Photon> >               (iConfig.getParameter<edm::InputTag>("photons"))),
+	phoLooseIdMapToken_               (consumes<edm::ValueMap<bool> >                  (iConfig.getParameter<edm::InputTag>("phoLooseIdMap"))),
+	phoMediumIdMapToken_              (consumes<edm::ValueMap<bool> >                  (iConfig.getParameter<edm::InputTag>("phoMediumIdMap"))),
+	phoTightIdMapToken_               (consumes<edm::ValueMap<bool> >                  (iConfig.getParameter<edm::InputTag>("phoTightIdMap"))),
+	phoMvaValuesMapToken_             (consumes<edm::ValueMap<float> >                 (iConfig.getParameter<edm::InputTag>("phoMvaValuesMap"))),
+	phoMvaCategoriesMapToken_         (consumes<edm::ValueMap<int> >                   (iConfig.getParameter<edm::InputTag>("phoMvaCategoriesMap"))),
+	phoVerboseIdFlag_                                                                  (iConfig.getParameter<bool>         ("phoIdVerbose")),
 
 	muonToken_	      	    (consumes<pat::MuonCollection>(iConfig.getParameter<edm::InputTag>("muons"))),
 	mvaValuesMapToken_          (consumes<edm::ValueMap<float> >(iConfig.getParameter<edm::InputTag>("mvaValuesMap"))),
@@ -81,6 +89,7 @@ Ntuplizer::Ntuplizer(const edm::ParameterSet& iConfig):
   runFlags["doGenEvent"] = iConfig.getParameter<bool>("doGenEvent");
   runFlags["doPileUp"] = iConfig.getParameter<bool>("doPileUp");
   runFlags["doElectrons"] = iConfig.getParameter<bool>("doElectrons");
+  runFlags["doPhotons"] = iConfig.getParameter<bool>("doPhotons");
   runFlags["doMuons"] = iConfig.getParameter<bool>("doMuons");
   runFlags["doTaus"] = iConfig.getParameter<bool>("doTaus");
   runFlags["doAK8Jets"] = iConfig.getParameter<bool>("doAK8Jets");
@@ -237,6 +246,27 @@ Ntuplizer::Ntuplizer(const edm::ParameterSet& iConfig):
 					      tauBoostedTauToken_ ,
 					      nBranches_  ,
 					      runFlags     );
+  }
+
+  if (runFlags["doPhotons"]) {
+        
+    std::vector<edm::EDGetTokenT<edm::ValueMap<bool> > > phoIdTokens;
+    phoIdTokens.push_back(phoLooseIdMapToken_ );
+    phoIdTokens.push_back(phoMediumIdMapToken_);
+    phoIdTokens.push_back(phoTightIdMapToken_ );
+    std::vector<edm::EDGetTokenT<edm::ValueMap<float> > > phoIdTokens1;
+    phoIdTokens1.push_back(phoMvaValuesMapToken_);
+    std::vector<edm::EDGetTokenT<edm::ValueMap<int> > > phoIdTokens2;
+    phoIdTokens2.push_back(phoMvaCategoriesMapToken_);
+        
+    nTuplizers_["photons"] = new PhotonsNtuplizer( nBranches_,
+						   photonToken_        ,
+						   vtxToken_           ,
+						   rhoToken_           ,
+						   //fixedGridRhoToken_  ,
+						   phoIdTokens         ,
+						   phoIdTokens1        ,
+						   phoIdTokens2        );
   }
 						      
   if (runFlags["doElectrons"]) {
