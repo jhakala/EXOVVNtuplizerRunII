@@ -1,6 +1,6 @@
 # EXO VGammaNtuplizerRunII
 
-Ntuplizer for searches for heavy resonances decaying to dibosons
+Ntuplizer for searches for heavy resonances decaying to boson + photon
 
 ## installation instructions
 
@@ -15,22 +15,28 @@ git cms-init
 
 ### getting the ntuplizer codes
 ```
+1. Fork the repo to your area
+
+2. 
 cd $CMSSW_BASE/src
-git clone https://github.com/xuliyan/VgammaTuplizer.git
+git clone https://github.com/"your github user name"/VgammaTuplizer.git
 cd VgammaTuplizer
-git remote add 94XWgam https://github.com/xuliyan/VgammaTuplizer
+git remote add 94XWgam https://github.com/"your github user name"/VgammaTuplizer
 git fetch 94XWgam
-git checkout -b 94XWgam_dev 94XWgam/94X_ntuplizer
+git checkout -b "your new branch name" 94XWgam/94X_ntuplizer
 cd $CMSSW_BASE/src
 scram b -j 16
 ```
+3. push code: use ssh, follow instructions on google
 
+PS: To clone code directly: git clone -b 94XWgam_dev https://github.com/xuliyan/VgammaTuplizer.git
 
 ### update the cut-based electron ID and MVAID to V2. HEEP are included by default in 94X
-(https://twiki.cern.ch/twiki/bin/view/CMS/CutBasedElectronIdentificationRun2)
+(https://twiki.cern.ch/twiki/bin/view/CMS/MultivariatePhotonIdentificationRun2#MVA_Recipe_for_regular_users_for) and
+(https://twiki.cern.ch/twiki/bin/view/CMS/EgammaPostRecoRecipes#2016_2017_Data_MC)
 ```
 cd $CMSSW_BASE/src
-git cms-merge-topic guitargeek:EgammaID_9_4_X
+git cms-merge-topic cms-egamma:EgammaID_949
 cd $CMSSW_BASE/src
 scram b -j 8
 ```
