@@ -26,12 +26,13 @@ git fetch 94XWgam
 git checkout -b "your new branch name" 94XWgam/94X_ntuplizer
 cd $CMSSW_BASE/src
 scram b -j 16
-```
 3. push code: use ssh, follow instructions on google
+git push "remote name" "remote branch name"
+```
 
 PS: To clone code directly: git clone -b 94XWgam_dev https://github.com/xuliyan/VgammaTuplizer.git
 
-### update the cut-based electron ID and MVAID to V2. HEEP are included by default in 94X
+### update Egamma MVAID. HEEP are included by default in 94X
 (https://twiki.cern.ch/twiki/bin/view/CMS/MultivariatePhotonIdentificationRun2#MVA_Recipe_for_regular_users_for) and
 (https://twiki.cern.ch/twiki/bin/view/CMS/EgammaPostRecoRecipes#2016_2017_Data_MC)
 ```
