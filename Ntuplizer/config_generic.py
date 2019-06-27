@@ -1,5 +1,5 @@
 ###### Process initialization ##########
-
+import sys
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process("Ntuple")
@@ -21,18 +21,12 @@ import FWCore.ParameterSet.VarParsing as VarParsing
 
 options = VarParsing.VarParsing ('analysis')
 
-options.maxEvents = -1
+options.maxEvents = 1000
 
 #data file
 
 
-#root://cmseos.fnal.gov//store/user/jhakala/ZpAnomalonHZ_
-options.inputFiles = 'root://cmseos.fnal.gov//store/user/jhakala/ZpAnomalonHZ_Zp2000-ND500-NS200/ZpAnomalonHZ_UFO-Zp2000-ND500-NS200_miniAOD_0.root'
-
-#options.inputFiles = '/store/data/Run2017F/JetHT/MINIAOD/17Nov2017-v1/70000/F6F6E56A-8ADF-E711-BF89-02163E01A25E.root'
-#options.inputFiles = '/store/data/Run2017D/SingleMuon/MINIAOD/17Nov2017-v1/60000/42E72A07-36E4-E711-9E0B-7845C4FAEFE9.root'
-
-#options.inputFiles = '/store/data/Run2017F/JetHT/MINIAOD/17Nov2017-v1/60000/2E078BBE-75E0-E711-B0A6-02163E01A355.root'
+options.inputFiles = ('/store/data/Run2017B/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
                      
 options.parseArguments()
 
@@ -638,6 +632,7 @@ if config["DOMETRECLUSTERING"]:
 from PhysicsTools.SelectorUtils.tools.vid_id_tools import *
 
 dataFormat=DataFormat.MiniAOD
+
 switchOnVIDElectronIdProducer(process,dataFormat,task=pattask)
 
 process.egmGsfElectronIDSequence = cms.Sequence(process.egmGsfElectronIDs)
@@ -660,6 +655,15 @@ my_id_modules = [
 #add them to the VID producer
 for idmod in my_id_modules:
     setupAllVIDIdsInModule(process,idmod,setupVIDElectronSelection,task=pattask)
+
+switchOnVIDPhotonIdProducer(process,dataFormat)
+process.egmPhotonIDSequence = cms.Sequence(process.egmPhotonIDSequence)
+
+my_id_modules_ph = ['RecoEgamma.PhotonIdentification.Identification.mvaPhotonID_Fall17_94X_V1_cff'  ,
+                    'RecoEgamma.PhotonIdentification.Identification.cutBasedPhotonID_Fall17_94X_V1_TrueVtx_cff']
+
+for idmod in my_id_modules_ph:
+    setupAllVIDIdsInModule(process,idmod,setupVIDPhotonSelection,task=pattask)
 
 ####### Event filters ###########
 
@@ -865,6 +869,7 @@ process.ntuplizer = cms.EDAnalyzer("Ntuplizer",
     doGenEvent	      = cms.bool(config["DOGENEVENT"]),
     doPileUp	      = cms.bool(config["DOPILEUP"]),
     doElectrons       = cms.bool(config["DOELECTRONS"]),
+    doPhotons         = cms.bool(config["DOPHOTONS"]),
     doMuons	      = cms.bool(config["DOMUONS"]),
     doTaus	      = cms.bool(config["DOTAUS"]),
     doAK8Jets	      = cms.bool(config["DOAK8JETS"]),
@@ -884,6 +889,13 @@ process.ntuplizer = cms.EDAnalyzer("Ntuplizer",
     doMultipleTauMVAversions = cms.bool(config["DOMULTIPLETAUMVAVERSIONS"]),
     vertices = cms.InputTag("offlineSlimmedPrimaryVertices"),
     muons = cms.InputTag("slimmedMuons"),
+    photons = cms.InputTag("slimmedPhotons"),
+    phoIdVerbose = cms.bool(False),
+    phoLooseIdMap  = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-loose"),
+    phoMediumIdMap = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-medium"),
+    phoTightIdMap  = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-tight"),
+    phoMvaValuesMap = cms.InputTag("photonMVAValueMapProducer:PhotonMVAEstimatorRunIIFall17v1Values"),
+    phoMvaCategoriesMap = cms.InputTag("photonMVAValueMapProducer:PhotonMVAEstimatorRunIIFall17v1Categories"),
     electrons = cms.InputTag("slimmedElectrons"),
     ebRecHits = cms.InputTag("reducedEgamma","reducedEBRecHits"),
 
@@ -1472,6 +1484,7 @@ if config["DOMULTIPLETAUMVAVERSIONS"]:
   process.p += process.rerunMvaIsolation2SeqRun2_2_newDM
 
 process.p += getattr(process, "NewTauIDsEmbedded")
+process.p += process.egmPhotonIDSequence
 # For new MVA ID END!
 
 process.p += process.ntuplizer

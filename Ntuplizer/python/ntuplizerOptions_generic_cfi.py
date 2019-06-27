@@ -39,16 +39,16 @@ config["DOMVAMET"] = False
 
 #--------- AK8 jets reclustering ----------#
 config["ADDAK8GENJETS"] = (True and config["RUNONMC"]) #! Add AK8 gen jet collection with pruned and softdrop mass
-config["DOAK8RECLUSTERING"] = True
+config["DOAK8RECLUSTERING"] = False
 config["DOAK8PRUNEDRECLUSTERING"] = False #! To add pruned jet and pruned subjet collection (not in MINIAOD)
 config["DOAK8PUPPI"] = True
 config["DOAK10TRIMMEDRECLUSTERING"] = False #ATLAS sequence
 config["DOHBBTAG"] = False #Higgs-tagger
 config["DOAK8PUPPIRECLUSTERING"] = True
-config["UpdateJetCollection"] = True #needed for Higgs-tagger in 80X
+config["UpdateJetCollection"] = False #needed for Higgs-tagger in 80X
 
 #--------- MET reclustering ----------#
-config["DOMETRECLUSTERING"] = True
+config["DOMETRECLUSTERING"] = False
 
 #--------- JEC ----------#
 config["CORRJETSONTHEFLY"] = True # at the moment JEC available just for MC Fall17
