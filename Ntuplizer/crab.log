@@ -1,0 +1,6 @@
+DEBUG 2019-07-04 13:38:14,765: 	 Executing command: 'submit'
+DEBUG 2019-07-04 13:38:14,767: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-07-04 13:38:14,806: 	 Checking credentials
+DEBUG 2019-07-04 13:38:14,807: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-04 13:38:14,808: 	 Getting proxy life time left
+ERROR 2019-07-04 13:38:15,005: 	 Keyboard Interrupted
