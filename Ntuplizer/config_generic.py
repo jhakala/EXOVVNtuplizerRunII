@@ -21,7 +21,7 @@ import FWCore.ParameterSet.VarParsing as VarParsing
 
 options = VarParsing.VarParsing ('analysis')
 
-options.maxEvents = 10
+options.maxEvents = 30
 
 #data file
 
@@ -746,7 +746,7 @@ if config["DOAK8PRUNEDRECLUSTERING"]:
 if config["DOAK10TRIMMEDRECLUSTERING"]:  
   jetsAK10trimmed = "patJetsAk10CHSJetsTrimmed"
 if reclusterPuppi:  
-  jetsAK8Puppi = "slimmedJetsAK8"  
+  jetsAK8Puppi = "packedJetsAk8PuppiJets"  
 
 if config["DOTAUSBOOSTED"]:
 #  TAUS = "slimmedTaus"
@@ -768,7 +768,7 @@ jecLevelsForMET = []
 
 if config["BUNCHSPACING"] == 25 and config["RUNONMC"] :
    JECprefix = "Fall17_17Nov2017_V32"
-   jecAK8chsUncFile = "JEC/%s_MC_Uncertainty_AK8PFchs.txt"%(JECprefix)
+   jecAK8chsUncFile = "JEC/%s_MC_Uncertainty_AK8PFPuppi.txt"%(JECprefix)
    jecAK4chsUncFile = "JEC/%s_MC_Uncertainty_AK4PFchs.txt"%(JECprefix)
 
 
@@ -786,7 +786,7 @@ elif config["BUNCHSPACING"] == 25 and not(config["RUNONMC"]):
    elif any("Run2017F" in s for s in  options.inputFiles): JEC_runDependent_suffix= "F"
   
    JECprefix = "Fall17_17Nov2017"+JEC_runDependent_suffix+"_V6"
-   jecAK8chsUncFile = "JEC/%s_DATA_Uncertainty_AK8PFchs.txt"%(JECprefix)
+   jecAK8chsUncFile = "JEC/%s_DATA_Uncertainty_AK8PFPuppi.txt"%(JECprefix)
    jecAK4chsUncFile = "JEC/%s_DATA_Uncertainty_AK4PFchs.txt"%(JECprefix)
    print "jec JEC_runDependent_suffix %s ,  prefix %s " %(JEC_runDependent_suffix,JECprefix)
 
@@ -795,13 +795,13 @@ print "doing corrections to jets on th fly %s, to met on the fly %s" %(config["C
 if config["CORRJETSONTHEFLY"]:
    if config["RUNONMC"]:
      jecLevelsAK8chs = [
-     	 'JEC/%s_MC_L1FastJet_AK8PFchs.txt'%(JECprefix),
-     	 'JEC/%s_MC_L2Relative_AK8PFchs.txt'%(JECprefix),
-     	 'JEC/%s_MC_L3Absolute_AK8PFchs.txt'%(JECprefix)
+     	 'JEC/%s_MC_L1FastJet_AK8PFPuppi.txt'%(JECprefix),
+     	 'JEC/%s_MC_L2Relative_AK8PFPuppi.txt'%(JECprefix),
+     	 'JEC/%s_MC_L3Absolute_AK8PFPuppi.txt'%(JECprefix)
        ]
      jecLevelsAK8Groomedchs = [
-     	 'JEC/%s_MC_L2Relative_AK8PFchs.txt'%(JECprefix),
-     	 'JEC/%s_MC_L3Absolute_AK8PFchs.txt'%(JECprefix)
+     	 'JEC/%s_MC_L2Relative_AK8PFPuppi.txt'%(JECprefix),
+     	 'JEC/%s_MC_L3Absolute_AK8PFPuppi.txt'%(JECprefix)
        ]
      jecLevelsAK8Puppi = [
      	 'JEC/%s_MC_L2Relative_AK8PFPuppi.txt'%(JECprefix),
@@ -814,15 +814,15 @@ if config["CORRJETSONTHEFLY"]:
        ]
    else:
      jecLevelsAK8chs = [
-     	 'JEC/%s_DATA_L1FastJet_AK8PFchs.txt'%(JECprefix),
-     	 'JEC/%s_DATA_L2Relative_AK8PFchs.txt'%(JECprefix),
-     	 'JEC/%s_DATA_L3Absolute_AK8PFchs.txt'%(JECprefix),
-         'JEC/%s_DATA_L2L3Residual_AK8PFchs.txt'%(JECprefix)
+     	 'JEC/%s_DATA_L1FastJet_AK8PFPuppi.txt'%(JECprefix),
+     	 'JEC/%s_DATA_L2Relative_AK8PFPuppi.txt'%(JECprefix),
+     	 'JEC/%s_DATA_L3Absolute_AK8PFPuppi.txt'%(JECprefix),
+         'JEC/%s_DATA_L2L3Residual_AK8PFPuppi.txt'%(JECprefix)
        ]
      jecLevelsAK8Groomedchs = [
-     	 'JEC/%s_DATA_L2Relative_AK8PFchs.txt'%(JECprefix),
-     	 'JEC/%s_DATA_L3Absolute_AK8PFchs.txt'%(JECprefix),
-         'JEC/%s_DATA_L2L3Residual_AK8PFchs.txt'%(JECprefix)
+     	 'JEC/%s_DATA_L2Relative_AK8PFPuppi.txt'%(JECprefix),
+     	 'JEC/%s_DATA_L3Absolute_AK8PFPuppi.txt'%(JECprefix),
+         'JEC/%s_DATA_L2L3Residual_AK8PFPuppi.txt'%(JECprefix)
        ]
      jecLevelsAK8Puppi = [
      	 'JEC/%s_DATA_L2Relative_AK8PFPuppi.txt'%(JECprefix),
@@ -898,7 +898,7 @@ process.ntuplizer = cms.EDAnalyzer("Ntuplizer",
     doHbbTag	      = cms.bool(config["DOHBBTAG"]),
     doPrunedSubjets   = cms.bool(config["DOAK8PRUNEDRECLUSTERING"]),
     doTrimming        = cms.bool(config["DOAK10TRIMMEDRECLUSTERING"]),
-    doPuppi           = cms.bool(config["DOAK8PUPPI"]),
+    doPuppi           = cms.bool(config["DOAK8PUPPI"]),#NOT IS USE ANYMORE
     doBoostedTaus     = cms.bool(config["DOTAUSBOOSTED"]),
     doMETSVFIT        = cms.bool(config["DOMETSVFIT"]),
     doMVAMET          = cms.bool(config["DOMVAMET"]),
@@ -968,6 +968,7 @@ process.ntuplizer = cms.EDAnalyzer("Ntuplizer",
     noiseFilter = cms.InputTag('TriggerResults','', hltFiltersProcessName),
     jecAK8chsPayloadNames = cms.vstring( jecLevelsAK8chs ),
     jecAK8chsUnc = cms.string( jecAK8chsUncFile ),
+    #jecAK8GroomedchsPayloadNames = cms.vstring( jecLevelsAK8Groomedchs ),
     jecAK8GroomedchsPayloadNames = cms.vstring( jecLevelsAK8Groomedchs ),
     jecAK8PuppiPayloadNames = cms.vstring( jecLevelsAK8Puppi ),
     jecAK4chsPayloadNames = cms.vstring( jecLevelsAK4chs ),

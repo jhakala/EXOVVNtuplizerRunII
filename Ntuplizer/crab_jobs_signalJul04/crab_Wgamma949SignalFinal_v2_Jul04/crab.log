@@ -1,0 +1,971 @@
+ process source filenames cms.Source("PoolSource",
+    fileNames = cms.untracked.vstring('/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/100000/B45E79A3-9432-E911-8FF5-AC1F6B0DE294.root', 
+        '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/4C1BB0B2-B12A-E911-BCA9-90B11C443C96.root', 
+        '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/282884EF-B22A-E911-861D-00259090829A.root', 
+        '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/8AA76743-B32A-E911-98E2-24BE05CEEC21.root')
+)
+
+RECLUSTERING PUPPI with latest tune from CMSSW_8_0_20
+*************************************** GLOBAL TAG *************************************************
+94X_mc2017_realistic_v17
+****************************************************************************************************
+jec unc file for ak8  JEC/Fall17_17Nov2017_V32_MC_Uncertainty_AK8PFPuppi.txt
+doing corrections to jets on th fly True, to met on the fly False
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Fatjet Collection:  slimmedJetsAK8
+PuppiJet Collection:  packedJetsAk8PuppiJets
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+LoadMVA_WPs_run2_2017: performed::::
+ak8GenJets, NjettinessGenAK8, genParticlesForJets, ak8GenJetsPruned, ak8GenJetsSoftDrop, ak8GenJetsPrunedMass, ak8GenJetsSoftDropMass, genJetsAK8, selectedGenJetsAK8, patJetsAk8PuppiJets, selectedPatJetsAk8PuppiJets, patJetPartonMatchAk8PuppiJets, patJetGenJetMatchAk8PuppiJets, patJetPartonsLegacy, patJetPartonAssociationLegacyAk8PuppiJets, patJetFlavourAssociationLegacyAk8PuppiJets, patJetPartons, patJetFlavourAssociationAk8PuppiJets, pfImpactParameterTagInfosAk8PuppiJets, pfInclusiveSecondaryVertexFinderTagInfosAk8PuppiJets, pfDeepCSVTagInfosAk8PuppiJets, pfBoostedDoubleSVAK8TagInfosAk8PuppiJets, pfImpactParameterAK8TagInfosAk8PuppiJets, pfInclusiveSecondaryVertexFinderAK8TagInfosAk8PuppiJets, pfCombinedInclusiveSecondaryVertexV2BJetTagsAk8PuppiJets, pfDeepCSVJetTagsAk8PuppiJets, pfBoostedDoubleSecondaryVertexAK8BJetTagsAk8PuppiJets, pfDeepCSVDiscriminatorsJetTagsAk8PuppiJets, patJetCorrFactorsAk8PuppiJets, patJetsAk8PuppiJetsSoftDrop, selectedPatJetsAk8PuppiJetsSoftDrop, patJetPartonMatchAk8PuppiJetsSoftDrop, patJetGenJetMatchAk8PuppiJetsSoftDrop, patJetPartonAssociationLegacyAk8PuppiJetsSoftDrop, patJetFlavourAssociationLegacyAk8PuppiJetsSoftDrop, patJetFlavourAssociationAk8PuppiJetsSoftDrop, pfImpactParameterTagInfosAk8PuppiJetsSoftDrop, pfInclusiveSecondaryVertexFinderTagInfosAk8PuppiJetsSoftDrop, pfDeepCSVTagInfosAk8PuppiJetsSoftDrop, pfBoostedDoubleSVAK8TagInfosAk8PuppiJetsSoftDrop, pfImpactParameterAK8TagInfosAk8PuppiJetsSoftDrop, pfInclusiveSecondaryVertexFinderAK8TagInfosAk8PuppiJetsSoftDrop, pfCombinedInclusiveSecondaryVertexV2BJetTagsAk8PuppiJetsSoftDrop, pfDeepCSVJetTagsAk8PuppiJetsSoftDrop, pfBoostedDoubleSecondaryVertexAK8BJetTagsAk8PuppiJetsSoftDrop, pfDeepCSVDiscriminatorsJetTagsAk8PuppiJetsSoftDrop, patJetCorrFactorsAk8PuppiJetsSoftDrop, patJetsAk8PuppiJetsSoftDropSubjets, selectedPatJetsAk8PuppiJetsSoftDropSubjets, patJetPartonMatchAk8PuppiJetsSoftDropSubjets, patJetGenJetMatchAk8PuppiJetsSoftDropSubjets, patJetPartonAssociationLegacyAk8PuppiJetsSoftDropSubjets, patJetFlavourAssociationLegacyAk8PuppiJetsSoftDropSubjets, patJetFlavourAssociationAk8PuppiJetsSoftDropSubjets, pfImpactParameterTagInfosAk8PuppiJetsSoftDropSubjets, pfInclusiveSecondaryVertexFinderTagInfosAk8PuppiJetsSoftDropSubjets, pfDeepCSVTagInfosAk8PuppiJetsSoftDropSubjets, pfBoostedDoubleSVAK8TagInfosAk8PuppiJetsSoftDropSubjets, pfImpactParameterAK8TagInfosAk8PuppiJetsSoftDropSubjets, pfInclusiveSecondaryVertexFinderAK8TagInfosAk8PuppiJetsSoftDropSubjets, pfCombinedInclusiveSecondaryVertexV2BJetTagsAk8PuppiJetsSoftDropSubjets, pfDeepCSVJetTagsAk8PuppiJetsSoftDropSubjets, pfBoostedDoubleSecondaryVertexAK8BJetTagsAk8PuppiJetsSoftDropSubjets, pfDeepCSVDiscriminatorsJetTagsAk8PuppiJetsSoftDropSubjets, patJetCorrFactorsAk8PuppiJetsSoftDropSubjets, patJetsAk8PuppiJetsPruned, selectedPatJetsAk8PuppiJetsPruned, patJetPartonMatchAk8PuppiJetsPruned, patJetGenJetMatchAk8PuppiJetsPruned, patJetPartonAssociationLegacyAk8PuppiJetsPruned, patJetFlavourAssociationLegacyAk8PuppiJetsPruned, patJetFlavourAssociationAk8PuppiJetsPruned, pfImpactParameterTagInfosAk8PuppiJetsPruned, pfInclusiveSecondaryVertexFinderTagInfosAk8PuppiJetsPruned, pfDeepCSVTagInfosAk8PuppiJetsPruned, pfBoostedDoubleSVAK8TagInfosAk8PuppiJetsPruned, pfImpactParameterAK8TagInfosAk8PuppiJetsPruned, pfInclusiveSecondaryVertexFinderAK8TagInfosAk8PuppiJetsPruned, pfCombinedInclusiveSecondaryVertexV2BJetTagsAk8PuppiJetsPruned, pfDeepCSVJetTagsAk8PuppiJetsPruned, pfBoostedDoubleSecondaryVertexAK8BJetTagsAk8PuppiJetsPruned, pfDeepCSVDiscriminatorsJetTagsAk8PuppiJetsPruned, patJetCorrFactorsAk8PuppiJetsPruned, patJetsAk8PuppiJetsPrunedSubjets, selectedPatJetsAk8PuppiJetsPrunedSubjets, patJetPartonMatchAk8PuppiJetsPrunedSubjets, patJetGenJetMatchAk8PuppiJetsPrunedSubjets, patJetPartonAssociationLegacyAk8PuppiJetsPrunedSubjets, patJetFlavourAssociationLegacyAk8PuppiJetsPrunedSubjets, patJetFlavourAssociationAk8PuppiJetsPrunedSubjets, pfImpactParameterTagInfosAk8PuppiJetsPrunedSubjets, pfInclusiveSecondaryVertexFinderTagInfosAk8PuppiJetsPrunedSubjets, pfDeepCSVTagInfosAk8PuppiJetsPrunedSubjets, pfBoostedDoubleSVAK8TagInfosAk8PuppiJetsPrunedSubjets, pfImpactParameterAK8TagInfosAk8PuppiJetsPrunedSubjets, pfInclusiveSecondaryVertexFinderAK8TagInfosAk8PuppiJetsPrunedSubjets, pfCombinedInclusiveSecondaryVertexV2BJetTagsAk8PuppiJetsPrunedSubjets, pfDeepCSVJetTagsAk8PuppiJetsPrunedSubjets, pfBoostedDoubleSecondaryVertexAK8BJetTagsAk8PuppiJetsPrunedSubjets, pfDeepCSVDiscriminatorsJetTagsAk8PuppiJetsPrunedSubjets, patJetCorrFactorsAk8PuppiJetsPrunedSubjets, electronMVAVariableHelper, electronMVAValueMapProducer, egmGsfElectronIDs, electronRegressionValueMapProducer, heepIDVarValueMaps
+DEBUG 2019-07-05 00:04:31,802: 	 Executing command: 'submit'
+DEBUG 2019-07-05 00:04:31,803: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-07-05 00:04:32,201: 	 Checking credentials
+DEBUG 2019-07-05 00:04:32,202: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:04:32,202: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:04:34,013: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 43135
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:04:34,920: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 43135
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:04:34,921: 	 Proxy valid for 11:58:55 hours
+INFO 2019-07-05 00:04:34,921: 	 Will use CRAB configuration file crabconfigs/crab_Signal.py
+DEBUG 2019-07-05 00:04:34,921: 	 Loading CRAB configuration file.
+DEBUG 2019-07-05 00:04:37,936: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-07-05 00:04:38,067: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:04:38,067: 	 Checking credentials
+DEBUG 2019-07-05 00:04:38,067: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:04:38,067: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:04:39,079: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 43131
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:04:39,987: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 43130
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:04:39,987: 	 Proxy lifetime 43131 secs is different from voms extension lifetime 43130 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:04:39,988: 	 Proxy valid for 11:58:50 hours
+DEBUG 2019-07-05 00:04:41,095: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u93529 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:04:41,201: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-07-05 00:04:41,312: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:04:41,312: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-07-05 00:04:41,312: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2019-07-05 00:04:41,518: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 617:46:59  (25.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:04:41,519: 	 Myproxy is valid: 2224019
+DEBUG 2019-07-05 00:04:41,520: 	 Command use: submit
+DEBUG 2019-07-05 00:04:41,520: 	 Options use: ['-c', 'crabconfigs/crab_Signal.py']
+DEBUG 2019-07-05 00:04:41,649: 	 CRABClient version: 3.3.1904
+DEBUG 2019-07-05 00:04:41,649: 	 Instance is prod
+DEBUG 2019-07-05 00:04:41,649: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-07-05 00:04:41,649: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-07-05 00:04:41,649: 	 Started submission
+DEBUG 2019-07-05 00:04:41,649: 	 Working on /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:04:41,906: 	 Loading required information from the environment
+DEBUG 2019-07-05 00:04:41,906: 	 Found CMSSW_9_4_9 for slc6_amd64_gcc630 with base /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9
+DEBUG 2019-07-05 00:04:41,906: 	 Loading required information from the environment
+DEBUG 2019-07-05 00:04:41,906: 	 Found CMSSW_9_4_9 for slc6_amd64_gcc630 with base /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9
+DEBUG 2019-07-05 00:04:41,942: 	 UNIQUE NAME: tarUUID fa5ee059-1cc2-494b-ba79-71ca7ea776e2 
+DEBUG 2019-07-05 00:04:41,942: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'crab_jobs_signalJul04'
+config.General.requestName = 'Wgamma949SignalFinal_v2_Jul04'
+config.section_('JobType')
+config.JobType.psetName = 'config_generic.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.sendExternalFolder = True
+config.section_('Data')
+config.Data.inputDataset = '/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM'
+config.Data.outputDatasetTag = 'Wgamma949SignalFinal_v2_Jul04'
+config.Data.publication = False
+config.Data.unitsPerJob = 1
+config.Data.inputDBS = 'global'
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/xuyan/'
+config.section_('Site')
+config.Site.storageSite = 'T3_US_Brown'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2019-07-05 00:04:41,942: 	 self.config.JobType.psetName: config_generic.py
+INFO 2019-07-05 00:04:41,943: 	 Importing CMSSW configuration config_generic.py
+INFO 2019-07-05 00:04:44,595: 	 Finished importing CMSSW configuration config_generic.py
+DEBUG 2019-07-05 00:04:44,596: 	 Writing CMSSW configuration to /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/inputs/PSet.py
+DEBUG 2019-07-05 00:04:45,243: 	 The following EDM output files will be collected: []
+DEBUG 2019-07-05 00:04:45,244: 	 The following TFile output files will be collected: ['flatTuple.root']
+DEBUG 2019-07-05 00:04:45,244: 	 The following user output files will be collected: []
+DEBUG 2019-07-05 00:04:45,244: 	 Loading required information from the environment
+DEBUG 2019-07-05 00:04:45,244: 	 Found CMSSW_9_4_9 for slc6_amd64_gcc630 with base /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9
+DEBUG 2019-07-05 00:04:45,244: 	 Making tarball in /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/inputs/fa5ee059-1cc2-494b-ba79-71ca7ea776e2default.tgz
+DEBUG 2019-07-05 00:04:45,275: 	 Checking directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/lib
+DEBUG 2019-07-05 00:04:45,275: 	 Adding directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/lib to tarball
+DEBUG 2019-07-05 00:04:50,588: 	 Checking directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/biglib
+DEBUG 2019-07-05 00:04:50,588: 	 Adding directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/biglib to tarball
+DEBUG 2019-07-05 00:04:50,589: 	 Checking directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/module
+DEBUG 2019-07-05 00:04:50,589: 	 Checking directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/external
+DEBUG 2019-07-05 00:04:50,589: 	 Adding directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/external to tarball
+DEBUG 2019-07-05 00:04:51,841: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/DQMOffline/Trigger/data to tarball
+DEBUG 2019-07-05 00:04:51,920: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/DQMOffline/Trigger/interface to tarball
+DEBUG 2019-07-05 00:04:52,183: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/PhysicsTools/NanoAOD/interface to tarball
+DEBUG 2019-07-05 00:04:52,207: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/PhysicsTools/PatAlgos/interface to tarball
+DEBUG 2019-07-05 00:04:52,380: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/PhysicsTools/SelectorUtils/interface to tarball
+DEBUG 2019-07-05 00:04:52,618: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/interface to tarball
+DEBUG 2019-07-05 00:04:52,643: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/data to tarball
+DEBUG 2019-07-05 00:05:32,145: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/EgammaTools/data to tarball
+DEBUG 2019-07-05 00:05:32,350: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/EgammaTools/interface to tarball
+DEBUG 2019-07-05 00:05:32,458: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/ElectronIdentification/data to tarball
+DEBUG 2019-07-05 00:05:40,087: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/ElectronIdentification/interface to tarball
+DEBUG 2019-07-05 00:05:40,216: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/PhotonIdentification/data to tarball
+DEBUG 2019-07-05 00:05:46,980: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/PhotonIdentification/interface to tarball
+DEBUG 2019-07-05 00:05:47,221: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/EgammaElectronAlgos/interface to tarball
+DEBUG 2019-07-05 00:05:47,353: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoParticleFlow/PFProducer/data to tarball
+DEBUG 2019-07-05 00:05:47,358: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoParticleFlow/PFProducer/interface to tarball
+DEBUG 2019-07-05 00:05:47,641: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/WGammaAnalyzer/Selection/data to tarball
+DEBUG 2019-07-05 00:05:47,697: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/WGammaAnalyzer/Utils/interface to tarball
+DEBUG 2019-07-05 00:05:53,581: 	 Uploading archive /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/inputs/fa5ee059-1cc2-494b-ba79-71ca7ea776e2default.tgz (79 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2019-07-05 00:07:08,780: 	 Loading required information from the environment
+DEBUG 2019-07-05 00:07:08,781: 	 Found CMSSW_9_4_9 for slc6_amd64_gcc630 with base /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9
+DEBUG 2019-07-05 00:07:08,781: 	 Making tarball in /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/inputs/debugFiles.tgz
+DEBUG 2019-07-05 00:07:08,804: 	 Uploading archive /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/inputs/debugFiles.tgz (14 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2019-07-05 00:07:08,985: 	 Result uploading input files: ed7fc13894de910749a90e65b25ac4c8b4a745072ebf674c7b9b77bb24ecf581.tar.gz 
+INFO 2019-07-05 00:07:08,988: 	 Sending the request to the server
+DEBUG 2019-07-05 00:07:08,988: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T3_US_Brown', 'algoargs': 1, 'cachefilename': 'ed7fc13894de910749a90e65b25ac4c8b4a745072ebf674c7b9b77bb24ecf581.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_9_4_9', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM', 'lfn': '/store/user/xuyan/', 'dryrun': 0, 'workflow': 'crab_Wgamma949SignalFinal_v2_Jul04', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 0, 'tfileoutfiles': ['flatTuple.root'], 'oneEventMode': 0, 'debugfilename': 'be2a21faa4194ea5e764116af600b621bc34d60e14c883ba0d9877fef81fe53b.tar.gz', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc630', 'totalunits': 0, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'Wgamma949SignalFinal_v2_Jul04'} 
+DEBUG 2019-07-05 00:07:08,989: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T3_US_Brown&algoargs=1&cachefilename=ed7fc13894de910749a90e65b25ac4c8b4a745072ebf674c7b9b77bb24ecf581.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_9_4_9&primarydataset=&inputdata=%2FPythiaChargedResonance_WGToJJG_M1600_width5%2FRunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1%2FMINIAODSIM&lfn=%2Fstore%2Fuser%2Fxuyan%2F&dryrun=0&workflow=crab_Wgamma949SignalFinal_v2_Jul04&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=0&oneEventMode=0&debugfilename=be2a21faa4194ea5e764116af600b621bc34d60e14c883ba0d9877fef81fe53b.tar.gz&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc630&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=Wgamma949SignalFinal_v2_Jul04&tfileoutfiles=flatTuple.root
+DEBUG 2019-07-05 00:07:09,252: 	 Result: {u'result': [{u'RequestName': u'190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04'}]}
+INFO 2019-07-05 00:07:09,256: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2019-07-05 00:07:09,256: 	 Task name: 190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:07:09,257: 	 Project dir: crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:07:09,257: 	 Please use 'crab status -d crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04' to check how the submission process proceeds.
+DEBUG 2019-07-05 00:07:09,257: 	 About to return
+INFO 2019-07-05 00:07:09,262: 	 Log file is /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/crab.log
+DEBUG 2019-07-05 00:23:21,985: 	 Executing command: 'status'
+DEBUG 2019-07-05 00:23:21,985: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-07-05 00:23:22,019: 	 Checking credentials
+DEBUG 2019-07-05 00:23:22,020: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:23:22,020: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:23:23,461: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 42006
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:23:25,298: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 42004
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:23:25,298: 	 Proxy lifetime 42006 secs is different from voms extension lifetime 42004 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:23:25,298: 	 Proxy valid for 11:40:04 hours
+DEBUG 2019-07-05 00:23:25,440: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:23:25,440: 	 Checking credentials
+DEBUG 2019-07-05 00:23:25,440: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:23:25,440: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:23:27,072: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 42003
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:23:28,504: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 42001
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:23:28,505: 	 Proxy lifetime 42003 secs is different from voms extension lifetime 42001 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:23:28,505: 	 Proxy valid for 11:40:01 hours
+DEBUG 2019-07-05 00:23:39,141: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-07-05 00:23:39,257: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:23:39,258: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-07-05 00:23:39,258: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2019-07-05 00:23:39,565: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 617:28:01  (25.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:23:39,567: 	 Myproxy is valid: 2222881
+DEBUG 2019-07-05 00:23:39,568: 	 Command use: status
+DEBUG 2019-07-05 00:23:39,568: 	 Options use: ['-d', 'crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04']
+DEBUG 2019-07-05 00:23:43,256: 	 CRABClient version: 3.3.1904
+DEBUG 2019-07-05 00:23:43,256: 	 Instance is prod
+DEBUG 2019-07-05 00:23:43,256: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-07-05 00:23:43,256: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-07-05 00:23:43,413: 	 Got information from server oracle database: {u'result': [u'190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2019-07-04 22:07:09.238779', u'None', u'2019-07-04 22:08:09.210911', u'None', u'CMSSW_9_4_9', u'slc6_amd64_gcc630', u'/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'ed7fc13894de910749a90e65b25ac4c8b4a745072ebf674c7b9b77bb24ecf581.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'xuyan', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan', u'cms', u'None', u'None', u'Wgamma949SignalFinal_v2_Jul04-00000000000000000000000000000000', u'F', u'T3_US_Brown', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['flatTuple.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0195.cern.ch', u'F', u'[]', u'T', u'/store/user/xuyan/', u'F', u'None', u'F', u'None', u'PythiaChargedResonance_WGToJJG_M1600_width5', u'None', u'be2a21faa4194ea5e764116af600b621bc34d60e14c883ba0d9877fef81fe53b.tar.gz', u'40276394', u'filetransfers', u'F', u'188.184.31.64', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2019-07-05 00:23:43,414: 	 CRAB project directory:		/afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:23:43,414: 	 Task name:			190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:23:43,414: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2019-07-05 00:23:43,414: 	 Status on the CRAB server:	SUBMITTED
+INFO 2019-07-05 00:23:43,415: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:23:43,415: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=xuyan&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:23:43,415: 	 New dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=xuyan&var-task=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:23:43,415: 	 In case of issues with the new dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2019-07-05 00:23:43,415: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 40276394)
+DEBUG 2019-07-05 00:23:43,415: 	 Webdir is located at http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:23:43,608: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:23:43,608: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04/status_cache
+DEBUG 2019-07-05 00:23:43,721: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1562278351.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276405.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1054332], 'TotalUserCpuTimeHistory': [249.0], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [5.0]}, '3': {'Retries': 0, 'WallDurations': [8.0, 308.0], 'StartTimes': [1562278370.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276403.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [740260], 'TotalUserCpuTimeHistory': [170.0], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [7.0]}, '2': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276402.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1151480], 'TotalUserCpuTimeHistory': [256.0], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [4.0]}, '4': {'Retries': 0, 'WallDurations': [9.0, 310.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276404.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [834392], 'TotalUserCpuTimeHistory': [197.0], 'SiteHistory': ['Unknown', 'T2_US_Vanderbilt'], 'TotalSysCpuTimeHistory': [8.0]}}
+INFO 2019-07-05 00:23:43,721: 	 Status on the scheduler:	SUBMITTED
+INFO 2019-07-05 00:23:43,721: 	 
+Jobs status:                    running      		100.0% (4/4)
+INFO 2019-07-05 00:23:43,721: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2019-07-05 00:23:43,766: 	 Log file is /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/crab.log
+DEBUG 2019-07-05 00:31:36,887: 	 Executing command: 'status'
+DEBUG 2019-07-05 00:31:36,887: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-07-05 00:31:36,914: 	 Checking credentials
+DEBUG 2019-07-05 00:31:36,916: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:31:36,916: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:31:38,950: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 41511
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:31:40,784: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 41509
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:31:40,784: 	 Proxy lifetime 41511 secs is different from voms extension lifetime 41509 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:31:40,784: 	 Proxy valid for 11:31:49 hours
+DEBUG 2019-07-05 00:31:40,958: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:31:40,958: 	 Checking credentials
+DEBUG 2019-07-05 00:31:40,959: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:31:40,959: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:31:42,418: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 41507
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:31:44,190: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 41505
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:31:44,190: 	 Proxy lifetime 41507 secs is different from voms extension lifetime 41505 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:31:44,190: 	 Proxy valid for 11:31:45 hours
+DEBUG 2019-07-05 00:31:44,381: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-07-05 00:31:44,501: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:31:44,501: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-07-05 00:31:44,501: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2019-07-05 00:31:44,822: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 617:19:56  (25.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:31:44,824: 	 Myproxy is valid: 2222396
+DEBUG 2019-07-05 00:31:44,827: 	 Command use: status
+DEBUG 2019-07-05 00:31:44,827: 	 Options use: ['-d', 'crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04']
+DEBUG 2019-07-05 00:31:44,995: 	 CRABClient version: 3.3.1904
+DEBUG 2019-07-05 00:31:44,995: 	 Instance is prod
+DEBUG 2019-07-05 00:31:44,995: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-07-05 00:31:44,995: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-07-05 00:31:45,125: 	 Got information from server oracle database: {u'result': [u'190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2019-07-04 22:07:09.238779', u'None', u'2019-07-04 22:08:09.210911', u'None', u'CMSSW_9_4_9', u'slc6_amd64_gcc630', u'/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'ed7fc13894de910749a90e65b25ac4c8b4a745072ebf674c7b9b77bb24ecf581.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'xuyan', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan', u'cms', u'None', u'None', u'Wgamma949SignalFinal_v2_Jul04-00000000000000000000000000000000', u'F', u'T3_US_Brown', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['flatTuple.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0195.cern.ch', u'F', u'[]', u'T', u'/store/user/xuyan/', u'F', u'None', u'F', u'None', u'PythiaChargedResonance_WGToJJG_M1600_width5', u'None', u'be2a21faa4194ea5e764116af600b621bc34d60e14c883ba0d9877fef81fe53b.tar.gz', u'40276394', u'filetransfers', u'F', u'188.184.31.64', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2019-07-05 00:31:45,125: 	 CRAB project directory:		/afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:31:45,126: 	 Task name:			190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:31:45,126: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2019-07-05 00:31:45,126: 	 Status on the CRAB server:	SUBMITTED
+INFO 2019-07-05 00:31:45,126: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:31:45,126: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=xuyan&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:31:45,126: 	 New dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=xuyan&var-task=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:31:45,126: 	 In case of issues with the new dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2019-07-05 00:31:45,126: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 40276394)
+DEBUG 2019-07-05 00:31:45,126: 	 Webdir is located at http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:31:45,279: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:31:45,279: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04/status_cache
+DEBUG 2019-07-05 00:31:45,412: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [9.0, 625.0], 'StartTimes': [1562278351.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276405.0'], 'EndTimes': [1562278976.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1054332], 'TotalUserCpuTimeHistory': [547], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [7]}, '3': {'Retries': 0, 'WallDurations': [8.0, 789.0], 'StartTimes': [1562278370.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276403.0'], 'EndTimes': [1562279159.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1042812], 'TotalUserCpuTimeHistory': [599], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [14]}, '2': {'Retries': 0, 'WallDurations': [9.0, 531.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276402.0'], 'EndTimes': [1562278877.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1151480], 'TotalUserCpuTimeHistory': [466], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [6]}, '4': {'Retries': 0, 'WallDurations': [9.0, 911.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276404.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1149344], 'TotalUserCpuTimeHistory': [780.0], 'SiteHistory': ['Unknown', 'T2_US_Vanderbilt'], 'TotalSysCpuTimeHistory': [14.0]}}
+INFO 2019-07-05 00:31:45,412: 	 Status on the scheduler:	SUBMITTED
+INFO 2019-07-05 00:31:45,416: 	 
+Jobs status:                    running      		 25.0% (1/4)
+INFO 2019-07-05 00:31:45,416: 	 				transferring 		 75.0% (3/4)
+INFO 2019-07-05 00:31:45,416: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2019-07-05 00:31:45,416: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2019-07-05 00:31:45,416: 	 
+Summary of run jobs:
+ * Memory: 1122MB min, 1124MB max, 1057MB ave
+ * Runtime: 0:08:51 min, 0:13:09 max, 0:10:48 ave
+ * CPU eff: 78% min, 89% max, 84% ave
+ * Waste: 0:00:26 (1% of total)
+
+INFO 2019-07-05 00:31:45,437: 	 Log file is /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/crab.log
+DEBUG 2019-07-05 00:38:38,290: 	 Executing command: 'status'
+DEBUG 2019-07-05 00:38:38,291: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-07-05 00:38:38,308: 	 Checking credentials
+DEBUG 2019-07-05 00:38:38,309: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:38:38,309: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:38:39,215: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:38:39,216: 	 Proxy valid for 00:00:00 hours
+DEBUG 2019-07-05 00:38:39,216: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2019-07-05 00:43:13,167: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2019-07-05 00:43:13,981: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:43:14,687: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 86397
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:43:14,688: 	 Proxy lifetime 86398 secs is different from voms extension lifetime 86397 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:43:15,394: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u93529 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:43:15,395: 	 Proxy created.
+DEBUG 2019-07-05 00:43:15,511: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:43:15,512: 	 Checking credentials
+DEBUG 2019-07-05 00:43:15,513: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:43:15,513: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:43:16,327: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 86395
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:43:17,136: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 86394
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:43:17,137: 	 Proxy lifetime 86395 secs is different from voms extension lifetime 86394 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:43:17,137: 	 Proxy valid for 23:59:54 hours
+DEBUG 2019-07-05 00:43:17,290: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-07-05 00:43:17,402: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:43:17,403: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-07-05 00:43:17,403: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2019-07-05 00:43:17,708: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 617:08:23  (25.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:43:17,710: 	 Myproxy is valid: 2221703
+DEBUG 2019-07-05 00:43:17,711: 	 Command use: status
+DEBUG 2019-07-05 00:43:17,711: 	 Options use: ['-d', 'crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/']
+DEBUG 2019-07-05 00:43:17,899: 	 CRABClient version: 3.3.1904
+DEBUG 2019-07-05 00:43:17,899: 	 Instance is prod
+DEBUG 2019-07-05 00:43:17,899: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-07-05 00:43:17,899: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-07-05 00:43:18,058: 	 Got information from server oracle database: {u'result': [u'190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2019-07-04 22:07:09.238779', u'None', u'2019-07-04 22:08:09.210911', u'None', u'CMSSW_9_4_9', u'slc6_amd64_gcc630', u'/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'ed7fc13894de910749a90e65b25ac4c8b4a745072ebf674c7b9b77bb24ecf581.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'xuyan', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan', u'cms', u'None', u'None', u'Wgamma949SignalFinal_v2_Jul04-00000000000000000000000000000000', u'F', u'T3_US_Brown', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['flatTuple.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0195.cern.ch', u'F', u'[]', u'T', u'/store/user/xuyan/', u'F', u'None', u'F', u'None', u'PythiaChargedResonance_WGToJJG_M1600_width5', u'None', u'be2a21faa4194ea5e764116af600b621bc34d60e14c883ba0d9877fef81fe53b.tar.gz', u'40276394', u'filetransfers', u'F', u'188.184.31.64', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2019-07-05 00:43:18,059: 	 CRAB project directory:		/afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:43:18,059: 	 Task name:			190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:43:18,059: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2019-07-05 00:43:18,059: 	 Status on the CRAB server:	SUBMITTED
+INFO 2019-07-05 00:43:18,060: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:43:18,060: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=xuyan&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:43:18,060: 	 New dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=xuyan&var-task=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:43:18,060: 	 In case of issues with the new dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2019-07-05 00:43:18,060: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 40276394)
+DEBUG 2019-07-05 00:43:18,060: 	 Webdir is located at http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:43:18,187: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:43:18,188: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04/status_cache
+DEBUG 2019-07-05 00:43:18,291: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [9.0, 625.0], 'StartTimes': [1562278351.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276405.0'], 'EndTimes': [1562278976.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1054332], 'TotalUserCpuTimeHistory': [547], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [7]}, '3': {'Retries': 0, 'WallDurations': [8.0, 789.0], 'StartTimes': [1562278370.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276403.0'], 'EndTimes': [1562279159.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1042812], 'TotalUserCpuTimeHistory': [599], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [14]}, '2': {'Retries': 0, 'WallDurations': [9.0, 531.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276402.0'], 'EndTimes': [1562278877.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1151480], 'TotalUserCpuTimeHistory': [466], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [6]}, '4': {'Retries': 0, 'WallDurations': [9.0, 1512.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276404.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1149808], 'TotalUserCpuTimeHistory': [1366.0], 'SiteHistory': ['Unknown', 'T2_US_Vanderbilt'], 'TotalSysCpuTimeHistory': [22.0]}}
+INFO 2019-07-05 00:43:18,291: 	 Status on the scheduler:	SUBMITTED
+INFO 2019-07-05 00:43:18,292: 	 
+Jobs status:                    running      		 25.0% (1/4)
+INFO 2019-07-05 00:43:18,292: 	 				transferring 		 75.0% (3/4)
+INFO 2019-07-05 00:43:18,292: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2019-07-05 00:43:18,292: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2019-07-05 00:43:18,292: 	 
+Summary of run jobs:
+ * Memory: 1018MB min, 1124MB max, 1057MB ave
+ * Runtime: 0:08:51 min, 0:13:09 max, 0:10:48 ave
+ * CPU eff: 78% min, 89% max, 84% ave
+ * Waste: 0:00:26 (1% of total)
+
+INFO 2019-07-05 00:43:18,340: 	 Log file is /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/crab.log
+DEBUG 2019-07-05 00:47:47,500: 	 Executing command: 'status'
+DEBUG 2019-07-05 00:47:47,500: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-07-05 00:47:47,513: 	 Checking credentials
+DEBUG 2019-07-05 00:47:47,514: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:47:47,514: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:47:48,328: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 86123
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:47:49,036: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 86122
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:47:49,037: 	 Proxy lifetime 86123 secs is different from voms extension lifetime 86122 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:47:49,037: 	 Proxy valid for 23:55:22 hours
+DEBUG 2019-07-05 00:47:49,156: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:47:49,156: 	 Checking credentials
+DEBUG 2019-07-05 00:47:49,157: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:47:49,157: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:47:49,865: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 86122
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:47:50,670: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 86121
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:47:50,671: 	 Proxy lifetime 86122 secs is different from voms extension lifetime 86121 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:47:50,671: 	 Proxy valid for 23:55:21 hours
+DEBUG 2019-07-05 00:47:54,316: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-07-05 00:47:54,430: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:47:54,431: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-07-05 00:47:54,431: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2019-07-05 00:47:54,636: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 617:03:46  (25.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:47:54,637: 	 Myproxy is valid: 2221426
+DEBUG 2019-07-05 00:47:54,638: 	 Command use: status
+DEBUG 2019-07-05 00:47:54,638: 	 Options use: ['-d', 'crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/']
+DEBUG 2019-07-05 00:47:54,764: 	 CRABClient version: 3.3.1904
+DEBUG 2019-07-05 00:47:54,764: 	 Instance is prod
+DEBUG 2019-07-05 00:47:54,764: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-07-05 00:47:54,764: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-07-05 00:47:54,911: 	 Got information from server oracle database: {u'result': [u'190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2019-07-04 22:07:09.238779', u'None', u'2019-07-04 22:08:09.210911', u'None', u'CMSSW_9_4_9', u'slc6_amd64_gcc630', u'/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'ed7fc13894de910749a90e65b25ac4c8b4a745072ebf674c7b9b77bb24ecf581.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'xuyan', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan', u'cms', u'None', u'None', u'Wgamma949SignalFinal_v2_Jul04-00000000000000000000000000000000', u'F', u'T3_US_Brown', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['flatTuple.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0195.cern.ch', u'F', u'[]', u'T', u'/store/user/xuyan/', u'F', u'None', u'F', u'None', u'PythiaChargedResonance_WGToJJG_M1600_width5', u'None', u'be2a21faa4194ea5e764116af600b621bc34d60e14c883ba0d9877fef81fe53b.tar.gz', u'40276394', u'filetransfers', u'F', u'188.184.31.64', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2019-07-05 00:47:54,911: 	 CRAB project directory:		/afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:47:54,912: 	 Task name:			190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:47:54,912: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2019-07-05 00:47:54,912: 	 Status on the CRAB server:	SUBMITTED
+INFO 2019-07-05 00:47:54,912: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:47:54,912: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=xuyan&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:47:54,912: 	 New dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=xuyan&var-task=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:47:54,912: 	 In case of issues with the new dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2019-07-05 00:47:54,912: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 40276394)
+DEBUG 2019-07-05 00:47:54,912: 	 Webdir is located at http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:47:55,069: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:47:55,069: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04/status_cache
+DEBUG 2019-07-05 00:47:55,173: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [9.0, 625.0], 'StartTimes': [1562278351.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276405.0'], 'EndTimes': [1562278976.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1054332], 'TotalUserCpuTimeHistory': [547], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [7]}, '3': {'Retries': 0, 'WallDurations': [8.0, 789.0], 'StartTimes': [1562278370.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276403.0'], 'EndTimes': [1562279159.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1042812], 'TotalUserCpuTimeHistory': [599], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [14]}, '2': {'Retries': 0, 'WallDurations': [9.0, 531.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276402.0'], 'EndTimes': [1562278877.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1151480], 'TotalUserCpuTimeHistory': [466], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [6]}, '4': {'Retries': 0, 'WallDurations': [9.0, 1812.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276404.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1149808], 'TotalUserCpuTimeHistory': [1662.0], 'SiteHistory': ['Unknown', 'T2_US_Vanderbilt'], 'TotalSysCpuTimeHistory': [25.0]}}
+INFO 2019-07-05 00:47:55,173: 	 Status on the scheduler:	SUBMITTED
+INFO 2019-07-05 00:47:55,173: 	 
+Jobs status:                    running      		 25.0% (1/4)
+INFO 2019-07-05 00:47:55,173: 	 				transferring 		 75.0% (3/4)
+INFO 2019-07-05 00:47:55,173: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2019-07-05 00:47:55,174: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2019-07-05 00:47:55,174: 	 
+Summary of run jobs:
+ * Memory: 1018MB min, 1124MB max, 1057MB ave
+ * Runtime: 0:08:51 min, 0:13:09 max, 0:10:48 ave
+ * CPU eff: 78% min, 89% max, 84% ave
+ * Waste: 0:00:26 (1% of total)
+
+INFO 2019-07-05 00:47:55,196: 	 Log file is /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/crab.log
+DEBUG 2019-07-05 00:54:16,898: 	 Executing command: 'status'
+DEBUG 2019-07-05 00:54:16,898: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-07-05 00:54:16,916: 	 Checking credentials
+DEBUG 2019-07-05 00:54:16,917: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:54:16,918: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:54:17,825: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 85734
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:54:18,634: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 85733
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:54:18,634: 	 Proxy lifetime 85734 secs is different from voms extension lifetime 85733 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:54:18,634: 	 Proxy valid for 23:48:53 hours
+DEBUG 2019-07-05 00:54:18,750: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:54:18,751: 	 Checking credentials
+DEBUG 2019-07-05 00:54:18,751: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:54:18,751: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:54:19,558: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 85732
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:54:20,365: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 85731
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:54:20,365: 	 Proxy lifetime 85732 secs is different from voms extension lifetime 85731 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:54:20,365: 	 Proxy valid for 23:48:51 hours
+DEBUG 2019-07-05 00:54:20,613: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-07-05 00:54:20,724: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:54:20,724: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-07-05 00:54:20,724: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2019-07-05 00:54:20,929: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 616:57:20  (25.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:54:20,930: 	 Myproxy is valid: 2221040
+DEBUG 2019-07-05 00:54:20,931: 	 Command use: status
+DEBUG 2019-07-05 00:54:20,931: 	 Options use: ['-d', 'crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/']
+DEBUG 2019-07-05 00:54:21,077: 	 CRABClient version: 3.3.1904
+DEBUG 2019-07-05 00:54:21,078: 	 Instance is prod
+DEBUG 2019-07-05 00:54:21,078: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-07-05 00:54:21,078: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-07-05 00:54:21,237: 	 Got information from server oracle database: {u'result': [u'190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2019-07-04 22:07:09.238779', u'None', u'2019-07-04 22:08:09.210911', u'None', u'CMSSW_9_4_9', u'slc6_amd64_gcc630', u'/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'ed7fc13894de910749a90e65b25ac4c8b4a745072ebf674c7b9b77bb24ecf581.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'xuyan', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan', u'cms', u'None', u'None', u'Wgamma949SignalFinal_v2_Jul04-00000000000000000000000000000000', u'F', u'T3_US_Brown', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['flatTuple.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0195.cern.ch', u'F', u'[]', u'T', u'/store/user/xuyan/', u'F', u'None', u'F', u'None', u'PythiaChargedResonance_WGToJJG_M1600_width5', u'None', u'be2a21faa4194ea5e764116af600b621bc34d60e14c883ba0d9877fef81fe53b.tar.gz', u'40276394', u'filetransfers', u'F', u'188.184.31.64', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2019-07-05 00:54:21,237: 	 CRAB project directory:		/afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:54:21,237: 	 Task name:			190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:54:21,238: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2019-07-05 00:54:21,238: 	 Status on the CRAB server:	SUBMITTED
+INFO 2019-07-05 00:54:21,238: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:54:21,238: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=xuyan&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:54:21,238: 	 New dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=xuyan&var-task=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:54:21,238: 	 In case of issues with the new dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2019-07-05 00:54:21,238: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 40276394)
+DEBUG 2019-07-05 00:54:21,238: 	 Webdir is located at http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:54:21,374: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:54:21,374: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04/status_cache
+DEBUG 2019-07-05 00:54:21,477: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [9.0, 625.0], 'StartTimes': [1562278351.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276405.0'], 'EndTimes': [1562278976.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1054332], 'TotalUserCpuTimeHistory': [547], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [7]}, '3': {'Retries': 0, 'WallDurations': [8.0, 789.0], 'StartTimes': [1562278370.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276403.0'], 'EndTimes': [1562279159.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1042812], 'TotalUserCpuTimeHistory': [599], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [14]}, '2': {'Retries': 0, 'WallDurations': [9.0, 531.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276402.0'], 'EndTimes': [1562278877.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1151480], 'TotalUserCpuTimeHistory': [466], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [6]}, '4': {'Retries': 0, 'WallDurations': [9.0, 2000.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276404.0'], 'EndTimes': [1562280346.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1149808], 'TotalUserCpuTimeHistory': [1694], 'SiteHistory': ['Unknown', 'T2_US_Vanderbilt'], 'TotalSysCpuTimeHistory': [25]}}
+INFO 2019-07-05 00:54:21,477: 	 Status on the scheduler:	SUBMITTED
+INFO 2019-07-05 00:54:21,478: 	 
+Jobs status:                    transferring 		100.0% (4/4)
+INFO 2019-07-05 00:54:21,478: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2019-07-05 00:54:21,478: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2019-07-05 00:54:21,478: 	 
+Summary of run jobs:
+ * Memory: 1018MB min, 1124MB max, 1074MB ave
+ * Runtime: 0:08:51 min, 0:33:20 max, 0:16:26 ave
+ * CPU eff: 78% min, 89% max, 85% ave
+ * Waste: 0:00:35 (1% of total)
+
+INFO 2019-07-05 00:54:21,499: 	 Log file is /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/crab.log
+DEBUG 2019-07-05 00:58:55,612: 	 Executing command: 'status'
+DEBUG 2019-07-05 00:58:55,612: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-07-05 00:58:55,624: 	 Checking credentials
+DEBUG 2019-07-05 00:58:55,625: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:58:55,626: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:58:56,532: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 85455
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:58:57,239: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 85454
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:58:57,239: 	 Proxy lifetime 85455 secs is different from voms extension lifetime 85454 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 00:58:57,239: 	 Proxy valid for 23:44:14 hours
+DEBUG 2019-07-05 00:58:57,353: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:58:57,353: 	 Checking credentials
+DEBUG 2019-07-05 00:58:57,354: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 00:58:57,354: 	 Getting proxy life time left
+DEBUG 2019-07-05 00:58:58,160: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 85453
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:58:58,969: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 85453
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:58:58,970: 	 Proxy valid for 23:44:13 hours
+DEBUG 2019-07-05 00:58:59,127: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-07-05 00:58:59,238: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:58:59,239: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-07-05 00:58:59,239: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2019-07-05 00:58:59,444: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 616:52:41  (25.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 00:58:59,446: 	 Myproxy is valid: 2220761
+DEBUG 2019-07-05 00:58:59,446: 	 Command use: status
+DEBUG 2019-07-05 00:58:59,446: 	 Options use: ['-d', 'crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/']
+DEBUG 2019-07-05 00:58:59,611: 	 CRABClient version: 3.3.1904
+DEBUG 2019-07-05 00:58:59,612: 	 Instance is prod
+DEBUG 2019-07-05 00:58:59,612: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-07-05 00:58:59,612: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-07-05 00:58:59,796: 	 Got information from server oracle database: {u'result': [u'190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2019-07-04 22:07:09.238779', u'None', u'2019-07-04 22:08:09.210911', u'None', u'CMSSW_9_4_9', u'slc6_amd64_gcc630', u'/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'ed7fc13894de910749a90e65b25ac4c8b4a745072ebf674c7b9b77bb24ecf581.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'xuyan', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan', u'cms', u'None', u'None', u'Wgamma949SignalFinal_v2_Jul04-00000000000000000000000000000000', u'F', u'T3_US_Brown', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['flatTuple.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0195.cern.ch', u'F', u'[]', u'T', u'/store/user/xuyan/', u'F', u'None', u'F', u'None', u'PythiaChargedResonance_WGToJJG_M1600_width5', u'None', u'be2a21faa4194ea5e764116af600b621bc34d60e14c883ba0d9877fef81fe53b.tar.gz', u'40276394', u'filetransfers', u'F', u'188.184.31.64', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2019-07-05 00:58:59,797: 	 CRAB project directory:		/afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:58:59,797: 	 Task name:			190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:58:59,797: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2019-07-05 00:58:59,797: 	 Status on the CRAB server:	SUBMITTED
+INFO 2019-07-05 00:58:59,797: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:58:59,797: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=xuyan&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:58:59,798: 	 New dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=xuyan&var-task=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 00:58:59,798: 	 In case of issues with the new dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2019-07-05 00:58:59,798: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 40276394)
+DEBUG 2019-07-05 00:58:59,798: 	 Webdir is located at http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:58:59,900: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 00:58:59,900: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04/status_cache
+DEBUG 2019-07-05 00:58:59,987: 	 Got information from status cache file: {'1': {'Retries': 1, 'WallDurations': [9.0, 625.0, 0], 'StartTimes': [1562278351.0], 'SubmitTimes': [1562278106.0, 1562280845.0], 'JobIds': ['40276405.0', '40278609.0'], 'EndTimes': [1562278976.0], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [1054332, 0], 'TotalUserCpuTimeHistory': [547, 0.0], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'Unknown'], 'TotalSysCpuTimeHistory': [7, 0.0]}, '3': {'Retries': 0, 'WallDurations': [8.0, 789.0], 'StartTimes': [1562278370.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276403.0'], 'EndTimes': [1562279159.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1042812], 'TotalUserCpuTimeHistory': [599], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [14]}, '2': {'Retries': 1, 'WallDurations': [9.0, 531.0, 0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278105.0, 1562280750.0], 'JobIds': ['40276402.0', '40278519.0'], 'EndTimes': [1562278877.0], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [1151480, 0], 'TotalUserCpuTimeHistory': [466, 0.0], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'Unknown'], 'TotalSysCpuTimeHistory': [6, 0.0]}, '4': {'Retries': 0, 'WallDurations': [9.0, 2000.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276404.0'], 'EndTimes': [1562280346.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1149808], 'TotalUserCpuTimeHistory': [1694], 'SiteHistory': ['Unknown', 'T2_US_Vanderbilt'], 'TotalSysCpuTimeHistory': [25]}}
+INFO 2019-07-05 00:58:59,987: 	 Status on the scheduler:	SUBMITTED
+INFO 2019-07-05 00:58:59,987: 	 
+Jobs status:                    idle         		 50.0% (2/4)
+INFO 2019-07-05 00:58:59,988: 	 				transferring 		 50.0% (2/4)
+INFO 2019-07-05 00:58:59,988: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2019-07-05 00:58:59,988: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2019-07-05 00:58:59,988: 	 
+Summary of run jobs:
+ * Memory: 0MB min, 1122MB max, 1071MB ave
+ * Runtime: 0:00:00 min, 0:33:20 max, 0:23:14 ave
+ * CPU eff: 78% min, 86% max, 84% ave
+ * Waste: 0:00:17 (1% of total)
+
+INFO 2019-07-05 00:59:00,043: 	 Log file is /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/crab.log
+DEBUG 2019-07-05 01:01:23,872: 	 Executing command: 'status'
+DEBUG 2019-07-05 01:01:23,873: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-07-05 01:01:23,886: 	 Checking credentials
+DEBUG 2019-07-05 01:01:23,887: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 01:01:23,887: 	 Getting proxy life time left
+DEBUG 2019-07-05 01:01:24,693: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 85307
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:01:25,401: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 85306
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:01:25,402: 	 Proxy lifetime 85307 secs is different from voms extension lifetime 85306 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 01:01:25,402: 	 Proxy valid for 23:41:46 hours
+DEBUG 2019-07-05 01:01:25,520: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:01:25,521: 	 Checking credentials
+DEBUG 2019-07-05 01:01:25,522: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 01:01:25,522: 	 Getting proxy life time left
+DEBUG 2019-07-05 01:01:26,232: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 85305
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:01:26,939: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 85305
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:01:26,940: 	 Proxy valid for 23:41:45 hours
+DEBUG 2019-07-05 01:01:27,095: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-07-05 01:01:27,206: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:01:27,207: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-07-05 01:01:27,207: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2019-07-05 01:01:27,411: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 616:50:13  (25.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:01:27,413: 	 Myproxy is valid: 2220613
+DEBUG 2019-07-05 01:01:27,413: 	 Command use: status
+DEBUG 2019-07-05 01:01:27,414: 	 Options use: ['-d', 'crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/']
+DEBUG 2019-07-05 01:01:27,536: 	 CRABClient version: 3.3.1904
+DEBUG 2019-07-05 01:01:27,536: 	 Instance is prod
+DEBUG 2019-07-05 01:01:27,536: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-07-05 01:01:27,537: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-07-05 01:01:27,698: 	 Got information from server oracle database: {u'result': [u'190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2019-07-04 22:07:09.238779', u'None', u'2019-07-04 22:08:09.210911', u'None', u'CMSSW_9_4_9', u'slc6_amd64_gcc630', u'/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'ed7fc13894de910749a90e65b25ac4c8b4a745072ebf674c7b9b77bb24ecf581.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'xuyan', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan', u'cms', u'None', u'None', u'Wgamma949SignalFinal_v2_Jul04-00000000000000000000000000000000', u'F', u'T3_US_Brown', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['flatTuple.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0195.cern.ch', u'F', u'[]', u'T', u'/store/user/xuyan/', u'F', u'None', u'F', u'None', u'PythiaChargedResonance_WGToJJG_M1600_width5', u'None', u'be2a21faa4194ea5e764116af600b621bc34d60e14c883ba0d9877fef81fe53b.tar.gz', u'40276394', u'filetransfers', u'F', u'188.184.31.64', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2019-07-05 01:01:27,698: 	 CRAB project directory:		/afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 01:01:27,699: 	 Task name:			190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 01:01:27,699: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2019-07-05 01:01:27,699: 	 Status on the CRAB server:	SUBMITTED
+INFO 2019-07-05 01:01:27,699: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 01:01:27,699: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=xuyan&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 01:01:27,699: 	 New dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=xuyan&var-task=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 01:01:27,699: 	 In case of issues with the new dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2019-07-05 01:01:27,699: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 40276394)
+DEBUG 2019-07-05 01:01:27,699: 	 Webdir is located at http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 01:01:27,889: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 01:01:27,889: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04/status_cache
+DEBUG 2019-07-05 01:01:27,990: 	 Got information from status cache file: {'1': {'Retries': 1, 'WallDurations': [9.0, 625.0, 0], 'StartTimes': [1562278351.0], 'SubmitTimes': [1562278106.0, 1562280845.0], 'JobIds': ['40276405.0', '40278609.0'], 'EndTimes': [1562278976.0], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [1054332, 0], 'TotalUserCpuTimeHistory': [547, 0.0], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'Unknown'], 'TotalSysCpuTimeHistory': [7, 0.0]}, '3': {'Retries': 0, 'WallDurations': [8.0, 789.0], 'StartTimes': [1562278370.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276403.0'], 'EndTimes': [1562279159.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1042812], 'TotalUserCpuTimeHistory': [599], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [14]}, '2': {'Retries': 1, 'WallDurations': [9.0, 531.0, 0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278105.0, 1562280750.0], 'JobIds': ['40276402.0', '40278519.0'], 'EndTimes': [1562278877.0], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [1151480, 0], 'TotalUserCpuTimeHistory': [466, 0.0], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'Unknown'], 'TotalSysCpuTimeHistory': [6, 0.0]}, '4': {'Retries': 0, 'WallDurations': [9.0, 2000.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276404.0'], 'EndTimes': [1562280346.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1149808], 'TotalUserCpuTimeHistory': [1694], 'SiteHistory': ['Unknown', 'T2_US_Vanderbilt'], 'TotalSysCpuTimeHistory': [25]}}
+INFO 2019-07-05 01:01:27,990: 	 Status on the scheduler:	SUBMITTED
+INFO 2019-07-05 01:01:27,990: 	 
+Jobs status:                    finished     		 25.0% (1/4)
+INFO 2019-07-05 01:01:27,990: 	 				idle         		 50.0% (2/4)
+INFO 2019-07-05 01:01:27,990: 	 				transferring 		 25.0% (1/4)
+INFO 2019-07-05 01:01:27,990: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2019-07-05 01:01:27,991: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2019-07-05 01:01:27,991: 	 
+Summary of run jobs:
+ * Memory: 0MB min, 1122MB max, 1071MB ave
+ * Runtime: 0:00:00 min, 0:33:20 max, 0:23:14 ave
+ * CPU eff: 78% min, 86% max, 84% ave
+ * Waste: 0:00:17 (1% of total)
+
+INFO 2019-07-05 01:01:28,019: 	 Log file is /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/crab.log
+DEBUG 2019-07-05 01:09:07,841: 	 Executing command: 'status'
+DEBUG 2019-07-05 01:09:07,841: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-07-05 01:09:07,930: 	 Checking credentials
+DEBUG 2019-07-05 01:09:07,932: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 01:09:07,932: 	 Getting proxy life time left
+DEBUG 2019-07-05 01:09:08,944: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 84843
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:09:09,656: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 84842
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:09:09,656: 	 Proxy lifetime 84843 secs is different from voms extension lifetime 84842 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 01:09:09,656: 	 Proxy valid for 23:34:02 hours
+DEBUG 2019-07-05 01:09:09,772: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:09:09,773: 	 Checking credentials
+DEBUG 2019-07-05 01:09:09,773: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-05 01:09:09,773: 	 Getting proxy life time left
+DEBUG 2019-07-05 01:09:10,482: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 84841
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:09:11,188: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 84840
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:09:11,189: 	 Proxy lifetime 84841 secs is different from voms extension lifetime 84840 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-05 01:09:11,189: 	 Proxy valid for 23:34:00 hours
+DEBUG 2019-07-05 01:09:11,291: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-07-05 01:09:11,404: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:09:11,405: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-07-05 01:09:11,405: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2019-07-05 01:09:11,611: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 616:42:29  (25.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-05 01:09:11,613: 	 Myproxy is valid: 2220149
+DEBUG 2019-07-05 01:09:11,615: 	 Command use: status
+DEBUG 2019-07-05 01:09:11,615: 	 Options use: ['-d', 'crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/']
+DEBUG 2019-07-05 01:09:11,710: 	 CRABClient version: 3.3.1904
+DEBUG 2019-07-05 01:09:11,710: 	 Instance is prod
+DEBUG 2019-07-05 01:09:11,710: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-07-05 01:09:11,710: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-07-05 01:09:11,800: 	 Got information from server oracle database: {u'result': [u'190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2019-07-04 22:07:09.238779', u'None', u'2019-07-04 22:08:09.210911', u'None', u'CMSSW_9_4_9', u'slc6_amd64_gcc630', u'/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'ed7fc13894de910749a90e65b25ac4c8b4a745072ebf674c7b9b77bb24ecf581.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'xuyan', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan', u'cms', u'None', u'None', u'Wgamma949SignalFinal_v2_Jul04-00000000000000000000000000000000', u'F', u'T3_US_Brown', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['flatTuple.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0195.cern.ch', u'F', u'[]', u'T', u'/store/user/xuyan/', u'F', u'None', u'F', u'None', u'PythiaChargedResonance_WGToJJG_M1600_width5', u'None', u'be2a21faa4194ea5e764116af600b621bc34d60e14c883ba0d9877fef81fe53b.tar.gz', u'40276394', u'filetransfers', u'F', u'188.184.31.64', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2019-07-05 01:09:11,801: 	 CRAB project directory:		/afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 01:09:11,801: 	 Task name:			190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 01:09:11,801: 	 Grid scheduler - Task Worker:	crab3@vocms0195.cern.ch - crab-prod-tw01
+INFO 2019-07-05 01:09:11,801: 	 Status on the CRAB server:	SUBMITTED
+INFO 2019-07-05 01:09:11,801: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 01:09:11,801: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=xuyan&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 01:09:11,801: 	 New dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=xuyan&var-task=190704_220709%3Axuyan_crab_Wgamma949SignalFinal_v2_Jul04
+INFO 2019-07-05 01:09:11,801: 	 In case of issues with the new dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2019-07-05 01:09:11,801: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 40276394)
+DEBUG 2019-07-05 01:09:11,801: 	 Webdir is located at http://vocms0195.cern.ch/mon/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 01:09:11,899: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04
+DEBUG 2019-07-05 01:09:11,899: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0195/cms365/190704_220709:xuyan_crab_Wgamma949SignalFinal_v2_Jul04/status_cache
+DEBUG 2019-07-05 01:09:11,999: 	 Got information from status cache file: {'1': {'Retries': 1, 'WallDurations': [9.0, 625.0, 9.0, 258.6659460067749], 'StartTimes': [1562278351.0, 1562281212.0], 'SubmitTimes': [1562278106.0, 1562280845.0], 'JobIds': ['40276405.0', '40278609.0'], 'EndTimes': [1562278976.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1054332, 21360], 'TotalUserCpuTimeHistory': [547, 0.0], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [7, 0.0]}, '3': {'Retries': 0, 'WallDurations': [8.0, 789.0], 'StartTimes': [1562278370.0], 'SubmitTimes': [1562278105.0], 'JobIds': ['40276403.0'], 'EndTimes': [1562279159.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [1042812], 'TotalUserCpuTimeHistory': [599], 'SiteHistory': ['Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [14]}, '2': {'Retries': 1, 'WallDurations': [9.0, 531.0, 9.0, 256.6659460067749], 'StartTimes': [1562278346.0, 1562281214.0], 'SubmitTimes': [1562278105.0, 1562280750.0], 'JobIds': ['40276402.0', '40278519.0'], 'EndTimes': [1562278877.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [1151480, 2780], 'TotalUserCpuTimeHistory': [466, 0.0], 'SiteHistory': ['Unknown', 'T2_US_UCSD', 'Unknown', 'T2_US_UCSD'], 'TotalSysCpuTimeHistory': [6, 0.0]}, '4': {'Retries': 0, 'WallDurations': [9.0, 2000.0], 'StartTimes': [1562278346.0], 'SubmitTimes': [1562278106.0], 'JobIds': ['40276404.0'], 'EndTimes': [1562280346.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'transferring', 'ResidentSetSize': [1149808], 'TotalUserCpuTimeHistory': [1694], 'SiteHistory': ['Unknown', 'T2_US_Vanderbilt'], 'TotalSysCpuTimeHistory': [25]}}
+INFO 2019-07-05 01:09:11,999: 	 Status on the scheduler:	SUBMITTED
+INFO 2019-07-05 01:09:11,999: 	 
+Jobs status:                    finished     		 25.0% (1/4)
+INFO 2019-07-05 01:09:11,999: 	 				running      		 50.0% (2/4)
+INFO 2019-07-05 01:09:11,999: 	 				transferring 		 25.0% (1/4)
+INFO 2019-07-05 01:09:11,999: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2019-07-05 01:09:11,999: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2019-07-05 01:09:12,000: 	 
+Summary of run jobs:
+ * Memory: 20MB min, 1122MB max, 1071MB ave
+ * Runtime: 0:04:16 min, 0:33:20 max, 0:23:14 ave
+ * CPU eff: 78% min, 86% max, 84% ave
+ * Waste: 0:00:17 (1% of total)
+
+INFO 2019-07-05 01:09:12,022: 	 Log file is /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul04/crab_Wgamma949SignalFinal_v2_Jul04/crab.log

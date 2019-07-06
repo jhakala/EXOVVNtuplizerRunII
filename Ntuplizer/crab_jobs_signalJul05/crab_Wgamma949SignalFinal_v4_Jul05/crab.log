@@ -1,0 +1,190 @@
+ process source filenames cms.Source("PoolSource",
+    fileNames = cms.untracked.vstring('/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/100000/B45E79A3-9432-E911-8FF5-AC1F6B0DE294.root', 
+        '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/4C1BB0B2-B12A-E911-BCA9-90B11C443C96.root', 
+        '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/282884EF-B22A-E911-861D-00259090829A.root', 
+        '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/8AA76743-B32A-E911-98E2-24BE05CEEC21.root')
+)
+
+*************************************** GLOBAL TAG *************************************************
+94X_mc2017_realistic_v17
+****************************************************************************************************
+jec unc file for ak8  JEC/Fall17_17Nov2017_V32_MC_Uncertainty_AK8PFPuppi.txt
+doing corrections to jets on th fly True, to met on the fly False
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Fatjet Collection:  slimmedJetsAK8
+PuppiJet Collection:  
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+LoadMVA_WPs_run2_2017: performed::::
+ak8GenJets, NjettinessGenAK8, genParticlesForJets, ak8GenJetsPruned, ak8GenJetsSoftDrop, ak8GenJetsPrunedMass, ak8GenJetsSoftDropMass, genJetsAK8, selectedGenJetsAK8, electronMVAVariableHelper, electronMVAValueMapProducer, egmGsfElectronIDs, electronRegressionValueMapProducer, heepIDVarValueMaps
+DEBUG 2019-07-06 00:14:10,455: 	 Executing command: 'submit'
+DEBUG 2019-07-06 00:14:10,456: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-07-06 00:14:10,522: 	 Checking credentials
+DEBUG 2019-07-06 00:14:10,522: 	 Proxy file /tmp/x509up_u93529 not found
+DEBUG 2019-07-06 00:14:10,522: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2019-07-06 00:14:25,560: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2019-07-06 00:14:26,266: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-06 00:14:26,973: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 86397
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-06 00:14:26,973: 	 Proxy lifetime 86398 secs is different from voms extension lifetime 86397 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-06 00:14:27,680: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u93529 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-06 00:14:27,680: 	 Proxy created.
+INFO 2019-07-06 00:14:27,682: 	 Will use CRAB configuration file crabconfigs/crab_Signal.py
+DEBUG 2019-07-06 00:14:27,683: 	 Loading CRAB configuration file.
+DEBUG 2019-07-06 00:14:30,127: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-07-06 00:14:30,306: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-06 00:14:30,306: 	 Checking credentials
+DEBUG 2019-07-06 00:14:30,306: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-07-06 00:14:30,306: 	 Getting proxy life time left
+DEBUG 2019-07-06 00:14:31,011: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 86394
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-06 00:14:31,717: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 86392
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-06 00:14:31,717: 	 Proxy lifetime 86394 secs is different from voms extension lifetime 86392 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-07-06 00:14:31,718: 	 Proxy valid for 23:59:52 hours
+DEBUG 2019-07-06 00:14:32,422: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u93529 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-06 00:14:32,614: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-07-06 00:14:32,723: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-06 00:14:32,724: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-07-06 00:14:32,724: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2019-07-06 00:14:32,928: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 593:37:08  (24.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-07-06 00:14:32,929: 	 Myproxy is valid: 2137028
+DEBUG 2019-07-06 00:14:32,929: 	 Command use: submit
+DEBUG 2019-07-06 00:14:32,929: 	 Options use: ['-c', 'crabconfigs/crab_Signal.py']
+DEBUG 2019-07-06 00:14:33,062: 	 CRABClient version: 3.3.1904
+DEBUG 2019-07-06 00:14:33,062: 	 Instance is prod
+DEBUG 2019-07-06 00:14:33,062: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-07-06 00:14:33,062: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-07-06 00:14:33,062: 	 Started submission
+DEBUG 2019-07-06 00:14:33,062: 	 Working on /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul05/crab_Wgamma949SignalFinal_v4_Jul05
+DEBUG 2019-07-06 00:14:33,249: 	 Loading required information from the environment
+DEBUG 2019-07-06 00:14:33,249: 	 Found CMSSW_9_4_9 for slc6_amd64_gcc630 with base /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9
+DEBUG 2019-07-06 00:14:33,249: 	 Loading required information from the environment
+DEBUG 2019-07-06 00:14:33,249: 	 Found CMSSW_9_4_9 for slc6_amd64_gcc630 with base /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9
+DEBUG 2019-07-06 00:14:33,267: 	 UNIQUE NAME: tarUUID 01526833-fbdc-4ec9-9714-f3c5b923efbe 
+DEBUG 2019-07-06 00:14:33,267: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'crab_jobs_signalJul05'
+config.General.requestName = 'Wgamma949SignalFinal_v4_Jul05'
+config.section_('JobType')
+config.JobType.psetName = 'config_generic.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.sendExternalFolder = True
+config.section_('Data')
+config.Data.inputDataset = '/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM'
+config.Data.outputDatasetTag = 'Wgamma949SignalFinal_v4_Jul05'
+config.Data.publication = False
+config.Data.unitsPerJob = 1
+config.Data.inputDBS = 'global'
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/xuyan/'
+config.section_('Site')
+config.Site.storageSite = 'T3_US_Brown'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2019-07-06 00:14:33,267: 	 self.config.JobType.psetName: config_generic.py
+INFO 2019-07-06 00:14:33,267: 	 Importing CMSSW configuration config_generic.py
+INFO 2019-07-06 00:14:34,639: 	 Finished importing CMSSW configuration config_generic.py
+DEBUG 2019-07-06 00:14:34,639: 	 Writing CMSSW configuration to /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul05/crab_Wgamma949SignalFinal_v4_Jul05/inputs/PSet.py
+DEBUG 2019-07-06 00:14:34,846: 	 The following EDM output files will be collected: []
+DEBUG 2019-07-06 00:14:34,846: 	 The following TFile output files will be collected: ['flatTuple.root']
+DEBUG 2019-07-06 00:14:34,846: 	 The following user output files will be collected: []
+DEBUG 2019-07-06 00:14:34,846: 	 Loading required information from the environment
+DEBUG 2019-07-06 00:14:34,846: 	 Found CMSSW_9_4_9 for slc6_amd64_gcc630 with base /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9
+DEBUG 2019-07-06 00:14:34,846: 	 Making tarball in /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul05/crab_Wgamma949SignalFinal_v4_Jul05/inputs/01526833-fbdc-4ec9-9714-f3c5b923efbedefault.tgz
+DEBUG 2019-07-06 00:14:34,865: 	 Checking directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/lib
+DEBUG 2019-07-06 00:14:34,865: 	 Adding directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/lib to tarball
+DEBUG 2019-07-06 00:14:39,784: 	 Checking directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/biglib
+DEBUG 2019-07-06 00:14:39,784: 	 Adding directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/biglib to tarball
+DEBUG 2019-07-06 00:14:39,785: 	 Checking directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/module
+DEBUG 2019-07-06 00:14:39,785: 	 Checking directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/external
+DEBUG 2019-07-06 00:14:39,786: 	 Adding directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/external to tarball
+DEBUG 2019-07-06 00:14:41,834: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/DQMOffline/Trigger/data to tarball
+DEBUG 2019-07-06 00:14:41,875: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/DQMOffline/Trigger/interface to tarball
+DEBUG 2019-07-06 00:14:42,081: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/PhysicsTools/NanoAOD/interface to tarball
+DEBUG 2019-07-06 00:14:42,116: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/PhysicsTools/PatAlgos/interface to tarball
+DEBUG 2019-07-06 00:14:42,230: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/PhysicsTools/SelectorUtils/interface to tarball
+DEBUG 2019-07-06 00:14:42,449: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/interface to tarball
+DEBUG 2019-07-06 00:14:42,644: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/data to tarball
+DEBUG 2019-07-06 00:15:27,040: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/EgammaTools/data to tarball
+DEBUG 2019-07-06 00:15:27,221: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/EgammaTools/interface to tarball
+DEBUG 2019-07-06 00:15:27,322: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/ElectronIdentification/data to tarball
+DEBUG 2019-07-06 00:15:34,184: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/ElectronIdentification/interface to tarball
+DEBUG 2019-07-06 00:15:34,271: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/PhotonIdentification/data to tarball
+DEBUG 2019-07-06 00:15:40,086: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/PhotonIdentification/interface to tarball
+DEBUG 2019-07-06 00:15:40,305: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoEgamma/EgammaElectronAlgos/interface to tarball
+DEBUG 2019-07-06 00:15:40,447: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoParticleFlow/PFProducer/data to tarball
+DEBUG 2019-07-06 00:15:40,450: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/RecoParticleFlow/PFProducer/interface to tarball
+DEBUG 2019-07-06 00:15:40,669: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/WGammaAnalyzer/Selection/data to tarball
+DEBUG 2019-07-06 00:15:40,776: 	 Adding data directory /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/WGammaAnalyzer/Utils/interface to tarball
+DEBUG 2019-07-06 00:15:41,858: 	 Uploading archive /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul05/crab_Wgamma949SignalFinal_v4_Jul05/inputs/01526833-fbdc-4ec9-9714-f3c5b923efbedefault.tgz (79 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2019-07-06 00:16:44,660: 	 Loading required information from the environment
+DEBUG 2019-07-06 00:16:44,660: 	 Found CMSSW_9_4_9 for slc6_amd64_gcc630 with base /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9
+DEBUG 2019-07-06 00:16:44,660: 	 Making tarball in /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul05/crab_Wgamma949SignalFinal_v4_Jul05/inputs/debugFiles.tgz
+DEBUG 2019-07-06 00:16:44,677: 	 Uploading archive /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul05/crab_Wgamma949SignalFinal_v4_Jul05/inputs/debugFiles.tgz (14 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2019-07-06 00:16:44,890: 	 Result uploading input files: ef00d957753a0c4e2738fd8b076ddb7db1e223b8f91daa0ce02a280a1b430233.tar.gz 
+INFO 2019-07-06 00:16:44,890: 	 Sending the request to the server
+DEBUG 2019-07-06 00:16:44,890: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T3_US_Brown', 'algoargs': 1, 'cachefilename': 'ef00d957753a0c4e2738fd8b076ddb7db1e223b8f91daa0ce02a280a1b430233.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_9_4_9', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/PythiaChargedResonance_WGToJJG_M1600_width5/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM', 'lfn': '/store/user/xuyan/', 'dryrun': 0, 'workflow': 'crab_Wgamma949SignalFinal_v4_Jul05', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 0, 'tfileoutfiles': ['flatTuple.root'], 'oneEventMode': 0, 'debugfilename': 'c7de73471890e4fbaa13380e83a77a844cb598502e2112b183826202ca0ab0a4.tar.gz', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc630', 'totalunits': 0, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'Wgamma949SignalFinal_v4_Jul05'} 
+DEBUG 2019-07-06 00:16:44,891: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T3_US_Brown&algoargs=1&cachefilename=ef00d957753a0c4e2738fd8b076ddb7db1e223b8f91daa0ce02a280a1b430233.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_9_4_9&primarydataset=&inputdata=%2FPythiaChargedResonance_WGToJJG_M1600_width5%2FRunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1%2FMINIAODSIM&lfn=%2Fstore%2Fuser%2Fxuyan%2F&dryrun=0&workflow=crab_Wgamma949SignalFinal_v4_Jul05&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=0&oneEventMode=0&debugfilename=c7de73471890e4fbaa13380e83a77a844cb598502e2112b183826202ca0ab0a4.tar.gz&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc630&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=Wgamma949SignalFinal_v4_Jul05&tfileoutfiles=flatTuple.root
+DEBUG 2019-07-06 00:16:45,151: 	 Result: {u'result': [{u'RequestName': u'190705_221645:xuyan_crab_Wgamma949SignalFinal_v4_Jul05'}]}
+INFO 2019-07-06 00:16:45,154: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2019-07-06 00:16:45,154: 	 Task name: 190705_221645:xuyan_crab_Wgamma949SignalFinal_v4_Jul05
+INFO 2019-07-06 00:16:45,154: 	 Project dir: crab_jobs_signalJul05/crab_Wgamma949SignalFinal_v4_Jul05
+INFO 2019-07-06 00:16:45,154: 	 Please use 'crab status -d crab_jobs_signalJul05/crab_Wgamma949SignalFinal_v4_Jul05' to check how the submission process proceeds.
+DEBUG 2019-07-06 00:16:45,155: 	 About to return
+INFO 2019-07-06 00:16:45,158: 	 Log file is /afs/cern.ch/work/x/xuyan/work5/DEV/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_signalJul05/crab_Wgamma949SignalFinal_v4_Jul05/crab.log

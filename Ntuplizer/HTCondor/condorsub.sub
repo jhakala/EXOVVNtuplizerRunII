@@ -1,6 +1,0 @@
-executable = batchjob.sh
-arguments             = $(ClusterId) $(ProcId)
-output                = hello.$(ClusterId).$(ProcId).out
-error                 = hello.$(ClusterId).$(ProcId).err
-log                   = hello.$(ClusterId).log
-queue
