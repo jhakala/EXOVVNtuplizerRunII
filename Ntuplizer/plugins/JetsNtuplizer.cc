@@ -458,7 +458,7 @@ void JetsNtuplizer::fillBranches( edm::Event const & event, const edm::EventSetu
   if (doAK8Jets_) {
     nBranches_->jetAK8_N = 0;
     int nsubjets   = 0;
-    std::cout<<">>>>>>>>>>>>>>>>>>>>>>>BEGIN<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
+    //std::cout<<">>>>>>>>>>>>>>>>>>>>>>>BEGIN<<<<<<<<<<<<<<<<<<<<<"<<std::endl;
      
     std::vector<float> vPuppiSoftDropSubjetpt     ;
     std::vector<float> vPuppiSoftDropSubjeteta    ;
@@ -908,8 +908,8 @@ void JetsNtuplizer::fillBranches( edm::Event const & event, const edm::EventSetu
 	  jecAK8Groomed_->setRho   ( nBranches_->rho          );
 	  jecAK8Groomed_->setNPV   ( vertices_->size()        );
 	  softdropcorr = jecAK8Groomed_->getCorrection();
-	  std::cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<std::endl;
-	  std::cout<<">>>>>>>>>>>>>>>>>>>"<<softdropcorr<<">>>>>>>>>>>>"<<fj.userFloat("ak8PFJetsPuppiSoftDropMass")<<std::endl;
+	  //std::cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<std::endl;
+	  //std::cout<<">>>>>>>>>>>>>>>>>>>"<<softdropcorr<<">>>>>>>>>>>>"<<fj.userFloat("ak8PFJetsPuppiSoftDropMass")<<std::endl;
 	  nBranches_->jetAK8_softdrop_massCorr.push_back(softdropcorr*fj.userFloat("ak8PFJetsPuppiSoftDropMass"));
 	  nBranches_->jetAK8_softdrop_jec.push_back(softdropcorr);
 

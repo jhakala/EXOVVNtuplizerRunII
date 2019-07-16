@@ -26,7 +26,7 @@ options.maxEvents = 30
 #data file
 
 
-#options.inputFiles = ('/store/data/Run2017B/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
+#options.inputFiles = ('/store/data/Run2017F/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
 
 options.inputFiles = ('/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/100000/B45E79A3-9432-E911-8FF5-AC1F6B0DE294.root',
 
@@ -91,7 +91,7 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 
 GT = ''
 if config["RUNONMC"]: GT = '94X_mc2017_realistic_v17'
-elif config["RUNONReReco"]: GT = '94X_dataRun2_ReReco_EOY17_v2'
+elif config["RUNONReReco"]: GT = '94X_dataRun2_v11'
 elif config["RUNONPromptReco"]: GT = '92X_dataRun2_2017Prompt_v11'
 
 print "*************************************** GLOBAL TAG *************************************************" 
@@ -776,16 +776,13 @@ if config["BUNCHSPACING"] == 25 and config["RUNONMC"] :
 elif config["BUNCHSPACING"] == 25 and not(config["RUNONMC"]):
 
    JEC_runDependent_suffix= ""
-   inRunF = False
-   if any("Run2017F" in s for s in  options.inputFiles):inRunF= True
-   print  "is this run in 2017F ? %s ! "  %(inRunF)
    if any("Run2017B" in s for s in  options.inputFiles): JEC_runDependent_suffix= "B"
    elif any("Run2017C" in s for s in  options.inputFiles): JEC_runDependent_suffix= "C"
-   elif any("Run2017D" in s for s in  options.inputFiles): JEC_runDependent_suffix= "D"
-   elif any("Run2017E" in s for s in  options.inputFiles): JEC_runDependent_suffix= "E"
+   elif any("Run2017D" in s for s in  options.inputFiles): JEC_runDependent_suffix= "DE"
+   elif any("Run2017E" in s for s in  options.inputFiles): JEC_runDependent_suffix= "DE"
    elif any("Run2017F" in s for s in  options.inputFiles): JEC_runDependent_suffix= "F"
   
-   JECprefix = "Fall17_17Nov2017"+JEC_runDependent_suffix+"_V6"
+   JECprefix = "Fall17_17Nov2017"+JEC_runDependent_suffix+"_V32"
    jecAK8chsUncFile = "JEC/%s_DATA_Uncertainty_AK8PFPuppi.txt"%(JECprefix)
    jecAK4chsUncFile = "JEC/%s_DATA_Uncertainty_AK4PFchs.txt"%(JECprefix)
    print "jec JEC_runDependent_suffix %s ,  prefix %s " %(JEC_runDependent_suffix,JECprefix)
