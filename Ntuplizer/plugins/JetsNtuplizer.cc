@@ -578,36 +578,6 @@ void JetsNtuplizer::fillBranches( edm::Event const & event, const edm::EventSetu
       nBranches_->jetAK8_chs_pruned_mass    .push_back(fj.userFloat("ak8PFJetsCHSValueMap:ak8PFJetsCHSPrunedMass"));
       nBranches_->jetAK8_chs_softdrop_mass  .push_back(fj.userFloat("ak8PFJetsCHSValueMap:ak8PFJetsCHSSoftDropMass"));
       
-      /*
-	TLorentzVector puppi_softdrop, puppi_softdrop_subjet;
-	auto const & sdSubjetsPuppi = fj.subjets("SoftDropPuppi");
-	for ( auto const & it : sdSubjetsPuppi ) {
-        puppi_softdrop_subjet.SetPtEtaPhiM(it->correctedP4(0).pt(),it->correctedP4(0).eta(),it->correctedP4(0).phi(),it->correctedP4(0).mass());
-        puppi_softdrop+=puppi_softdrop_subjet;
-	}
-      */
-
-      // nBranches_->jetAK8_puppi_softdrop_mass.push_back(puppi_softdrop.M());
-  
-      
-      // double puppi_softdropcorr = 1;
-      // if( doCorrOnTheFly_ ){
-      //   // Using puppi corrections for softdrop puppi jets. Approximation!
-      //   jecAK8Puppi_->setJetEta( puppi_softdrop.Eta()     );
-      //   jecAK8Puppi_->setJetPt ( puppi_softdrop.Pt()      );
-      //   jecAK8Puppi_->setJetE  ( puppi_softdrop.E()       );
-      //   jecAK8Puppi_->setJetA  ( fj.jetArea() );
-      //   jecAK8Puppi_->setRho   ( nBranches_->rho          );
-      //   jecAK8Puppi_->setNPV   ( vertices_->size()        );
-      //   puppi_softdropcorr = jecAK8Puppi_->getCorrection();
-      // 	// nBranches_->jetAK8_softdrop_massCorr.push_back(puppi_softdropcorr*fj.userFloat("ak8PFJetsPuppiSoftDropMass"));
-      //   //nBranches_->jetAK8_softdrop_jec.push_back(puppi_softdropcorr);
-      // }
-      // else{
-      //   //nBranches_->jetAK8_softdrop_massCorr.push_back(-99);
-      // 	// nBranches_->jetAK8_softdrop_jec.push_back(-99);
-      // }
-      
       vPuppiSoftDropSubjetpt.clear();
       vPuppiSoftDropSubjeteta.clear();
       vPuppiSoftDropSubjetmass.clear();
@@ -648,45 +618,6 @@ void JetsNtuplizer::fillBranches( edm::Event const & event, const edm::EventSetu
 
       } 
        
-       
-      //
-      // // Color connection between the two subjets
-      // float s_pull1(0.), s_pull2(0.);
-      // reco::Candidate::LorentzVector Axis1, Axis2;
-      // TVector2 t1(0, 0), t2(0, 0);
-      // if(wSubjets.size()>=2) {
-      //   for(auto daughter : wSubjets.at(0)->getJetConstituentsQuick()) {
-      //     if(daughter->charge()!=0) Axis1 += daughter->p4();
-      //   }
-      //   for(auto daughter : wSubjets.at(1)->getJetConstituentsQuick()) {
-      //     if(daughter->charge()!=0) Axis2 += daughter->p4();
-      //   }
-      //   for(auto daughter : wSubjets.at(0)->getJetConstituentsQuick()) {
-      //     if(daughter->charge() !=0) {
-      //       TVector2 r(daughter->rapidity()-Axis1.Rapidity(), deltaPhi(daughter->phi(), Axis1.Phi()));
-      //       t1 += ( daughter->pt() * r.Mod() / Axis1.pt() ) * r;
-      //     }
-      //   }
-      //   for(auto daughter : wSubjets.at(1)->getJetConstituentsQuick()) {
-      //     if(daughter->charge() !=0) {
-      //       TVector2 r(daughter->rapidity()-Axis2.Rapidity(), deltaPhi(daughter->phi(), Axis2.Phi()));
-      //       t2 += ( daughter->pt() * r.Mod() / Axis2.pt() ) * r;
-      //     }
-      //   }
-      //   // Axis12: Jet1->Jet2
-      //   TVector2 Axis12( Axis2.Rapidity()-Axis1.Rapidity(), deltaPhi(Axis2.Phi(), Axis1.Phi()) );
-      //   if(t1.Mod()>0.) s_pull1 = t1.DeltaPhi( Axis12 );
-      //   if(t2.Mod()>0.) s_pull2 = t2.DeltaPhi(-1*Axis12);
-      //
-      //   // Background
-      //   // Beams
-      //   //TVector2 Beam1( Axis1.Rapidity()>Axis2.Rapidity() ? +1. : -1 , 0.);
-      //   //TVector2 Beam2( -1*Beam1 );
-      //   //if(t1.Mod()>0.) b_pull1 = t1.DeltaPhi( Beam1 );
-      //   //if(t2.Mod()>0.) b_pull2 = t2.DeltaPhi( Beam2 );
-      // }
-      //
-
       nBranches_->jetAK8_subjet_puppi_softdrop_N.push_back(nsubjets);
       nBranches_->jetAK8_subjet_puppi_softdrop_pt.push_back(vPuppiSoftDropSubjetpt);
       nBranches_->jetAK8_subjet_puppi_softdrop_eta.push_back(vPuppiSoftDropSubjeteta);
@@ -908,8 +839,6 @@ void JetsNtuplizer::fillBranches( edm::Event const & event, const edm::EventSetu
 	  jecAK8Groomed_->setRho   ( nBranches_->rho          );
 	  jecAK8Groomed_->setNPV   ( vertices_->size()        );
 	  softdropcorr = jecAK8Groomed_->getCorrection();
-	  //std::cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<std::endl;
-	  //std::cout<<">>>>>>>>>>>>>>>>>>>"<<softdropcorr<<">>>>>>>>>>>>"<<fj.userFloat("ak8PFJetsPuppiSoftDropMass")<<std::endl;
 	  nBranches_->jetAK8_softdrop_massCorr.push_back(softdropcorr*fj.userFloat("ak8PFJetsPuppiSoftDropMass"));
 	  nBranches_->jetAK8_softdrop_jec.push_back(softdropcorr);
 
