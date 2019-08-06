@@ -1,0 +1,122 @@
+DEBUG 2019-08-05 23:49:53,250: 	 Executing command: 'submit'
+DEBUG 2019-08-05 23:49:53,250: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2019-08-05 23:49:53,260: 	 Checking credentials
+DEBUG 2019-08-05 23:49:53,262: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-08-05 23:49:53,262: 	 Getting proxy life time left
+DEBUG 2019-08-05 23:49:54,268: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 604790
+
+ error: 
+ retcode : 0
+DEBUG 2019-08-05 23:49:54,978: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 604790
+
+ error: 
+ retcode : 0
+DEBUG 2019-08-05 23:49:54,978: 	 Proxy valid for 167:59:50 hours
+INFO 2019-08-05 23:49:54,978: 	 Will use CRAB configuration file crab_MC2017GJets_HT-100To200.py
+DEBUG 2019-08-05 23:49:54,978: 	 Loading CRAB configuration file.
+DEBUG 2019-08-05 23:49:57,639: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2019-08-05 23:49:57,765: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-08-05 23:49:57,766: 	 Checking credentials
+DEBUG 2019-08-05 23:49:57,766: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2019-08-05 23:49:57,766: 	 Getting proxy life time left
+DEBUG 2019-08-05 23:49:58,773: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 604786
+
+ error: 
+ retcode : 0
+DEBUG 2019-08-05 23:49:59,481: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 604785
+
+ error: 
+ retcode : 0
+DEBUG 2019-08-05 23:49:59,481: 	 Proxy lifetime 604786 secs is different from voms extension lifetime 604785 secs for proxy: /tmp/x509up_u93529
+DEBUG 2019-08-05 23:49:59,481: 	 Proxy valid for 167:59:45 hours
+DEBUG 2019-08-05 23:50:00,187: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u93529 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2019-08-05 23:50:00,286: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2019-08-05 23:50:00,397: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2019-08-05 23:50:00,397: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2019-08-05 23:50:00,397: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2019-08-05 23:50:00,602: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 638:13:20  (26.6 days)
+
+ error: 
+ retcode : 0
+DEBUG 2019-08-05 23:50:00,604: 	 Myproxy is valid: 2297600
+DEBUG 2019-08-05 23:50:00,604: 	 Command use: submit
+DEBUG 2019-08-05 23:50:00,604: 	 Options use: ['-c', 'crab_MC2017GJets_HT-100To200.py']
+DEBUG 2019-08-05 23:50:00,745: 	 CRABClient version: 3.3.1904
+DEBUG 2019-08-05 23:50:00,745: 	 Instance is prod
+DEBUG 2019-08-05 23:50:00,745: 	 Server base url is cmsweb.cern.ch
+DEBUG 2019-08-05 23:50:00,745: 	 Command url /crabserver/prod/workflow
+DEBUG 2019-08-05 23:50:00,745: 	 Started submission
+DEBUG 2019-08-05 23:50:00,745: 	 Working on /afs/cern.ch/work/x/xuyan/work5/PROD/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crabconfigs/crab_jobs_WgammaMC_2017_Aug02/crab_Wgamma949_GJets_HT-100To200_Aug02
+DEBUG 2019-08-05 23:50:00,972: 	 Loading required information from the environment
+DEBUG 2019-08-05 23:50:00,973: 	 Found CMSSW_9_4_9 for slc6_amd64_gcc630 with base /afs/cern.ch/work/x/xuyan/work5/PROD/CMSSW_9_4_9
+DEBUG 2019-08-05 23:50:00,973: 	 Loading required information from the environment
+DEBUG 2019-08-05 23:50:00,973: 	 Found CMSSW_9_4_9 for slc6_amd64_gcc630 with base /afs/cern.ch/work/x/xuyan/work5/PROD/CMSSW_9_4_9
+DEBUG 2019-08-05 23:50:00,996: 	 UNIQUE NAME: tarUUID 6200e0ab-001f-4ea7-a020-a713c1376c90 
+DEBUG 2019-08-05 23:50:00,997: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.transferOutputs = True
+config.General.workArea = 'crab_jobs_WgammaMC_2017_Aug02'
+config.General.requestName = 'Wgamma949_GJets_HT-100To200_Aug02'
+config.section_('JobType')
+config.JobType.psetName = 'config_generic.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.sendExternalFolder = True
+config.section_('Data')
+config.Data.inputDataset = '/GJets_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIIFall17MiniAODv2-PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/MINIAODSIM'
+config.Data.outputDatasetTag = 'Wgamma949_GJets_HT-100To200_Aug02'
+config.Data.publication = False
+config.Data.unitsPerJob = 2
+config.Data.inputDBS = 'global'
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/xuyan/'
+config.section_('Site')
+config.Site.storageSite = 'T3_US_Brown'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2019-08-05 23:50:00,997: 	 self.config.JobType.psetName: config_generic.py
+ERROR 2019-08-05 23:50:00,998: 	 Cannot find CMSSW configuration file config_generic.py in /afs/cern.ch/work/x/xuyan/work5/PROD/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crabconfigs
+ERROR 2019-08-05 23:50:00,998: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/bin/crab", line 161, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/bin/crab", line 148, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 102, in __call__
+    dummy_inputfiles, jobconfig = plugjobtype.run(filecacheurl)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/JobType/Analysis.py", line 86, in run
+    userConfig=self.config.JobType.psetName)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1904/lib/python2.7/site-packages/CRABClient/JobType/CMSSWConfig.py", line 40, in __init__
+    raise ConfigurationException(msg)
+ConfigurationException: Cannot find CMSSW configuration file config_generic.py in /afs/cern.ch/work/x/xuyan/work5/PROD/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crabconfigs

@@ -127,6 +127,8 @@ void PhotonsNtuplizer::fillBranches( edm::Event const & event, const edm::EventS
     nBranches_->ph_passTightId.push_back ( (int)isPassTight );
     nBranches_->ph_mvaValue.push_back( (*mvaValues)[pho]);
     nBranches_->ph_mvaCategory.push_back( (*mvaCategories)[pho]);
+    //std::cout<<(*mvaValues)[pho]<<" "<<pho->userFloat("PhotonMVAEstimatorRunIIFall17v1Values")<<std::endl;
+    //std::cout<<(*mvaValues)[pho]<<" "<<pho->userFloat("PhotonMVAEstimatorRunIIFall17v2Values")<<std::endl;
 
 
     ++npho;
