@@ -91,7 +91,7 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 
 GT = ''
 if config["RUNONMC"]: GT = '94X_mc2017_realistic_v17'
-elif config["RUNONReReco"]: GT = '94X_dataRun2_v6'
+elif config["RUNONReReco"]: GT = '94X_dataRun2_v11'
 elif config["RUNONPromptReco"]: GT = '92X_dataRun2_2017Prompt_v11'
 
 print "*************************************** GLOBAL TAG *************************************************" 
@@ -668,8 +668,8 @@ for idmod in my_id_modules:
 switchOnVIDPhotonIdProducer(process,dataFormat)
 process.egmPhotonIDSequence = cms.Sequence(process.egmPhotonIDSequence)
 
-my_id_modules_ph = ['RecoEgamma.PhotonIdentification.Identification.mvaPhotonID_Fall17_94X_V1_cff'  ,
-                    'RecoEgamma.PhotonIdentification.Identification.cutBasedPhotonID_Fall17_94X_V1_TrueVtx_cff']
+my_id_modules_ph = ['RecoEgamma.PhotonIdentification.Identification.mvaPhotonID_Fall17_94X_V2_cff',
+                    'RecoEgamma.PhotonIdentification.Identification.cutBasedPhotonID_Fall17_94X_V2_cff']
 
 for idmod in my_id_modules_ph:
     setupAllVIDIdsInModule(process,idmod,setupVIDPhotonSelection,task=pattask)
@@ -746,7 +746,8 @@ if config["DOAK8PRUNEDRECLUSTERING"]:
 if config["DOAK10TRIMMEDRECLUSTERING"]:  
   jetsAK10trimmed = "patJetsAk10CHSJetsTrimmed"
 if reclusterPuppi:  
-  jetsAK8Puppi = "packedJetsAk8PuppiJets"  
+  #jetsAK8Puppi = "packedJetsAk8PuppiJets"
+  jetsAK8Puppi = "slimmedJetsAK8"  
 
 if config["DOTAUSBOOSTED"]:
 #  TAUS = "slimmedTaus"
@@ -769,7 +770,8 @@ jecLevelsForMET = []
 if config["BUNCHSPACING"] == 25 and config["RUNONMC"] :
    JECprefix = "Fall17_17Nov2017_V32"
    jecAK8chsUncFile = "JEC/%s_MC_Uncertainty_AK8PFPuppi.txt"%(JECprefix)
-   jecAK4chsUncFile = "JEC/%s_MC_Uncertainty_AK4PFchs.txt"%(JECprefix)
+   #jecAK4chsUncFile = "JEC/%s_MC_Uncertainty_AK4PFchs.txt"%(JECprefix)
+   jecAK4chsUncFile = "JEC/%s_MC_Uncertainty_AK4PFPuppi.txt"%(JECprefix)
 
 
 
@@ -784,7 +786,8 @@ elif config["BUNCHSPACING"] == 25 and not(config["RUNONMC"]):
   
    JECprefix = "Fall17_17Nov2017"+JEC_runDependent_suffix+"_V32"
    jecAK8chsUncFile = "JEC/%s_DATA_Uncertainty_AK8PFPuppi.txt"%(JECprefix)
-   jecAK4chsUncFile = "JEC/%s_DATA_Uncertainty_AK4PFchs.txt"%(JECprefix)
+   #jecAK4chsUncFile = "JEC/%s_DATA_Uncertainty_AK4PFchs.txt"%(JECprefix)
+   jecAK4chsUncFile = "JEC/%s_DATA_Uncertainty_AK4PFPuppi.txt"%(JECprefix)
    print "jec JEC_runDependent_suffix %s ,  prefix %s " %(JEC_runDependent_suffix,JECprefix)
 
 print "jec unc file for ak8 ", jecAK8chsUncFile
@@ -805,9 +808,9 @@ if config["CORRJETSONTHEFLY"]:
      	 'JEC/%s_MC_L3Absolute_AK8PFPuppi.txt'%(JECprefix)
        ]
      jecLevelsAK4chs = [
-     	 'JEC/%s_MC_L1FastJet_AK4PFchs.txt'%(JECprefix),
-     	 'JEC/%s_MC_L2Relative_AK4PFchs.txt'%(JECprefix),
-     	 'JEC/%s_MC_L3Absolute_AK4PFchs.txt'%(JECprefix)
+     	 #'JEC/%s_MC_L1FastJet_AK4PFPuppi.txt'%(JECprefix),
+     	 'JEC/%s_MC_L2Relative_AK4PFPuppi.txt'%(JECprefix),
+     	 'JEC/%s_MC_L3Absolute_AK4PFPuppi.txt'%(JECprefix)
        ]
    else:
      jecLevelsAK8chs = [
@@ -827,10 +830,10 @@ if config["CORRJETSONTHEFLY"]:
          'JEC/%s_DATA_L2L3Residual_AK8PFPuppi.txt'%(JECprefix)
        ]
      jecLevelsAK4chs = [
-     	 'JEC/%s_DATA_L1FastJet_AK4PFchs.txt'%(JECprefix),
-     	 'JEC/%s_DATA_L2Relative_AK4PFchs.txt'%(JECprefix),
-     	 'JEC/%s_DATA_L3Absolute_AK4PFchs.txt'%(JECprefix),
-         'JEC/%s_DATA_L2L3Residual_AK4PFchs.txt'%(JECprefix)
+     	 'JEC/%s_DATA_L1FastJet_AK4PFPuppi.txt'%(JECprefix),
+     	 'JEC/%s_DATA_L2Relative_AK4PFPuppi.txt'%(JECprefix),
+     	 'JEC/%s_DATA_L3Absolute_AK4PFPuppi.txt'%(JECprefix),
+         'JEC/%s_DATA_L2L3Residual_AK4PFPuppi.txt'%(JECprefix)
        ]   
 if config["CORRMETONTHEFLY"]:  
    if config["RUNONMC"]:
@@ -904,11 +907,11 @@ process.ntuplizer = cms.EDAnalyzer("Ntuplizer",
     muons = cms.InputTag("slimmedMuons"),
     photons = cms.InputTag("slimmedPhotons"),
     phoIdVerbose = cms.bool(False),
-    phoLooseIdMap  = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-loose"),
-    phoMediumIdMap = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-medium"),
-    phoTightIdMap  = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V1-tight"),
-    phoMvaValuesMap = cms.InputTag("photonMVAValueMapProducer:PhotonMVAEstimatorRunIIFall17v1Values"),
-    phoMvaCategoriesMap = cms.InputTag("photonMVAValueMapProducer:PhotonMVAEstimatorRunIIFall17v1Categories"),
+    phoLooseIdMap  = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-loose"),
+    phoMediumIdMap = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-medium"),
+    phoTightIdMap  = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-tight"),
+    phoMvaValuesMap = cms.InputTag("photonMVAValueMapProducer:PhotonMVAEstimatorRunIIFall17v2Values"),
+    phoMvaCategoriesMap = cms.InputTag("photonMVAValueMapProducer:PhotonMVAEstimatorRunIIFall17v2Categories"),
     electrons = cms.InputTag("slimmedElectrons"),
     ebRecHits = cms.InputTag("reducedEgamma","reducedEBRecHits"),
 

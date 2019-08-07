@@ -70,26 +70,24 @@ void PhotonsNtuplizer::fillBranches( edm::Event const & event, const edm::EventS
   event.getByToken(photonMvaValuesMapToken_         , mvaValues              );
   event.getByToken(photonMvaCategoriesMapToken_     , mvaCategories          );
 
-  /*   Vertex stuff -- need this?
+  /*
   // Find the first vertex in the collection that passes good quality criteria
-  // reco::VertexCollection::const_iterator firstGoodVertex = vertices_->end();
-  //reco::VertexCollection::const_iterator firstGoodVertex = vertices_->begin();
-  //int firstGoodVertexIdx = 0;
-  //for( reco::VertexCollection::const_iterator vtx = vertices_->begin(); vtx != vertices_->end(); ++vtx, ++firstGoodVertexIdx){
-  //  bool isFake = (vtx->chi2()==0 && vtx->ndof()==0);
-  //  // Check the goodness
-  //  if( !isFake && vtx->ndof()>=4. && vtx->position().Rho()<=2.0 && fabs(vtx->position().Z())<=24.0) {
-  //    firstGoodVertex = vtx;
-  //    break;
-  //  }
-  //
-  //}
+  int firstGoodVertexIdx = 0;
+  for( reco::VertexCollection::const_iterator vtx = vertices_->begin(); vtx != vertices_->end(); ++vtx, ++firstGoodVertexIdx){
+    bool isFake = (vtx->chi2()==0 && vtx->ndof()==0);
+    // Check the goodness
+    if( !isFake && vtx->ndof()>=4. && vtx->position().Rho()<=2.0 && fabs(vtx->position().Z())<=24.0) {
+      firstGoodVertex = vtx;
+      break;
+    }
+  }
   */
+  
   int npho = 0;
 
   for (size_t i=0; i < photons->size(); ++i) {
     const auto pho=photons->ptrAt(i);
-    if (pho->pt() < 15 ) continue;
+    if (pho->pt() < 15) continue;
     nBranches_->ph_pdgId               .push_back(pho->pdgId());
     nBranches_->ph_charge              .push_back(pho->charge());
     nBranches_->ph_e                   .push_back(pho->energy());
