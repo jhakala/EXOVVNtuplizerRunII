@@ -30,7 +30,7 @@ scram b -j 16
 git push "remote name" "remote branch name"
 ```
 
-PS: To clone code directly: git clone -b 94XWgam_dev https://github.com/xuliyan/VgammaTuplizer.git
+PS: To clone code directly: git clone -b 94XWgam_prod17 https://github.com/xuliyan/VgammaTuplizer.git
 
 ### update Egamma MVAID. HEEP are included by default in 94X
 (https://twiki.cern.ch/twiki/bin/view/CMS/MultivariatePhotonIdentificationRun2#MVA_Recipe_for_regular_users_for) and
