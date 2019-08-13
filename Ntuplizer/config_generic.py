@@ -21,20 +21,14 @@ import FWCore.ParameterSet.VarParsing as VarParsing
 
 options = VarParsing.VarParsing ('analysis')
 
-options.maxEvents = 30
+options.maxEvents = -1
 
 #data file
 
 
-options.inputFiles = ('/store/data/Run2017D/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
+#options.inputFiles = ('/store/data/Run2017D/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
 
-#options.inputFiles = ('/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/100000/B45E79A3-9432-E911-8FF5-AC1F6B0DE294.root',
-
-#                      '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/4C1BB0B2-B12A-E911-BCA9-90B11C443C96.root',
-
-#                      '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/282884EF-B22A-E911-861D-00259090829A.root',
-
-#                      '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/8AA76743-B32A-E911-98E2-24BE05CEEC21.root')
+options.inputFiles = ('/store/mc/RunIIFall17MiniAODv2/GJets_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/90000/E0325781-1344-E811-B1D5-0025904C6788.root')
 
                      
 options.parseArguments()
@@ -90,8 +84,8 @@ process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_condD
 from Configuration.AlCa.GlobalTag import GlobalTag
 
 GT = ''
-if config["RUNONMC"]: GT = '94X_mc2017_realistic_v17'
-elif config["RUNONReReco"]: GT = '94X_dataRun2_v11'
+if config["RUNONMC"]: GT = '94X_mc2017_realistic_v14'
+elif config["RUNONReReco"]: GT = '94X_dataRun2_v6'
 elif config["RUNONPromptReco"]: GT = '92X_dataRun2_2017Prompt_v11'
 
 print "*************************************** GLOBAL TAG *************************************************" 
