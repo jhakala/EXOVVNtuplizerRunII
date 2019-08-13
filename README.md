@@ -23,7 +23,7 @@ git clone https://github.com/"your github user name"/VgammaTuplizer.git
 cd VgammaTuplizer
 git remote add 94XWgam https://github.com/"your github user name"/VgammaTuplizer
 git fetch 94XWgam
-git checkout -b "your new branch name" 94XWgam/94X_ntuplizer
+git checkout -b "your new branch name" 949Wgam/94X_ntuplizer
 cd $CMSSW_BASE/src
 scram b -j 16
 3. push code: use ssh, follow instructions on google
