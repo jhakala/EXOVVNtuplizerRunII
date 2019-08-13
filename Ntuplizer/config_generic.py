@@ -26,9 +26,9 @@ options.maxEvents = -1
 #data file
 
 
-#options.inputFiles = ('/store/data/Run2017D/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
+options.inputFiles = ('/store/data/Run2017B/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
 
-options.inputFiles = ('/store/mc/RunIIFall17MiniAODv2/GJets_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/90000/E0325781-1344-E811-B1D5-0025904C6788.root')
+#options.inputFiles = ('/store/mc/RunIIFall17MiniAODv2/GJets_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/90000/E0325781-1344-E811-B1D5-0025904C6788.root')
 
                      
 options.parseArguments()
