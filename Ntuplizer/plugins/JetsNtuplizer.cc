@@ -146,7 +146,7 @@ bool JetsNtuplizer::tightJetIDWithoutLepVeto( const pat::Jet& j ) {
 //===================================================================================================================
 bool JetsNtuplizer::tightJetID( const pat::Jet& j ) {
 
-  // Change to 13 TeV definition on Jun24 2019
+  // Change to 13 TeV definition on Aug14 2019
   // For PUPPI jets
   // https://twiki.cern.ch/twiki/bin/view/CMS/JetID13TeVRun2017
 
@@ -154,14 +154,18 @@ bool JetsNtuplizer::tightJetID( const pat::Jet& j ) {
   double chf = j.chargedHadronEnergyFraction();
   double nhf = j.neutralHadronEnergyFraction(); // + j.HFHadronEnergyFraction();
   double nemf = j.neutralEmEnergyFraction();
-  //double cemf = j.chargedEmEnergyFraction();
+  double cemf = j.chargedEmEnergyFraction();
+  double muef = j.muonEnergyFraction();
   int chMult = j.chargedMultiplicity();
   int neMult = j.neutralMultiplicity();
   int npr    = chMult + neMult;
   int NumConst = npr;
 
   if(abs(eta) <= 2.7){
-    return (nhf<0.90 && nemf<0.90 && NumConst>1) && ((abs(eta)<=2.4 && chf>0 && chMult>0) || abs(eta)>2.4);
+    if(abs(eta) <= 2.4)  
+      return (nhf<0.90 && nemf<0.90 && NumConst>1 && muef < 0.80 && chf>0 && chMult>0 && cemf < 0.80);
+    else
+      return (nhf<0.90 && nemf<0.90 && NumConst>1 && muef < 0.80);
   }
   else if(abs(eta) <= 3.0){
     return (nhf<0.99);
