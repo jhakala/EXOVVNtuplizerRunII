@@ -59,20 +59,20 @@ public:
   std::vector<float>              genParticle_phi      ;
   std::vector<float>              genParticle_mass     ;
   std::vector<int  >              genParticle_pdgId    ;
-  std::vector<int  >              genParticle_isPrompt ;
-  std::vector<int  >              genParticle_isDirectPromptTauDecayProduct;
-  std::vector<int  >              genParticle_fromHardProcessFinalState;
-  std::vector<int  >              genParticle_isDirectHardProcessTauDecayProductFinalState;
   std::vector<int  >              genParticle_status   ;
   std::vector<int  >              genParticle_nDau     ;
   std::vector<int  >              genParticle_nMoth    ;
-  std::vector<std::vector<int> >  genParticle_mother   ; 
+  std::vector<std::vector<int> >  genParticle_mother   ;
+  std::vector<std::vector<float> >  genParticle_mother_pt   ;
+  std::vector<std::vector<float> >  genParticle_mother_eta   ;
+  std::vector<std::vector<float> >  genParticle_mother_phi   ;
+  std::vector<std::vector<float> >  genParticle_mother_e   ; 
   std::vector<std::vector<int> >  genParticle_dau      ;
-  std::vector<float >  genParticle_tauvispt      ;
-  std::vector<float >  genParticle_tauviseta      ;
-  std::vector<float >  genParticle_tauvisphi      ;
-  std::vector<float >  genParticle_tauvismass      ;
-  std::vector<int >    genParticle_taudecay      ;
+  std::vector<std::vector<float> >  genParticle_dau_pt      ;
+  std::vector<std::vector<float> >  genParticle_dau_eta      ;
+  std::vector<std::vector<float> >  genParticle_dau_phi      ;
+  std::vector<std::vector<float> >  genParticle_dau_e      ;
+
 
   /** generator info */
   float                           lheV_pt              ;

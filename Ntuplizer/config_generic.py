@@ -26,11 +26,12 @@ options.maxEvents = -1
 #data file
 
 
-#options.inputFiles = ('/store/data/Run2017B/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
+#options.inputFiles = ('/store/data/Run2017F/SinglePhoton/MINIAOD/31Mar2018-v1/80000/24EE7C33-1039-E811-98A4-1CB72C1B6C32.root')
 
-options.inputFiles = ('/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M4000_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/270000/96926530-714E-E911-947C-38EAA78D89C4.root',
-                      '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M4000_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/270000/76AE8BAA-704E-E911-986B-801844E55F38.root',
-                      '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M4000_width5/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/270000/0E5A1A0A-714E-E911-BFBE-3417EBE649DE.root')
+options.inputFiles = ('/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width0p01/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/F45C3149-EC2A-E911-A9E2-AC1F6B1AF080.root',
+                      '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width0p01/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/BC7FCCAE-EC2A-E911-B97B-EC0D9A8222F6.root',
+                      '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width0p01/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/10000/9A288452-EC2A-E911-AC9C-509A4C844AF8.root',
+                      '/store/mc/RunIIFall17MiniAODv2/PythiaChargedResonance_WGToJJG_M1600_width0p01/MINIAODSIM/PU2017_12Apr2018_94X_mc2017_realistic_v14-v1/100000/3E565040-A031-E911-835D-A4BF011258A0.root')
 
                      
 options.parseArguments()
