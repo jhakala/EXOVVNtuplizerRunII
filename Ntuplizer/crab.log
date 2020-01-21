@@ -357,3 +357,752 @@ Traceback (most recent call last):
   File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1909/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 49, in loadConfig
     raise ConfigurationException("CRAB configuration file %s not found." % (configname))
 ConfigurationException: CRAB configuration file crab_jobs_WgammaMC_2017_Aug20/crab_Wgamma949_GJets_HT-100To200_Aug20/ not found.
+DEBUG 2020-01-10 20:18:27.701 UTC: 	 Running on: Linux lxplus771.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-01-10 20:18:27.717 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-01-10 20:18:27.717 UTC: 	 Executing command: 'submit'
+DEBUG 2020-01-10 20:18:27.717 UTC: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2020-01-10 20:18:27.725 UTC: 	 Checking credentials
+DEBUG 2020-01-10 20:18:27.725 UTC: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2020-01-10 20:18:27.725 UTC: 	 Getting proxy life time left
+DEBUG 2020-01-10 20:18:28.530 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 85836
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 20:18:29.136 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 85834
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 20:18:29.136 UTC: 	 Proxy lifetime 85836 secs is different from voms extension lifetime 85834 secs for proxy: /tmp/x509up_u93529
+DEBUG 2020-01-10 20:18:29.136 UTC: 	 Proxy valid for 23:50:34 hours
+INFO 2020-01-10 20:18:29.137 UTC: 	 Will use CRAB configuration file crabconfigs/crab_MC2017QCD_HT300to500.py
+DEBUG 2020-01-10 20:18:29.137 UTC: 	 Loading CRAB configuration file.
+DEBUG 2020-01-10 20:18:31.488 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2020-01-10 20:18:31.488 UTC: 	 Working area '/afs/cern.ch/work/x/xuyan/work5/PROD17/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_WgammaMC_2017_Jan10/crab_Wgamma949_QCD_HT300to500_Jan10' already exists 
+Please change the requestName in the config file
+ERROR 2020-01-10 20:18:31.488 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 324, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 418, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/work/x/xuyan/work5/PROD17/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_WgammaMC_2017_Jan10/crab_Wgamma949_QCD_HT300to500_Jan10' already exists 
+Please change the requestName in the config file
+DEBUG 2020-01-10 20:18:31.899 UTC: 	 Running on: Linux lxplus771.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-01-10 20:18:31.914 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-01-10 20:18:31.914 UTC: 	 Executing command: 'submit'
+DEBUG 2020-01-10 20:18:31.914 UTC: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2020-01-10 20:18:31.920 UTC: 	 Checking credentials
+DEBUG 2020-01-10 20:18:31.921 UTC: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2020-01-10 20:18:31.921 UTC: 	 Getting proxy life time left
+DEBUG 2020-01-10 20:18:32.525 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 85832
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 20:18:33.131 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 85830
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 20:18:33.131 UTC: 	 Proxy lifetime 85832 secs is different from voms extension lifetime 85830 secs for proxy: /tmp/x509up_u93529
+DEBUG 2020-01-10 20:18:33.131 UTC: 	 Proxy valid for 23:50:30 hours
+INFO 2020-01-10 20:18:33.132 UTC: 	 Will use CRAB configuration file crabconfigs/crab_MC2017QCD_HT500to700.py
+DEBUG 2020-01-10 20:18:33.132 UTC: 	 Loading CRAB configuration file.
+DEBUG 2020-01-10 20:18:35.495 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2020-01-10 20:18:35.495 UTC: 	 Working area '/afs/cern.ch/work/x/xuyan/work5/PROD17/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_WgammaMC_2017_Jan10/crab_Wgamma949_QCD_HT500to700_Jan10' already exists 
+Please change the requestName in the config file
+ERROR 2020-01-10 20:18:35.495 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 324, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 418, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/work/x/xuyan/work5/PROD17/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_WgammaMC_2017_Jan10/crab_Wgamma949_QCD_HT500to700_Jan10' already exists 
+Please change the requestName in the config file
+DEBUG 2020-01-10 20:18:35.866 UTC: 	 Running on: Linux lxplus771.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-01-10 20:18:35.878 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-01-10 20:18:35.879 UTC: 	 Executing command: 'submit'
+DEBUG 2020-01-10 20:18:35.879 UTC: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2020-01-10 20:18:35.884 UTC: 	 Checking credentials
+DEBUG 2020-01-10 20:18:35.884 UTC: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2020-01-10 20:18:35.885 UTC: 	 Getting proxy life time left
+DEBUG 2020-01-10 20:18:36.589 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 85828
+
+ error: 
+ retcode : 0
+ERROR 2020-01-10 20:18:36.684 UTC: 	 Keyboard Interrupted
+DEBUG 2020-01-10 20:18:38.092 UTC: 	 Running on: Linux lxplus771.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-01-10 20:18:38.107 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-01-10 20:18:38.108 UTC: 	 Executing command: 'submit'
+DEBUG 2020-01-10 20:18:38.108 UTC: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2020-01-10 20:18:38.116 UTC: 	 Checking credentials
+DEBUG 2020-01-10 20:18:38.116 UTC: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2020-01-10 20:18:38.116 UTC: 	 Getting proxy life time left
+ERROR 2020-01-10 20:18:38.187 UTC: 	 Keyboard Interrupted
+DEBUG 2020-01-10 22:33:16.312 UTC: 	 Running on: Linux lxplus786.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-01-10 22:33:16.328 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-01-10 22:33:16.328 UTC: 	 Executing command: 'submit'
+DEBUG 2020-01-10 22:33:16.328 UTC: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2020-01-10 22:33:16.335 UTC: 	 Checking credentials
+DEBUG 2020-01-10 22:33:16.336 UTC: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2020-01-10 22:33:16.336 UTC: 	 Getting proxy life time left
+DEBUG 2020-01-10 22:33:17.042 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 67867
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 22:33:17.649 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 67866
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 22:33:17.649 UTC: 	 Proxy lifetime 67867 secs is different from voms extension lifetime 67866 secs for proxy: /tmp/x509up_u93529
+DEBUG 2020-01-10 22:33:17.649 UTC: 	 Proxy valid for 18:51:06 hours
+INFO 2020-01-10 22:33:17.679 UTC: 	 Will use CRAB configuration file crabconfigs/crab_2017B.py
+DEBUG 2020-01-10 22:33:17.679 UTC: 	 Loading CRAB configuration file.
+DEBUG 2020-01-10 22:33:20.594 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2020-01-10 22:33:20.594 UTC: 	 Working area '/afs/cern.ch/work/x/xuyan/work5/PROD17/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_2017B_photonJan10/crab_Wgamma94XSinglePhoton_Jan10_2017B' already exists 
+Please change the requestName in the config file
+ERROR 2020-01-10 22:33:20.594 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 324, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 418, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/work/x/xuyan/work5/PROD17/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_2017B_photonJan10/crab_Wgamma94XSinglePhoton_Jan10_2017B' already exists 
+Please change the requestName in the config file
+DEBUG 2020-01-10 22:33:20.940 UTC: 	 Running on: Linux lxplus786.cern.ch 3.10.0-1062.9.1.el7.x86_64 #1 SMP Fri Dec 6 15:49:49 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-01-10 22:33:20.957 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-01-10 22:33:20.957 UTC: 	 Executing command: 'submit'
+DEBUG 2020-01-10 22:33:20.957 UTC: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2020-01-10 22:33:20.964 UTC: 	 Checking credentials
+DEBUG 2020-01-10 22:33:20.965 UTC: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2020-01-10 22:33:20.965 UTC: 	 Getting proxy life time left
+DEBUG 2020-01-10 22:33:21.679 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 67862
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 22:33:22.386 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 67861
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 22:33:22.386 UTC: 	 Proxy lifetime 67862 secs is different from voms extension lifetime 67861 secs for proxy: /tmp/x509up_u93529
+DEBUG 2020-01-10 22:33:22.386 UTC: 	 Proxy valid for 18:51:01 hours
+INFO 2020-01-10 22:33:22.387 UTC: 	 Will use CRAB configuration file crabconfigs/crab_2017C.py
+DEBUG 2020-01-10 22:33:22.387 UTC: 	 Loading CRAB configuration file.
+ERROR 2020-01-10 22:33:23.960 UTC: 	 Keyboard Interrupted
+DEBUG 2020-01-10 22:39:28.007 UTC: 	 Running on: Linux lxplus705.cern.ch 3.10.0-1062.7.1.el7.x86_64 #1 SMP Mon Dec 2 17:33:29 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-01-10 22:39:28.023 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-01-10 22:39:28.023 UTC: 	 Executing command: 'submit'
+DEBUG 2020-01-10 22:39:28.024 UTC: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2020-01-10 22:39:28.033 UTC: 	 Checking credentials
+DEBUG 2020-01-10 22:39:28.034 UTC: 	 Proxy file /tmp/x509up_u93529 not found
+DEBUG 2020-01-10 22:39:28.034 UTC: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2020-01-10 22:39:34.449 UTC: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2020-01-10 22:39:35.160 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 22:39:35.768 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 22:39:36.373 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u93529 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 22:39:36.373 UTC: 	 Proxy created.
+INFO 2020-01-10 22:39:36.375 UTC: 	 Will use CRAB configuration file crabconfigs/crab_2017B.py
+DEBUG 2020-01-10 22:39:36.375 UTC: 	 Loading CRAB configuration file.
+DEBUG 2020-01-10 22:39:38.735 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2020-01-10 22:39:38.738 UTC: 	 Working area '/afs/cern.ch/work/x/xuyan/work5/PROD17/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_2017B_photonJan10/crab_Wgamma94XSinglePhoton_Jan10_2017B' already exists 
+Please change the requestName in the config file
+ERROR 2020-01-10 22:39:38.738 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 35, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 324, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 418, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/work/x/xuyan/work5/PROD17/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab_jobs_2017B_photonJan10/crab_Wgamma94XSinglePhoton_Jan10_2017B' already exists 
+Please change the requestName in the config file
+DEBUG 2020-01-10 22:39:39.138 UTC: 	 Running on: Linux lxplus705.cern.ch 3.10.0-1062.7.1.el7.x86_64 #1 SMP Mon Dec 2 17:33:29 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-01-10 22:39:39.152 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-01-10 22:39:39.153 UTC: 	 Executing command: 'submit'
+DEBUG 2020-01-10 22:39:39.153 UTC: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2020-01-10 22:39:39.159 UTC: 	 Checking credentials
+DEBUG 2020-01-10 22:39:39.160 UTC: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2020-01-10 22:39:39.160 UTC: 	 Getting proxy life time left
+DEBUG 2020-01-10 22:39:39.764 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 86394
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 22:39:40.372 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 86393
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-10 22:39:40.372 UTC: 	 Proxy lifetime 86394 secs is different from voms extension lifetime 86393 secs for proxy: /tmp/x509up_u93529
+DEBUG 2020-01-10 22:39:40.372 UTC: 	 Proxy valid for 23:59:53 hours
+INFO 2020-01-10 22:39:40.373 UTC: 	 Will use CRAB configuration file crabconfigs/crab_2017C.py
+DEBUG 2020-01-10 22:39:40.373 UTC: 	 Loading CRAB configuration file.
+ERROR 2020-01-10 22:39:41.599 UTC: 	 Keyboard Interrupted
+DEBUG 2020-01-11 19:46:27.299 UTC: 	 Running on: Linux lxplus705.cern.ch 3.10.0-1062.7.1.el7.x86_64 #1 SMP Mon Dec 2 17:33:29 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - Unknown Operating System
+ERROR 2020-01-11 19:46:27.412 UTC: 	 Unhandled Exception!
+ERROR 2020-01-11 19:46:27.412 UTC: 	 
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 207, in <module>
+    flushMemoryLogger(client.tblogger, client.memhandler, client.logger.logfile)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 178, in flushMemoryLogger
+    memhandler.close()
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc630/external/python/2.7.11-fmblme/lib/python2.7/logging/handlers.py", line 1220, in close
+    self.flush()
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc630/external/python/2.7.11-fmblme/lib/python2.7/logging/handlers.py", line 1210, in flush
+    self.target.handle(record)
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc630/external/python/2.7.11-fmblme/lib/python2.7/logging/__init__.py", line 751, in handle
+    self.emit(record)
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc630/external/python/2.7.11-fmblme/lib/python2.7/logging/__init__.py", line 949, in emit
+    StreamHandler.emit(self, record)
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc630/external/python/2.7.11-fmblme/lib/python2.7/logging/__init__.py", line 877, in emit
+    self.flush()
+  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc630/external/python/2.7.11-fmblme/lib/python2.7/logging/__init__.py", line 837, in flush
+    self.stream.flush()
+KeyboardInterrupt
+ERROR 2020-01-11 19:46:27.419 UTC: 	 ERROR: KeyboardInterrupt: 
+ERROR 2020-01-11 19:46:27.419 UTC: 	 
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+ERROR 2020-01-11 19:46:27.419 UTC: 	 	Client Version: 3.3.2001
+ERROR 2020-01-11 19:46:27.419 UTC: 	 	Please use 'crab uploadlog' to upload the log file /afs/cern.ch/work/x/xuyan/work5/PROD17/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab.log to the CRAB cache.
+DEBUG 2020-01-11 21:11:57.310 UTC: 	 Running on: Linux lxplus705.cern.ch 3.10.0-1062.7.1.el7.x86_64 #1 SMP Mon Dec 2 17:33:29 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-01-11 21:11:57.324 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-01-11 21:11:57.325 UTC: 	 Executing command: 'status'
+DEBUG 2020-01-11 21:11:57.325 UTC: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+ERROR 2020-01-11 21:11:57.326 UTC: 	 Error: /crab_jobs_WgammaMC_2017_Jan10/crab_Wgamma949_QCD_HT700to1000_Jan10v2 is not a valid CRAB project directory.
+ERROR 2020-01-11 21:11:57.326 UTC: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 40, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 277, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.2001/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 595, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: /crab_jobs_WgammaMC_2017_Jan10/crab_Wgamma949_QCD_HT700to1000_Jan10v2 is not a valid CRAB project directory.
+DEBUG 2020-01-13 20:20:56.191 UTC: 	 Running on: Linux lxplus734.cern.ch 3.10.0-1062.7.1.el7.x86_64 #1 SMP Mon Dec 2 17:33:29 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-01-13 20:20:56.206 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-01-13 20:20:56.206 UTC: 	 Executing command: 'tasks'
+DEBUG 2020-01-13 20:20:56.207 UTC: 	 Found CRAB cache file /afs/cern.ch/user/x/xuyan/.crab3
+DEBUG 2020-01-13 20:20:56.213 UTC: 	 Checking credentials
+DEBUG 2020-01-13 20:20:56.214 UTC: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2020-01-13 20:20:56.214 UTC: 	 Getting proxy life time left
+DEBUG 2020-01-13 20:20:56.918 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 52966
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-13 20:20:57.524 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 52965
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-13 20:20:57.525 UTC: 	 Proxy lifetime 52966 secs is different from voms extension lifetime 52965 secs for proxy: /tmp/x509up_u93529
+DEBUG 2020-01-13 20:20:57.525 UTC: 	 Proxy valid for 14:42:45 hours
+DEBUG 2020-01-13 20:20:57.634 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-13 20:20:57.635 UTC: 	 Checking credentials
+DEBUG 2020-01-13 20:20:57.635 UTC: 	 Found proxy file /tmp/x509up_u93529
+DEBUG 2020-01-13 20:20:57.635 UTC: 	 Getting proxy life time left
+DEBUG 2020-01-13 20:20:58.239 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -timeleft
+ output : 52964
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-13 20:20:58.844 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u93529 -actimeleft
+ output : 52964
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-13 20:20:58.844 UTC: 	 Proxy valid for 14:42:44 hours
+DEBUG 2020-01-13 20:20:59.024 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2020-01-13 20:20:59.133 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-13 20:20:59.133 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-01-13 20:20:59.133 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan_cmsweb.cern.ch for credential name
+DEBUG 2020-01-13 20:20:59.538 UTC: 	 Executing : 
+ command : myproxy-info -l b1772a5c240352d6d735b714aa331919d3f56592 -s myproxy.cern.ch
+ output : username: b1772a5c240352d6d735b714aa331919d3f56592
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=xuyan/CN=803661/CN=Xuli Yan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|058|030|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 644:53:54  (26.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-01-13 20:20:59.539 UTC: 	 Myproxy is valid: 2321634
+DEBUG 2020-01-13 20:20:59.539 UTC: 	 Command use: tasks
+DEBUG 2020-01-13 20:20:59.539 UTC: 	 Options use: []
+DEBUG 2020-01-13 20:20:59.723 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-01-13 20:20:59.724 UTC: 	 Instance is prod
+DEBUG 2020-01-13 20:20:59.724 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-01-13 20:20:59.724 UTC: 	 Command url /crabserver/prod/workflow
+INFO 2020-01-13 20:21:00.981 UTC: 	 
+List of tasks from 2019-12-14 until 2020-01-13
+INFO 2020-01-13 20:21:00.983 UTC: 	 Beware that STATUS here does not include information from grid jobs
+INFO 2020-01-13 20:21:00.983 UTC: 	 ================================================================================
+INFO 2020-01-13 20:21:00.983 UTC: 	 NAME								STATUS
+INFO 2020-01-13 20:21:00.983 UTC: 	 ================================================================================
+INFO 2020-01-13 20:21:00.983 UTC: 	 200113_154936:xuyan_crab_Wgamma102XEGamma_Jan10v2_2018D
+								KILLED
+INFO 2020-01-13 20:21:00.983 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.983 UTC: 	 200113_111807:xuyan_crab_Wgamma949_QCD_HT700to1000_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.983 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.983 UTC: 	 200113_110603:xuyan_crab_Wgamma949_QCD_HT700to1000_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.983 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.983 UTC: 	 200112_181126:xuyan_crab_Wgamma94XSingleMuon_Jan12_2016B
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.983 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.984 UTC: 	 200112_180709:xuyan_crab_Wgamma94XSinglePhoton_Jan12_2016B
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.984 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.984 UTC: 	 200111_224338:xuyan_crab_Wgamma949_GJets_HT-600ToInf_Jan11
+								SUBMITTED
+INFO 2020-01-13 20:21:00.984 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.984 UTC: 	 200111_224106:xuyan_crab_Wgamma949_GJets_HT-400To600_Jan11
+								SUBMITTED
+INFO 2020-01-13 20:21:00.984 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.984 UTC: 	 200111_223834:xuyan_crab_Wgamma949_GJets_HT-200To400_Jan11
+								SUBMITTED
+INFO 2020-01-13 20:21:00.984 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.984 UTC: 	 200111_223600:xuyan_crab_Wgamma949_GJets_HT-100To200_Jan11
+								SUBMITTED
+INFO 2020-01-13 20:21:00.984 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.984 UTC: 	 200111_223335:xuyan_crab_Wgamma949_QCD_HT2000toInf_Jan11
+								SUBMITTED
+INFO 2020-01-13 20:21:00.984 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.984 UTC: 	 200111_223101:xuyan_crab_Wgamma949_QCD_HT1500to2000_Jan11
+								SUBMITTED
+INFO 2020-01-13 20:21:00.984 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.984 UTC: 	 200111_222829:xuyan_crab_Wgamma949_QCD_HT1000to1500_Jan11
+								SUBMITTED
+INFO 2020-01-13 20:21:00.984 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.984 UTC: 	 200111_222556:xuyan_crab_Wgamma949_QCD_HT700to1000_Jan11
+								SUBMITTED
+INFO 2020-01-13 20:21:00.984 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.984 UTC: 	 200111_222325:xuyan_crab_Wgamma949_QCD_HT500to700_Jan11
+								SUBMITTED
+INFO 2020-01-13 20:21:00.984 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.984 UTC: 	 200111_222052:xuyan_crab_Wgamma949_QCD_HT300to500_Jan11
+								SUBMITTED
+INFO 2020-01-13 20:21:00.985 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.985 UTC: 	 200111_215419:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016H
+								SUBMITTED
+INFO 2020-01-13 20:21:00.985 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.985 UTC: 	 200111_215136:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016G
+								SUBMITTED
+INFO 2020-01-13 20:21:00.985 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.985 UTC: 	 200111_214836:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016F
+								SUBMITTED
+INFO 2020-01-13 20:21:00.985 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.985 UTC: 	 200111_214541:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016E
+								SUBMITTED
+INFO 2020-01-13 20:21:00.985 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.985 UTC: 	 200111_214253:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016D
+								SUBMITTED
+INFO 2020-01-13 20:21:00.985 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.985 UTC: 	 200111_214001:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016C
+								SUBMITTED
+INFO 2020-01-13 20:21:00.985 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.985 UTC: 	 200111_212344:xuyan_crab_Wgamma94XSingleMuon_Jan11_2016H
+								SUBMITTED
+INFO 2020-01-13 20:21:00.985 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.985 UTC: 	 200111_212102:xuyan_crab_Wgamma94XSingleMuon_Jan11_2016G
+								SUBMITTED
+INFO 2020-01-13 20:21:00.985 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.985 UTC: 	 200111_211832:xuyan_crab_Wgamma94XSingleMuon_Jan11_2016F
+								SUBMITTED
+INFO 2020-01-13 20:21:00.985 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.986 UTC: 	 200111_211555:xuyan_crab_Wgamma94XSingleMuon_Jan11_2016E
+								SUBMITTED
+INFO 2020-01-13 20:21:00.986 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.986 UTC: 	 200111_211318:xuyan_crab_Wgamma94XSingleMuon_Jan11_2016D
+								SUBMITTED
+INFO 2020-01-13 20:21:00.986 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.986 UTC: 	 200111_211047:xuyan_crab_Wgamma94XSingleMuon_Jan11_2016C
+								SUBMITTED
+INFO 2020-01-13 20:21:00.986 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.986 UTC: 	 200111_210811:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016H
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.986 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.986 UTC: 	 200111_210535:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016G
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.986 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.986 UTC: 	 200111_210300:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016F
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.986 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.986 UTC: 	 200111_210036:xuyan_crab_Wgamma949_QCD_HT700to1000_Jan10v2
+								SUBMITTED
+INFO 2020-01-13 20:21:00.986 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.986 UTC: 	 200111_210033:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016E
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.986 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.986 UTC: 	 200111_205756:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016D
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.986 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.986 UTC: 	 200111_205520:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016C
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.986 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.987 UTC: 	 200111_204959:xuyan_crab_Wgamma94XSingleMuon_Jan11_2016B
+								SUBMITTED
+INFO 2020-01-13 20:21:00.987 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.987 UTC: 	 200111_204547:xuyan_crab_Wgamma94XSinglePhoton_Jan11_2016B
+								SUBMITTED
+INFO 2020-01-13 20:21:00.987 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.987 UTC: 	 200110_234316:xuyan_crab_Wgamma102XSingleMuon_Jan10_2018C
+								SUBMITTED
+INFO 2020-01-13 20:21:00.987 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.987 UTC: 	 200110_234119:xuyan_crab_Wgamma102XEGamma_Jan10_2018C
+								SUBMITTED
+INFO 2020-01-13 20:21:00.987 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.987 UTC: 	 200110_234115:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017F
+								SUBMITTED
+INFO 2020-01-13 20:21:00.987 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.987 UTC: 	 200110_233915:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017F
+								KILLED
+INFO 2020-01-13 20:21:00.987 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.987 UTC: 	 200110_233913:xuyan_crab_Wgamma102XSingleMuon_Jan10_2018B
+								SUBMITTED
+INFO 2020-01-13 20:21:00.987 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.987 UTC: 	 200110_233725:xuyan_crab_Wgamma102XEGamma_Jan10_2018B
+								SUBMITTED
+INFO 2020-01-13 20:21:00.987 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.987 UTC: 	 200110_233708:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017E
+								SUBMITTED
+INFO 2020-01-13 20:21:00.987 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.987 UTC: 	 200110_233457:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017E
+								SUBMITTED
+INFO 2020-01-13 20:21:00.988 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.988 UTC: 	 200110_233436:xuyan_crab_Wgamma102XSingleMuon_Jan10_2018D
+								SUBMITTED
+INFO 2020-01-13 20:21:00.988 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.988 UTC: 	 200110_233213:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017D
+								SUBMITTED
+INFO 2020-01-13 20:21:00.988 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.988 UTC: 	 200110_233212:xuyan_crab_Wgamma102XEGamma_Jan10_2018D
+								SUBMITTED
+INFO 2020-01-13 20:21:00.988 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.988 UTC: 	 200110_233001:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017D
+								SUBMITTED
+INFO 2020-01-13 20:21:00.988 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.988 UTC: 	 200110_232802:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017C
+								SUBMITTED
+INFO 2020-01-13 20:21:00.988 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.988 UTC: 	 200110_232602:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017C
+								KILLED
+INFO 2020-01-13 20:21:00.988 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.988 UTC: 	 200110_232359:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017B
+								SUBMITTED
+INFO 2020-01-13 20:21:00.988 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.989 UTC: 	 200110_231759:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017B
+								SUBMITTED
+INFO 2020-01-13 20:21:00.989 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.989 UTC: 	 200110_225801:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017F
+								KILLED
+INFO 2020-01-13 20:21:00.989 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.989 UTC: 	 200110_225615:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017E
+								KILLED
+INFO 2020-01-13 20:21:00.989 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.989 UTC: 	 200110_225428:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017D
+								KILLED
+INFO 2020-01-13 20:21:00.989 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.989 UTC: 	 200110_225241:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017C
+								KILLED
+INFO 2020-01-13 20:21:00.989 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.989 UTC: 	 200110_225054:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017B
+								KILLED
+INFO 2020-01-13 20:21:00.989 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.989 UTC: 	 200110_224906:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017F
+								KILLED
+INFO 2020-01-13 20:21:00.989 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.989 UTC: 	 200110_224719:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017E
+								KILLED
+INFO 2020-01-13 20:21:00.989 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.989 UTC: 	 200110_224531:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017D
+								KILLED
+INFO 2020-01-13 20:21:00.989 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.989 UTC: 	 200110_224344:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017C
+								KILLED
+INFO 2020-01-13 20:21:00.990 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.990 UTC: 	 200110_224158:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017B
+								KILLED
+INFO 2020-01-13 20:21:00.990 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.990 UTC: 	 200110_213957:xuyan_crab_Wgamma102XSingleMuon_Jan10_2018D
+								KILLED
+INFO 2020-01-13 20:21:00.990 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.990 UTC: 	 200110_213819:xuyan_crab_Wgamma102XEGamma_Jan10_2018D
+								KILLED
+INFO 2020-01-13 20:21:00.990 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.990 UTC: 	 200110_212919:xuyan_crab_Wgamma102XSingleMuon_Jan10_2018C
+								KILLED
+INFO 2020-01-13 20:21:00.990 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.990 UTC: 	 200110_212740:xuyan_crab_Wgamma102XSingleMuon_Jan10_2018B
+								KILLED
+INFO 2020-01-13 20:21:00.990 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.990 UTC: 	 200110_212601:xuyan_crab_Wgamma102XSingleMuon_Jan10_2018A
+								SUBMITTED
+INFO 2020-01-13 20:21:00.990 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.990 UTC: 	 200110_212424:xuyan_crab_Wgamma102XEGamma_Jan10_2018C
+								KILLED
+INFO 2020-01-13 20:21:00.990 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.990 UTC: 	 200110_212246:xuyan_crab_Wgamma102XEGamma_Jan10_2018B
+								KILLED
+INFO 2020-01-13 20:21:00.990 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.990 UTC: 	 200110_212105:xuyan_crab_Wgamma102XEGamma_Jan10_2018A
+								SUBMITTED
+INFO 2020-01-13 20:21:00.991 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.991 UTC: 	 200110_212005:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017F
+								KILLED
+INFO 2020-01-13 20:21:00.991 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.991 UTC: 	 200110_211855:xuyan_crab_Wgamma10210_GJets_HT-600ToInf_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.991 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.991 UTC: 	 200110_211819:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017E
+								KILLED
+INFO 2020-01-13 20:21:00.991 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.991 UTC: 	 200110_211713:xuyan_crab_Wgamma10210_GJets_HT-400To600_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.991 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.991 UTC: 	 200110_211629:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017D
+								KILLED
+INFO 2020-01-13 20:21:00.991 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.991 UTC: 	 200110_211534:xuyan_crab_Wgamma10210_GJets_HT-200To400_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.991 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.991 UTC: 	 200110_211442:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017C
+								KILLED
+INFO 2020-01-13 20:21:00.991 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.991 UTC: 	 200110_211354:xuyan_crab_Wgamma10210_GJets_HT-100To200_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.991 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.991 UTC: 	 200110_211258:xuyan_crab_Wgamma94XSingleMuon_Jan10_2017B
+								KILLED
+INFO 2020-01-13 20:21:00.991 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.991 UTC: 	 200110_211215:xuyan_crab_Wgamma10210_QCD_HT2000toInf_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.992 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.992 UTC: 	 200110_211037:xuyan_crab_Wgamma10210_QCD_HT1500to2000_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.992 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.992 UTC: 	 200110_210859:xuyan_crab_Wgamma10210_QCD_HT1000to1500_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.992 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.992 UTC: 	 200110_210720:xuyan_crab_Wgamma10210_QCD_HT700to1000_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.992 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.992 UTC: 	 200110_210542:xuyan_crab_Wgamma10210_QCD_HT500to700_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.992 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.992 UTC: 	 200110_210401:xuyan_crab_Wgamma10210_QCD_HT300to500_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.992 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.992 UTC: 	 200110_210313:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017F
+								KILLED
+INFO 2020-01-13 20:21:00.992 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.992 UTC: 	 200110_210131:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017E
+								KILLED
+INFO 2020-01-13 20:21:00.992 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.992 UTC: 	 200110_205952:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017D
+								KILLED
+INFO 2020-01-13 20:21:00.992 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.992 UTC: 	 200110_205812:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017C
+								KILLED
+INFO 2020-01-13 20:21:00.993 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.993 UTC: 	 200110_205627:xuyan_crab_Wgamma94XSinglePhoton_Jan10_2017B
+								KILLED
+INFO 2020-01-13 20:21:00.993 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.993 UTC: 	 200110_203541:xuyan_crab_Wgamma949_GJets_HT-600ToInf_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.993 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.993 UTC: 	 200110_203401:xuyan_crab_Wgamma949_GJets_HT-400To600_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.993 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.993 UTC: 	 200110_203215:xuyan_crab_Wgamma949_GJets_HT-200To400_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.993 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.993 UTC: 	 200110_203037:xuyan_crab_Wgamma949_GJets_HT-100To200_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.993 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.993 UTC: 	 200110_202858:xuyan_crab_Wgamma949_QCD_HT2000toInf_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.993 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.993 UTC: 	 200110_202718:xuyan_crab_Wgamma949_QCD_HT1500to2000_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.993 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.993 UTC: 	 200110_202536:xuyan_crab_Wgamma949_QCD_HT1000to1500_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.993 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.993 UTC: 	 200110_202356:xuyan_crab_Wgamma949_QCD_HT700to1000_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.993 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.994 UTC: 	 200110_202214:xuyan_crab_Wgamma949_QCD_HT500to700_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.994 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.994 UTC: 	 200110_202030:xuyan_crab_Wgamma949_QCD_HT300to500_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.994 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.994 UTC: 	 200110_194224:xuyan_crab_Wgamma102XEGamma_Jan10_2018D
+								KILLED
+INFO 2020-01-13 20:21:00.994 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.994 UTC: 	 200110_194024:xuyan_crab_Wgamma102XEGamma_Jan10_2018C
+								KILLED
+INFO 2020-01-13 20:21:00.994 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.994 UTC: 	 200110_193844:xuyan_crab_Wgamma102XEGamma_Jan10_2018B
+								KILLED
+INFO 2020-01-13 20:21:00.994 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.994 UTC: 	 200110_193659:xuyan_crab_Wgamma102XEGamma_Jan10_2018A
+								KILLED
+INFO 2020-01-13 20:21:00.994 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.994 UTC: 	 200110_193317:xuyan_crab_Wgamma10210_GJets_HT-600ToInf_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.994 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.994 UTC: 	 200110_193136:xuyan_crab_Wgamma10210_GJets_HT-400To600_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.994 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.994 UTC: 	 200110_192950:xuyan_crab_Wgamma10210_GJets_HT-200To400_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.994 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.994 UTC: 	 200110_192802:xuyan_crab_Wgamma10210_GJets_HT-100To200_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.994 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.995 UTC: 	 200110_192150:xuyan_crab_Wgamma10210_QCD_HT2000toInf_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.995 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.995 UTC: 	 200110_192010:xuyan_crab_Wgamma10210_QCD_HT1500to2000_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.995 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.995 UTC: 	 200110_191830:xuyan_crab_Wgamma10210_QCD_HT1000to1500_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.995 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.995 UTC: 	 200110_191639:xuyan_crab_Wgamma10210_QCD_HT700to1000_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.995 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.995 UTC: 	 200110_191448:xuyan_crab_Wgamma10210_QCD_HT500to700_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.995 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.995 UTC: 	 200110_191307:xuyan_crab_Wgamma10210_QCD_HT300to500_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.995 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.995 UTC: 	 200110_185247:xuyan_crab_Wgamma10210_QCD_HT500to700_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.995 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.995 UTC: 	 200110_185109:xuyan_crab_Wgamma10210_QCD_HT300to500_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.995 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.995 UTC: 	 200110_184935:xuyan_crab_Wgamma10210_QCD_HT200to300_Jan10
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.995 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.995 UTC: 	 200110_184419:xuyan_crab_Wgamma10210_GJets_HT-600ToInf_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.996 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.996 UTC: 	 200110_183708:xuyan_crab_Wgamma10210_GJets_HT-600ToInf_Jan10
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.996 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.996 UTC: 	 200110_183105:xuyan_crab_Wgamma10210_GJets_HT-400To600_Jan10
+								SUBMITTED
+INFO 2020-01-13 20:21:00.996 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.996 UTC: 	 200110_182838:xuyan_crab_Wgamma10210_GJets_HT-200To400_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.996 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.996 UTC: 	 200110_182325:xuyan_crab_Wgamma10210_GJets_HT-100To200_Jan10
+								KILLED
+INFO 2020-01-13 20:21:00.996 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.996 UTC: 	 200110_173801:xuyan_crab_Wgamma102XEGamma_Jan10_2018C
+								KILLED
+INFO 2020-01-13 20:21:00.996 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.996 UTC: 	 200110_173750:xuyan_crab_Wgamma102XEGamma_Jan10_2018B
+								KILLED
+INFO 2020-01-13 20:21:00.996 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.996 UTC: 	 200110_173735:xuyan_crab_Wgamma102XEGamma_Jan10_2018A
+								KILLED
+INFO 2020-01-13 20:21:00.996 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.996 UTC: 	 200110_173239:xuyan_crab_Wgamma102XEGamma_Jan10_2018D
+								KILLED
+INFO 2020-01-13 20:21:00.996 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.996 UTC: 	 200110_172628:xuyan_crab_Wgamma102XEGamma_Jan10_2018C
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.996 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.996 UTC: 	 200110_172524:xuyan_crab_Wgamma102XEGamma_Jan10_2018B
+								SUBMITFAILED
+INFO 2020-01-13 20:21:00.996 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.997 UTC: 	 200110_172328:xuyan_crab_Wgamma102XEGamma_Jan10_2018A
+								KILLED
+INFO 2020-01-13 20:21:00.997 UTC: 	 --------------------------------------------------------------------------------
+INFO 2020-01-13 20:21:00.997 UTC: 	 
+
+INFO 2020-01-13 20:21:01.106 UTC: 	 Log file is /afs/cern.ch/work/x/xuyan/work5/PROD17/CMSSW_9_4_9/src/VgammaTuplizer/Ntuplizer/crab.log

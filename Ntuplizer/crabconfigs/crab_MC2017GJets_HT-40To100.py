@@ -6,6 +6,7 @@ config.General.workArea = 'crab_jobs_WgammaMC_2017_%s'%"Aug20"
 config.General.transferOutputs = True
 config.General.transferLogs = True
 
+config.JobType.allowUndistributedCMSSW = True
 config.JobType.pluginName = 'Analysis'
 config.JobType.psetName = 'config_generic.py'
 

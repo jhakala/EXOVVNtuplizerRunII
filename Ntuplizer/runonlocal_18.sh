@@ -1,13 +1,11 @@
 #!/bin/bash
-
-for mass in {2800,3000,3500}
+mass=1800
+mkdir ${mass}
+for ((i=0; i<30;i++))
 do
-    mkdir ${mass}
-    for file in `ls /afs/cern.ch/work/x/xuyan/work5/PROD17/DATA/${mass}`
-    do
-	name="'file:/afs/cern.ch/work/x/xuyan/work5/PROD17/DATA/"$mass"/"$file"'"
-	echo $name
-	cat > ${mass}/${file}.py <<EOF
+    name="'root://cmseos.fnal.gov//store/user/jhakala/WGamma_M1800_W0.05_v2/WGamma-M1800_W0.05_miniAOD_${i}.root'"
+    echo $name
+    cat > ${mass}/${i}.py <<EOF
 ###### Process initialization ##########
 import sys
 import FWCore.ParameterSet.Config as cms
@@ -18,7 +16,7 @@ process.load("Configuration.StandardSequences.MagneticField_cff")
 process.load('Configuration.Geometry.GeometryRecoDB_cff')
 
 process.TFileService = cms.Service("TFileService",
-                                    fileName = cms.string('flat_${file}')
+                                    fileName = cms.string('flat_${mass}_${i}.root')
                                    )
 
 #from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data_cfi import config
@@ -864,15 +862,25 @@ if config["CORRMETONTHEFLY"]:
 #                        src = cms.InputTag(jetsAK8)
 #                        )
 ######## JER ########
-JERprefix = "Spring16_25nsV6"
-jerAK8chsFile_res = "JER/%s_MC_PtResolution_AK8PFchs.txt"%(JERprefix)
-jerAK4chsFile_res = "JER/%s_MC_PtResolution_AK4PFchs.txt"%(JERprefix)
-jerAK8PuppiFile_res = "JER/%s_MC_PtResolution_AK8PFPuppi.txt"%(JERprefix)
-jerAK4PuppiFile_res = "JER/%s_MC_PtResolution_AK4PFPuppi.txt"%(JERprefix)
-jerAK8chsFile_sf = "JER/%s_MC_SF_AK8PFchs.txt"%(JERprefix)
-jerAK4chsFile_sf = "JER/%s_MC_SF_AK4PFchs.txt"%(JERprefix)
-jerAK8PuppiFile_sf = "JER/%s_MC_SF_AK8PFPuppi.txt"%(JERprefix)
-jerAK4PuppiFile_sf = "JER/%s_MC_SF_AK4PFPuppi.txt"%(JERprefix)
+JERprefix = "Fall17_V3"
+if config["RUNONMC"]:
+  jerAK8chsFile_res = "JER/%s_MC_PtResolution_AK8PFchs.txt"%(JERprefix)
+  jerAK4chsFile_res = "JER/%s_MC_PtResolution_AK4PFchs.txt"%(JERprefix)
+  jerAK8PuppiFile_res = "JER/%s_MC_PtResolution_AK8PFPuppi.txt"%(JERprefix)
+  jerAK4PuppiFile_res = "JER/%s_MC_PtResolution_AK4PFPuppi.txt"%(JERprefix)
+  jerAK8chsFile_sf = "JER/%s_MC_SF_AK8PFchs.txt"%(JERprefix)
+  jerAK4chsFile_sf = "JER/%s_MC_SF_AK4PFchs.txt"%(JERprefix)
+  jerAK8PuppiFile_sf = "JER/%s_MC_SF_AK8PFPuppi.txt"%(JERprefix)
+  jerAK4PuppiFile_sf = "JER/%s_MC_SF_AK4PFPuppi.txt"%(JERprefix)
+else:
+  jerAK8chsFile_res = "JER/%s_DATA_PtResolution_AK8PFchs.txt"%(JERprefix)
+  jerAK4chsFile_res = "JER/%s_DATA_PtResolution_AK4PFchs.txt"%(JERprefix)
+  jerAK8PuppiFile_res = "JER/%s_DATA_PtResolution_AK8PFPuppi.txt"%(JERprefix)
+  jerAK4PuppiFile_res = "JER/%s_DATA_PtResolution_AK4PFPuppi.txt"%(JERprefix)
+  jerAK8chsFile_sf = "JER/%s_DATA_SF_AK8PFchs.txt"%(JERprefix)
+  jerAK4chsFile_sf = "JER/%s_DATA_SF_AK4PFchs.txt"%(JERprefix)
+  jerAK8PuppiFile_sf = "JER/%s_DATA_SF_AK8PFPuppi.txt"%(JERprefix)
+  jerAK4PuppiFile_sf = "JER/%s_DATA_SF_AK4PFPuppi.txt"%(JERprefix)
 
 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
@@ -1514,10 +1522,10 @@ process.p.associate(pattask)
 print pattask
 
 #  LocalWords:  tauIdMVAIsoDBoldDMwLT
-          
+
+
 EOF
 
-	cmsRun ${mass}/${file}.py
-	
-    done
+    cmsRun ${mass}/${i}.py
+    
 done
