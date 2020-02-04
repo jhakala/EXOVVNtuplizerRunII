@@ -1,10 +1,3 @@
-#!/bin/bash
-mass=1800
-for ((i=30; i<60;i++))
-do
-    name="'root://cmseos.fnal.gov//store/user/jhakala/WGamma_M1800_W0.05_v2/WGamma-M1800_W0.05_miniAOD_${i}.root'"
-    echo $name
-    cat > ${mass}/${i}.py <<EOF
 ###### Process initialization ##########
 import sys
 import FWCore.ParameterSet.Config as cms
@@ -15,7 +8,7 @@ process.load("Configuration.StandardSequences.MagneticField_cff")
 process.load('Configuration.Geometry.GeometryRecoDB_cff')
 
 process.TFileService = cms.Service("TFileService",
-                                    fileName = cms.string('flat_${mass}_${i}.root')
+                                    fileName = cms.string('flatTuple.root')
                                    )
 
 #from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data_cfi import config
@@ -33,9 +26,9 @@ options.maxEvents = -1
 #data file
 
 
-#options.inputFiles = ('/store/data/Run2017F/SinglePhoton/MINIAOD/31Mar2018-v1/80000/24EE7C33-1039-E811-98A4-1CB72C1B6C32.root')
+options.inputFiles = ('/store/data/Run2017E/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
 
-options.inputFiles = (${name})
+#options.inputFiles = ('root://cmseos.fnal.gov//store/user/jhakala/WGamma_M1600_W0.05_v2/WGamma-M1600_W0.05_miniAOD_0.root')
 
                      
 options.parseArguments()
@@ -1521,10 +1514,3 @@ process.p.associate(pattask)
 print pattask
 
 #  LocalWords:  tauIdMVAIsoDBoldDMwLT
-
-
-EOF
-
-    cmsRun ${mass}/${i}.py
-    
-done

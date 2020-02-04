@@ -8,7 +8,7 @@ process.load("Configuration.StandardSequences.MagneticField_cff")
 process.load('Configuration.Geometry.GeometryRecoDB_cff')
 
 process.TFileService = cms.Service("TFileService",
-                                    fileName = cms.string('flatTuple_old.root')
+                                    fileName = cms.string('flatTuple.root')
                                    )
 
 #from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data_cfi import config
@@ -21,12 +21,12 @@ import FWCore.ParameterSet.VarParsing as VarParsing
 
 options = VarParsing.VarParsing ('analysis')
 
-options.maxEvents = 5000
+options.maxEvents = -1
 
 #data file
 
 
-options.inputFiles = ('/store/data/Run2017B/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
+options.inputFiles = ('/store/data/Run2017F/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
 
 #options.inputFiles = ('root://cmseos.fnal.gov//store/user/jhakala/WGamma_M1600_W0.05_v2/WGamma-M1600_W0.05_miniAOD_0.root')
 
@@ -854,16 +854,25 @@ if config["CORRMETONTHEFLY"]:
 #                        src = cms.InputTag(jetsAK8)
 #                        )
 ######## JER ########
-######## JER ########
-JERprefix = "Spring16_25nsV6"
-jerAK8chsFile_res = "JER/%s_MC_PtResolution_AK8PFchs.txt"%(JERprefix)
-jerAK4chsFile_res = "JER/%s_MC_PtResolution_AK4PFchs.txt"%(JERprefix)
-jerAK8PuppiFile_res = "JER/%s_MC_PtResolution_AK8PFPuppi.txt"%(JERprefix)
-jerAK4PuppiFile_res = "JER/%s_MC_PtResolution_AK4PFPuppi.txt"%(JERprefix)
-jerAK8chsFile_sf = "JER/%s_MC_SF_AK8PFchs.txt"%(JERprefix)
-jerAK4chsFile_sf = "JER/%s_MC_SF_AK4PFchs.txt"%(JERprefix)
-jerAK8PuppiFile_sf = "JER/%s_MC_SF_AK8PFPuppi.txt"%(JERprefix)
-jerAK4PuppiFile_sf = "JER/%s_MC_SF_AK4PFPuppi.txt"%(JERprefix)
+JERprefix = "Fall17_V3"
+if config["RUNONMC"]:
+  jerAK8chsFile_res = "JER/%s_MC_PtResolution_AK8PFchs.txt"%(JERprefix)
+  jerAK4chsFile_res = "JER/%s_MC_PtResolution_AK4PFchs.txt"%(JERprefix)
+  jerAK8PuppiFile_res = "JER/%s_MC_PtResolution_AK8PFPuppi.txt"%(JERprefix)
+  jerAK4PuppiFile_res = "JER/%s_MC_PtResolution_AK4PFPuppi.txt"%(JERprefix)
+  jerAK8chsFile_sf = "JER/%s_MC_SF_AK8PFchs.txt"%(JERprefix)
+  jerAK4chsFile_sf = "JER/%s_MC_SF_AK4PFchs.txt"%(JERprefix)
+  jerAK8PuppiFile_sf = "JER/%s_MC_SF_AK8PFPuppi.txt"%(JERprefix)
+  jerAK4PuppiFile_sf = "JER/%s_MC_SF_AK4PFPuppi.txt"%(JERprefix)
+else:
+  jerAK8chsFile_res = "JER/%s_DATA_PtResolution_AK8PFchs.txt"%(JERprefix)
+  jerAK4chsFile_res = "JER/%s_DATA_PtResolution_AK4PFchs.txt"%(JERprefix)
+  jerAK8PuppiFile_res = "JER/%s_DATA_PtResolution_AK8PFPuppi.txt"%(JERprefix)
+  jerAK4PuppiFile_res = "JER/%s_DATA_PtResolution_AK4PFPuppi.txt"%(JERprefix)
+  jerAK8chsFile_sf = "JER/%s_DATA_SF_AK8PFchs.txt"%(JERprefix)
+  jerAK4chsFile_sf = "JER/%s_DATA_SF_AK4PFchs.txt"%(JERprefix)
+  jerAK8PuppiFile_sf = "JER/%s_DATA_SF_AK8PFPuppi.txt"%(JERprefix)
+  jerAK4PuppiFile_sf = "JER/%s_DATA_SF_AK4PFPuppi.txt"%(JERprefix)
 
 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 print ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"

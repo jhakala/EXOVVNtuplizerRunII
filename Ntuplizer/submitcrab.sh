@@ -18,8 +18,8 @@ crab submit crabconfigs/crab_2017C.py
 crab submit crabconfigs/crab_2017D.py
 crab submit crabconfigs/crab_2017E.py
 crab submit crabconfigs/crab_2017F.py
-crab submit crabconfigs/crab_2017SingleMuonB.py
-crab submit crabconfigs/crab_2017SingleMuonC.py
-crab submit crabconfigs/crab_2017SingleMuonD.py
-crab submit crabconfigs/crab_2017SingleMuonE.py
-crab submit crabconfigs/crab_2017SingleMuonF.py
+#crab submit crabconfigs/crab_2017SingleMuonB.py
+#crab submit crabconfigs/crab_2017SingleMuonC.py
+#crab submit crabconfigs/crab_2017SingleMuonD.py
+#crab submit crabconfigs/crab_2017SingleMuonE.py
+#crab submit crabconfigs/crab_2017SingleMuonF.py

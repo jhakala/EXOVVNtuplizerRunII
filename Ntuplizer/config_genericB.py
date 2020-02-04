@@ -26,9 +26,9 @@ options.maxEvents = -1
 #data file
 
 
-#options.inputFiles = ('/store/data/Run2017B/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
+options.inputFiles = ('/store/data/Run2017B/SinglePhoton/MINIAOD/31Mar2018-v1/90000/FE0443CC-A337-E811-881E-0CC47A7C351E.root')
 
-options.inputFiles = ('root://cmseos.fnal.gov//store/user/jhakala/WGamma_M1600_W0.05_v2/WGamma-M1600_W0.05_miniAOD_0.root')
+#options.inputFiles = ('root://cmseos.fnal.gov//store/user/jhakala/WGamma_M1600_W0.05_v2/WGamma-M1600_W0.05_miniAOD_0.root')
 
                      
 options.parseArguments()
