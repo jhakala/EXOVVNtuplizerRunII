@@ -22,11 +22,11 @@
 PhotonsNtuplizer::PhotonsNtuplizer(NtupleBranches*                                        nBranches         ,
                                    edm::EDGetToken                                        photonToken       ,
                                    edm::EDGetTokenT<reco::VertexCollection>               verticeToken      ,
-                                   edm::EDGetTokenT<double>                               rhoToken          ,
+                                   edm::EDGetTokenT<double>                               rhoToken          
                                    //edm::EDGetTokenT<double>                               fixedGridRhoToken ,
-                                   std::vector< edm::EDGetTokenT<edm::ValueMap<bool> > >  phoIDtokens       ,
-                                   std::vector<edm::EDGetTokenT<edm::ValueMap<float> > >  phoIDtokens1      ,
-                                   std::vector<edm::EDGetTokenT<edm::ValueMap<int> > >    phoIDtokens2
+                                   //std::vector< edm::EDGetTokenT<edm::ValueMap<bool> > >  phoIDtokens       ,
+                                   //std::vector<edm::EDGetTokenT<edm::ValueMap<float> > >  phoIDtokens1      ,
+                                   //std::vector<edm::EDGetTokenT<edm::ValueMap<int> > >    phoIDtokens2
 
     )
 /* Stuff for cut based id as in SimplePhotonNtupler example
@@ -40,11 +40,11 @@ PhotonsNtuplizer::PhotonsNtuplizer(NtupleBranches*                              
   , verticeToken_                     ( verticeToken      )
   , rhoToken_                         ( rhoToken          )
   //, fixedGridRhoToken_                ( fixedGridRhoToken )
-  , photonLooseIdMapToken_            ( phoIDtokens[0]    )
-  , photonMediumIdMapToken_           ( phoIDtokens[1]    )
-  , photonTightIdMapToken_            ( phoIDtokens[2]    )
-  , photonMvaValuesMapToken_          ( phoIDtokens1[0]   )
-  , photonMvaCategoriesMapToken_      ( phoIDtokens2[0]   )
+  //, photonLooseIdMapToken_            ( phoIDtokens[0]    )
+  //, photonMediumIdMapToken_           ( phoIDtokens[1]    )
+  //, photonTightIdMapToken_            ( phoIDtokens[2]    )
+  //, photonMvaValuesMapToken_          ( phoIDtokens1[0]   )
+  //, photonMvaCategoriesMapToken_      ( phoIDtokens2[0]   )
 
 {
 
@@ -64,11 +64,11 @@ void PhotonsNtuplizer::fillBranches( edm::Event const & event, const edm::EventS
   event.getByToken(rhoToken_                        , rho_                   );
   //event.getByToken(fixedGridRhoToken_               , fixedGridRho_          );
 
-  event.getByToken(photonLooseIdMapToken_           , loose_id_decisions     );
-  event.getByToken(photonMediumIdMapToken_          , medium_id_decisions    );
-  event.getByToken(photonTightIdMapToken_           , tight_id_decisions     );
-  event.getByToken(photonMvaValuesMapToken_         , mvaValues              );
-  event.getByToken(photonMvaCategoriesMapToken_     , mvaCategories          );
+  //event.getByToken(photonLooseIdMapToken_           , loose_id_decisions     );
+  //event.getByToken(photonMediumIdMapToken_          , medium_id_decisions    );
+  //event.getByToken(photonTightIdMapToken_           , tight_id_decisions     );
+  //event.getByToken(photonMvaValuesMapToken_         , mvaValues              );
+  //event.getByToken(photonMvaCategoriesMapToken_     , mvaCategories          );
 
   /*
   // Find the first vertex in the collection that passes good quality criteria
@@ -101,6 +101,11 @@ void PhotonsNtuplizer::fillBranches( edm::Event const & event, const edm::EventS
     nBranches_->ph_pz                  .push_back(pho->pz());
     nBranches_->ph_pt                  .push_back(pho->pt());
     nBranches_->ph_et                  .push_back(pho->et());
+    nBranches_->ph_Corr                .push_back(pho->userFloat("ecalEnergyPostCorr") / pho->energy());
+
+    /*======= Energy Scale and smearing ==========*/
+    nBranches_->ph_energyscale.push_back(pho->userFloat("energyScaleValue"));
+    nBranches_->ph_resolution.push_back(pho->userFloat("energySigmaValue"));
 
     /*======= ISO ==========*/
     double ph_rho = *(rho_.product());
@@ -116,18 +121,11 @@ void PhotonsNtuplizer::fillBranches( edm::Event const & event, const edm::EventS
 
     /*======= IDs ==========*/
     //float et = pho.energy()!=0. ? pho.et()/pho.energy()*pho.caloEnergy() : 0.;
-
-    bool isPassLoose = (*loose_id_decisions)[pho];
-    bool isPassMedium = (*medium_id_decisions)[pho];
-    bool isPassTight = (*tight_id_decisions)[pho];
-    nBranches_->ph_passLooseId.push_back ( (int)isPassLoose );
-    nBranches_->ph_passMediumId.push_back ( (int)isPassMedium );
-    nBranches_->ph_passTightId.push_back ( (int)isPassTight );
-    nBranches_->ph_mvaValue.push_back( (*mvaValues)[pho]);
-    nBranches_->ph_mvaCategory.push_back( (*mvaCategories)[pho]);
-    //std::cout<<(*mvaValues)[pho]<<" "<<pho->userFloat("PhotonMVAEstimatorRunIIFall17v1Values")<<std::endl;
-    //std::cout<<(*mvaValues)[pho]<<" "<<pho->userFloat("PhotonMVAEstimatorRunIIFall17v2Values")<<std::endl;
-
+    nBranches_->ph_passLooseId.push_back (pho->photonID("cutBasedPhotonID-Fall17-94X-V2-loose"));
+    nBranches_->ph_passMediumId.push_back (pho->photonID("cutBasedPhotonID-Fall17-94X-V2-medium"));
+    nBranches_->ph_passTightId.push_back (pho->photonID("cutBasedPhotonID-Fall17-94X-V2-tight"));
+    nBranches_->ph_mvaValue.push_back(pho->userFloat("PhotonMVAEstimatorRunIIFall17v2Values"));
+    nBranches_->ph_mvaCategory.push_back(pho->userInt("PhotonMVAEstimatorRunIIFall17v2Categories"));
 
     ++npho;
 

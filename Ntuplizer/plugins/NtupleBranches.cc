@@ -91,6 +91,9 @@ void NtupleBranches::branch( std::map< std::string, bool >& runFlags ){
     tree_->Branch( "ph_passTightId"                                    , &ph_passTightId                                );
     tree_->Branch( "ph_mvaVal"                                         , &ph_mvaValue                                   );
     tree_->Branch( "ph_mvaCat"                                         , &ph_mvaCategory                                );
+    tree_->Branch( "ph_Corr"                                           , &ph_Corr                                       );
+    tree_->Branch( "ph_energyscale"                                    , &ph_energyscale                                );
+    tree_->Branch( "ph_resolution"                                     , &ph_resolution                                 );
 
   } ////doPhotons
   

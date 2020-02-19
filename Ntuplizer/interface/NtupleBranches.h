@@ -111,6 +111,9 @@ public:
   std::vector<float>                   ph_et                        ;   
   std::vector<float>                   ph_mvaValue                  ;
   std::vector<float>                   ph_mvaCategory               ;
+  std::vector<float>                   ph_Corr                    ;
+  std::vector<float>                   ph_energyscale               ;
+  std::vector<float>                   ph_resolution                ;
   
   // Variables typically used for cut based photon ID
   //std::vector<Float_t>               ph_full5x5_sigmaIetaIeta_    ;

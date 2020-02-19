@@ -15,11 +15,11 @@ public:
     PhotonsNtuplizer(NtupleBranches*                                       nBranches         ,
                      edm::EDGetToken                                       photonToken       ,
                      edm::EDGetTokenT<reco::VertexCollection>              verticeToken      ,
-                     edm::EDGetTokenT<double>                              rhoToken          ,
+                     edm::EDGetTokenT<double>                              rhoToken          
                      //edm::EDGetTokenT<double>                              fixedGridRhoToken ,
-                     std::vector<edm::EDGetTokenT<edm::ValueMap<bool> > >  phoIDtokens       ,
-                     std::vector<edm::EDGetTokenT<edm::ValueMap<float> > > phoIDtokens1      ,
-                     std::vector<edm::EDGetTokenT<edm::ValueMap<int> > >   phoIDtokens2
+                     //std::vector<edm::EDGetTokenT<edm::ValueMap<bool> > >  phoIDtokens       ,
+                     //std::vector<edm::EDGetTokenT<edm::ValueMap<float> > > phoIDtokens1      ,
+                     //std::vector<edm::EDGetTokenT<edm::ValueMap<int> > >   phoIDtokens2
                      );
 
     ~PhotonsNtuplizer( void );
