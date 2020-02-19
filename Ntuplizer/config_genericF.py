@@ -21,7 +21,7 @@ import FWCore.ParameterSet.VarParsing as VarParsing
 
 options = VarParsing.VarParsing ('analysis')
 
-options.maxEvents = 50
+options.maxEvents = -1
 
 #data file
 
