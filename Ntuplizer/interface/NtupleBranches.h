@@ -580,10 +580,31 @@ public:
   std::vector<int>            jetAK8_genParton_pdgID   ;
   std::vector<int>            jetAK8_nbHadrons         ;
   std::vector<int>            jetAK8_ncHadrons         ;
-  std::vector<float>  	      jetAK8_Hbbtag 	       ;
+  std::vector<float>  	      jetAK8_HbbtagOLD 	       ;
   std::vector<float>  	      jetAK8_csv               ;
+
   std::vector<float>          jetAK8_deep_csv_b        ;  	        
   std::vector<float>          jetAK8_deep_csv_bb       ;
+  std::vector<float>          jetAK8_DDB               ;
+  std::vector<float>          jetAK8_decDDB            ;
+
+
+  std::vector<float>          jetAK8_akx_WvsQCD        ;
+  std::vector<float>          jetAK8_akx_ZvsQCD        ;
+  std::vector<float>          jetAK8_akx_ZbbvsQCD      ;
+  std::vector<float>          jetAK8_akx_HbbvsQCD      ;
+  std::vector<float>          jetAK8_akx_H4qvsQCD      ;
+  std::vector<float>          jetAK8_akx_probWcq       ;
+  std::vector<float>          jetAK8_akx_probWqq       ;
+  std::vector<float>          jetAK8_akx_probZbb       ;
+  std::vector<float>          jetAK8_akx_probZcc       ;
+  std::vector<float>          jetAK8_akx_probZqq       ;
+  std::vector<float>          jetAK8_akx_probHbb       ;
+
+
+
+
+
 
   std::vector<float>  	      jetAK8_tau1              ;
   std::vector<float>  	      jetAK8_tau2              ;

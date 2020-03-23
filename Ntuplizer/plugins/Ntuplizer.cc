@@ -68,7 +68,9 @@ Ntuplizer::Ntuplizer(const edm::ParameterSet& iConfig):
   runFlags["doPrunedSubjets"] = iConfig.getParameter<bool>("doPrunedSubjets");
   runFlags["doTrimming"] = iConfig.getParameter<bool>("doTrimming");
   runFlags["doPuppi"] = iConfig.getParameter<bool>("doPuppi");
-  runFlags["doHbbTag"] = iConfig.getParameter<bool>("doHbbTag");
+  runFlags["doHbbTagOLD"] = iConfig.getParameter<bool>("doHbbTagOLD");
+  runFlags["doHbbTags"] = iConfig.getParameter<bool>("doHbbTags");
+  runFlags["doHbbTags"] = iConfig.getParameter<bool>("doDeepAKX");
   runFlags["doMETSVFIT"] = iConfig.getParameter<bool>("doMETSVFIT");
   runFlags["doMVAMET"] = iConfig.getParameter<bool>("doMVAMET");
   runFlags["doPuppiRecluster"] = iConfig.getParameter<edm::InputTag>("puppijets").label()!="";

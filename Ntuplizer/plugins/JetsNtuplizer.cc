@@ -564,11 +564,29 @@ void JetsNtuplizer::fillBranches( edm::Event const & event, const edm::EventSetu
       nBranches_->jetAK8_nemf    	    .push_back(fj.neutralEmEnergyFraction());
       nBranches_->jetAK8_cemf    	    .push_back(fj.chargedEmEnergyFraction());      
       nBranches_->jetAK8_charge 	    .push_back(fj.charge());					 
-      nBranches_->jetAK8_Hbbtag             .push_back(fj.bDiscriminator("pfBoostedDoubleSecondaryVertexAK8BJetTags"));       
+      nBranches_->jetAK8_HbbtagOLD          .push_back(fj.bDiscriminator("pfBoostedDoubleSecondaryVertexAK8BJetTags"));       
+      nBranches_->jetAK8_DDB                .push_back(fj.bDiscriminator("pfDeepDoubleBvLJetTags:probHbb"));       
+      nBranches_->jetAK8_decDDB             .push_back(fj.bDiscriminator("pfMassIndependentDeepDoubleBvLJetTags:probHbb"));       
       nBranches_->jetAK8_csv                .push_back(fj.bDiscriminator("pfCombinedInclusiveSecondaryVertexV2BJetTags"));
       nBranches_->jetAK8_deep_csv_b         .push_back(fj.bDiscriminator("pfDeepCSVJetTags:probb") );
       nBranches_->jetAK8_deep_csv_bb        .push_back(fj.bDiscriminator("pfDeepCSVJetTags:probbb"));
 
+      // deepAKX
+      //
+      // "standard"
+      // "experimental" 
+      nBranches_->jetAK8_akx_WvsQCD         .push_back(fj.bDiscriminator("pfDeepBoostedDiscriminatorsJetTags:WvsQCD"));
+      nBranches_->jetAK8_akx_ZvsQCD         .push_back(fj.bDiscriminator("pfDeepBoostedDiscriminatorsJetTags:ZvsQCD"));
+      nBranches_->jetAK8_akx_ZbbvsQCD       .push_back(fj.bDiscriminator("pfDeepBoostedDiscriminatorsJetTags:ZbbvsQCD"));
+      nBranches_->jetAK8_akx_HbbvsQCD       .push_back(fj.bDiscriminator("pfDeepBoostedDiscriminatorsJetTags:HbbvsQCD"));
+      nBranches_->jetAK8_akx_H4qvsQCD       .push_back(fj.bDiscriminator("pfDeepBoostedDiscriminatorsJetTags:H4qvsQCD"));
+      // "advanced"   
+      nBranches_->jetAK8_akx_probWcq         .push_back(fj.bDiscriminator("pfDeepBoostedJetTags:probWcq"));
+      nBranches_->jetAK8_akx_probWqq         .push_back(fj.bDiscriminator("pfDeepBoostedJetTags:probWqq"));
+      nBranches_->jetAK8_akx_probZbb         .push_back(fj.bDiscriminator("pfDeepBoostedJetTags:probZbb"));
+      nBranches_->jetAK8_akx_probZcc         .push_back(fj.bDiscriminator("pfDeepBoostedJetTags:probZcc"));
+      nBranches_->jetAK8_akx_probZqq         .push_back(fj.bDiscriminator("pfDeepBoostedJetTags:probZqq"));
+      nBranches_->jetAK8_akx_probHbb         .push_back(fj.bDiscriminator("pfDeepBoostedJetTags:probHbb"));
 
       nBranches_->jetAK8_tau1               .push_back(fj.userFloat("NjettinessAK8Puppi:tau1"));	  
       nBranches_->jetAK8_tau2               .push_back(fj.userFloat("NjettinessAK8Puppi:tau2"));

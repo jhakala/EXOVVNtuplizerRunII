@@ -525,12 +525,30 @@ void NtupleBranches::branch( std::map< std::string, bool >& runFlags ){
 
       
     }
-    if (runFlags["doHbbTag"]) {
-      tree_->Branch( "jetAK8_Hbbtag"	     , &jetAK8_Hbbtag		 );
+    if (runFlags["doHbbTagOLD"]) {
+      tree_->Branch( "jetAK8_HbbtagOLD"	     , &jetAK8_HbbtagOLD	 );
+      tree_->Branch( "jetAK8_csv"	     , &jetAK8_csv		 );
     }
-    tree_->Branch( "jetAK8_csv"		     , &jetAK8_csv		 );
-    tree_->Branch( "jetAK8_deep_csv_b"       , &jetAK8_deep_csv_b        );
-    tree_->Branch( "jetAK8_deep_csv_bb"      , &jetAK8_deep_csv_bb       );
+    if (runFlags["doHbbTags"]) {
+      tree_->Branch( "jetAK8_DDB"            , &jetAK8_DDB		);
+      tree_->Branch( "jetAK8_decDDB"         , &jetAK8_decDDB		);
+      tree_->Branch( "jetAK8_deep_csv_b"     , &jetAK8_deep_csv_b       );
+      tree_->Branch( "jetAK8_deep_csv_bb"    , &jetAK8_deep_csv_bb      );
+    }
+    if (runFlags["doDeepAKX"]) {
+
+      tree_->Branch( "jetAK8_akx_WvsQCD"     , &jetAK8_akx_WvsQCD       );
+      tree_->Branch( "jetAK8_akx_ZvsQCD"     , &jetAK8_akx_ZvsQCD       );
+      tree_->Branch( "jetAK8_akx_ZbbvsQCD"   , &jetAK8_akx_ZbbvsQCD     );
+      tree_->Branch( "jetAK8_akx_HbbvsQCD"   , &jetAK8_akx_HbbvsQCD     );
+      tree_->Branch( "jetAK8_akx_H4qvsQCD"   , &jetAK8_akx_H4qvsQCD     );
+      tree_->Branch( "jetAK8_akx_probWcq"    , &jetAK8_akx_probWcq      );
+      tree_->Branch( "jetAK8_akx_probWqq"    , &jetAK8_akx_probWqq      );
+      tree_->Branch( "jetAK8_akx_probZbb"    , &jetAK8_akx_probZbb      );
+      tree_->Branch( "jetAK8_akx_probZcc"    , &jetAK8_akx_probZcc      );
+      tree_->Branch( "jetAK8_akx_probZqq"    , &jetAK8_akx_probZqq      );
+      tree_->Branch( "jetAK8_akx_probHbb"    , &jetAK8_akx_probHbb      );
+    }
     tree_->Branch( "jetAK8_tau1"	     , &jetAK8_tau1		 );
     tree_->Branch( "jetAK8_tau2"	     , &jetAK8_tau2      	 );
     tree_->Branch( "jetAK8_tau3"	     , &jetAK8_tau3	    	 );
@@ -1199,10 +1217,25 @@ void NtupleBranches::reset( void ){
   jetAK8_genParton_pdgID.clear();
   jetAK8_nbHadrons.clear();
   jetAK8_ncHadrons.clear();
-  jetAK8_Hbbtag.clear();
+  jetAK8_HbbtagOLD.clear();
   jetAK8_csv.clear();   
+  jetAK8_DDB.clear();
+  jetAK8_decDDB.clear();
   jetAK8_deep_csv_b.clear();
   jetAK8_deep_csv_bb.clear();
+  jetAK8_deep_csv_b.clear();
+  jetAK8_deep_csv_bb.clear();
+  jetAK8_akx_WvsQCD.clear();
+  jetAK8_akx_ZvsQCD.clear();
+  jetAK8_akx_ZbbvsQCD.clear();
+  jetAK8_akx_HbbvsQCD.clear();
+  jetAK8_akx_H4qvsQCD.clear();
+  jetAK8_akx_probWcq.clear();
+  jetAK8_akx_probWqq.clear();
+  jetAK8_akx_probZbb.clear();
+  jetAK8_akx_probZcc.clear();
+  jetAK8_akx_probZqq.clear();
+  jetAK8_akx_probHbb.clear();
   jetAK8_pull1.clear();   
   jetAK8_pull2.clear();   
   jetAK8_tau1.clear();
