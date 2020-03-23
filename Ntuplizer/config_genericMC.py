@@ -409,6 +409,21 @@ if config["UpdateJetCollection"]:
   #process.updatedJets.userData.userFloats.src += ['pileupJetIdUpdated:fullDiscriminant']
   #process.updatedJets.userData.userInts.src += ['pileupJetIdUpdated:fullId']
 
+if config["doDeepAKX"]:
+  from PhysicsTools.PatAlgos.tools.jetTools import updateJetCollection
+  from RecoBTag.MXNet.pfDeepBoostedJet_cff import _pfDeepBoostedJetTagsAll, _pfDeepBoostedJetTagsProbs, _pfDeepBoostedJetTagsMetaDiscrs, _pfMassDecorrelatedDeepBoostedJetTagsProbs, _pfMassDecorrelatedDeepBoostedJetTagsMetaDiscrs
+  updateJetCollection(
+      process,
+      jetSource = cms.InputTag('slimmedJetsAK8'),
+      pvSource = cms.InputTag('offlineSlimmedPrimaryVertices'),
+      svSource = cms.InputTag('slimmedSecondaryVertices'),
+      rParam = 0.8,
+      jetCorrections = ('AK8PFPuppi', cms.vstring(['L2Relative', 'L3Absolute', 'L2L3Residual']), 'None'),
+      btagDiscriminators = _pfDeepBoostedJetTagsAll,
+      postfix='AK8WithDeepTags',
+      printWarning = False
+     ) 
+
 def cap(s): return s[0].upper() + s[1:]
 
 from PhysicsTools.PatAlgos.tools.jetTools import *
@@ -869,7 +884,9 @@ process.ntuplizer = cms.EDAnalyzer("Ntuplizer",
     doTriggerObjects  = cms.bool(config["DOTRIGGEROBJECTS"]),
     doHltFilters      = cms.bool(config["DOHLTFILTERS"]),
     doMissingEt       = cms.bool(config["DOMISSINGET"]),
-    doHbbTag	      = cms.bool(config["DOHBBTAG"]),
+    doHbbTagOLD	      = cms.bool(config["DOHBBTAGOLD"]),
+    doHbbTags	      = cms.bool(config["DOHBBTAGS"]),
+    doDeepAKX	      = cms.bool(config["DODEEPAKX"]),
     doPrunedSubjets   = cms.bool(config["DOAK8PRUNEDRECLUSTERING"]),
     doTrimming        = cms.bool(config["DOAK10TRIMMEDRECLUSTERING"]),
     doPuppi           = cms.bool(config["DOAK8PUPPI"]),#NOT IS USE ANYMORE
