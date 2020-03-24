@@ -5,9 +5,9 @@ config = dict()
 #--------- general ----------#
 
 #--------- Set Just one to true ----------#
-config["RUNONMC"] = False
+config["RUNONMC"] = True
 config["RUNONPromptReco"] = False
-config["RUNONReReco"] = True
+config["RUNONReReco"] = False
 #-----------------------------------------#
 
 config["USEJSON"] = not (config["RUNONMC"])
@@ -37,17 +37,17 @@ config["DOTAUSBOOSTED"] = False
 config["DOMETSVFIT"] = False
 config["DOMVAMET"] = False
 
-#--------- AK8 jets reclustering ----------#
-config["ADDAK8GENJETS"] = (True and config["RUNONMC"]) #! Add AK8 gen jet collection with pruned and softdrop mass
-config["DOAK8RECLUSTERING"] = False
-config["DOAK8PRUNEDRECLUSTERING"] = False #! To add pruned jet and pruned subjet collection (not in MINIAOD)
-config["DOAK8PUPPI"] = True # Only control the loop in Jet Tuplizer, need to be true
-config["DOAK10TRIMMEDRECLUSTERING"] = False #ATLAS sequence
-config["DOHBBTAGOLD"] = False # old Higgs-tagger
+#--------- AK8 jets ----------#
+config["ADDAK8GENJETS"] = (False and config["RUNONMC"]) #! Add AK8 gen jet collection with pruned and softdrop mass
+#config["DOAK8RECLUSTERING"] = False
+#config["DOAK8PRUNEDRECLUSTERING"] = False #! To add pruned jet and pruned subjet collection (not in MINIAOD)
+#config["DOAK8PUPPI"] = False # Only control the loop in Jet Tuplizer, need to be true  TODO 
+#config["DOAK10TRIMMEDRECLUSTERING"] = False #ATLAS sequence
+#config["DOHBBTAGOLD"] = False # old Higgs-tagger
 config["DOHBBTAGS"] = True # new Higgs-tagger
 config["DODEEPAKX"] = True
-config["DOAK8PUPPIRECLUSTERING"] = True # No impact?
-config["UpdateJetCollection"] = False #needed for Higgs-tagger in 80X
+#config["DOAK8PUPPIRECLUSTERING"] = False # No impact?  TODO
+#config["UpdateJetCollection"] = False #needed for Higgs-tagger in 80X
 
 #--------- MET reclustering ----------#
 config["DOMETRECLUSTERING"] = False

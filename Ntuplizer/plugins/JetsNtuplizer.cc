@@ -566,16 +566,23 @@ void JetsNtuplizer::fillBranches( edm::Event const & event, const edm::EventSetu
       nBranches_->jetAK8_charge 	    .push_back(fj.charge());					 
       nBranches_->jetAK8_HbbtagOLD          .push_back(fj.bDiscriminator("pfBoostedDoubleSecondaryVertexAK8BJetTags"));       
       nBranches_->jetAK8_DDB                .push_back(fj.bDiscriminator("pfDeepDoubleBvLJetTags:probHbb"));       
+      std::cout << "test " << fj.bDiscriminator("pfMassIndependentDeepDoubleBvLJetTags:probHbb") << std::endl;
+      for (unsigned short i = 0; i<fj.getPairDiscri().size(); ++i) {
+        std::cout << fj.getPairDiscri().at(i).first << std::endl;
+      }
       nBranches_->jetAK8_decDDB             .push_back(fj.bDiscriminator("pfMassIndependentDeepDoubleBvLJetTags:probHbb"));       
       nBranches_->jetAK8_csv                .push_back(fj.bDiscriminator("pfCombinedInclusiveSecondaryVertexV2BJetTags"));
       nBranches_->jetAK8_deep_csv_b         .push_back(fj.bDiscriminator("pfDeepCSVJetTags:probb") );
       nBranches_->jetAK8_deep_csv_bb        .push_back(fj.bDiscriminator("pfDeepCSVJetTags:probbb"));
 
-      // deepAKX
-      //
+
+      /* =============
+       * || deepAKX ||
+       * ============= */
+
       // "standard"
-      // "experimental" 
       nBranches_->jetAK8_akx_WvsQCD         .push_back(fj.bDiscriminator("pfDeepBoostedDiscriminatorsJetTags:WvsQCD"));
+      // "experimental" 
       nBranches_->jetAK8_akx_ZvsQCD         .push_back(fj.bDiscriminator("pfDeepBoostedDiscriminatorsJetTags:ZvsQCD"));
       nBranches_->jetAK8_akx_ZbbvsQCD       .push_back(fj.bDiscriminator("pfDeepBoostedDiscriminatorsJetTags:ZbbvsQCD"));
       nBranches_->jetAK8_akx_HbbvsQCD       .push_back(fj.bDiscriminator("pfDeepBoostedDiscriminatorsJetTags:HbbvsQCD"));

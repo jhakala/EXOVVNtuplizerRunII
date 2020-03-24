@@ -530,13 +530,16 @@ void NtupleBranches::branch( std::map< std::string, bool >& runFlags ){
       tree_->Branch( "jetAK8_csv"	     , &jetAK8_csv		 );
     }
     if (runFlags["doHbbTags"]) {
+      std::cout << "doHbbTags on" << std::endl;
       tree_->Branch( "jetAK8_DDB"            , &jetAK8_DDB		);
       tree_->Branch( "jetAK8_decDDB"         , &jetAK8_decDDB		);
       tree_->Branch( "jetAK8_deep_csv_b"     , &jetAK8_deep_csv_b       );
       tree_->Branch( "jetAK8_deep_csv_bb"    , &jetAK8_deep_csv_bb      );
     }
     if (runFlags["doDeepAKX"]) {
-
+      std::cout << "doDeepAKX on" << std::endl;
+      
+      std::cout <<  "adding Deep AKX branches" << std::endl;
       tree_->Branch( "jetAK8_akx_WvsQCD"     , &jetAK8_akx_WvsQCD       );
       tree_->Branch( "jetAK8_akx_ZvsQCD"     , &jetAK8_akx_ZvsQCD       );
       tree_->Branch( "jetAK8_akx_ZbbvsQCD"   , &jetAK8_akx_ZbbvsQCD     );
