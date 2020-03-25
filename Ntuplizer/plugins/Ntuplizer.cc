@@ -46,6 +46,7 @@ Ntuplizer::Ntuplizer(const edm::ParameterSet& iConfig):
   /*=======================================================================================*/
   edm::Service<TFileService> fs;
   TTree* tree = fs->make<TTree>( "tree", "tree" );
+  _hCounter = fs->make<TH1D>("hCounter", "Events counter", 5,0,5);
   
   std::map< std::string, bool > runFlags;
   runFlags["runOnMC"] = iConfig.getParameter<bool>("runOnMC");
@@ -367,6 +368,8 @@ Ntuplizer::~Ntuplizer()
 
 ///////////////////////////////////////////////////////////////////////////////////
 void Ntuplizer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup){
+
+  _hCounter->Fill(0.,1);
   
   nBranches_->reset();
 

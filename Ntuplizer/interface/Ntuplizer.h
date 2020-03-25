@@ -44,6 +44,8 @@ private:
   virtual void endLuminosityBlock(edm::LuminosityBlock const  &, edm::EventSetup const&)    override;
   
   // ----------member data ---------------------------
+
+  TH1D* _hCounter; //count events run over
   
   NtupleBranches* nBranches_;
   std::map<std::string,CandidateNtuplizer*>                 nTuplizers_         ;
