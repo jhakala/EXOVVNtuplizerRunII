@@ -799,22 +799,27 @@ void NtupleBranches::reset( void ){
   ph_e.clear();
   ph_eta.clear();
   ph_phi.clear();
+  ph_superCluster_eta.clear();
+  ph_superCluster_phi.clear();
   ph_mass.clear();
   ph_pt.clear();
   ph_et.clear();
-  ph_superCluster_eta.clear();
-  ph_superCluster_phi.clear();
-  ph_passLooseId.clear();
-  ph_passMediumId.clear();
-  ph_passTightId.clear();
-  ph_mvaValue.clear();
-  ph_mvaCategory.clear();
+  ph_Corr.clear();
+  ph_energyscale.clear();
+  ph_resolution.clear();
+
   ph_rho.clear();
   ph_sigmaIetaIeta.clear();    
   ph_hOverE.clear();    
   ph_isoGamma.clear();    
   ph_isoCh.clear();    
   ph_passEleVeto.clear();    
+
+  ph_passLooseId.clear();
+  ph_passMediumId.clear();
+  ph_passTightId.clear();
+  ph_mvaValue.clear();
+  ph_mvaCategory.clear();
   //ph_fixedGridRho.clear();
     
   /** electrons */

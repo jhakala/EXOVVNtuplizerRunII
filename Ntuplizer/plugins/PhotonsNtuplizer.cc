@@ -96,9 +96,6 @@ void PhotonsNtuplizer::fillBranches( edm::Event const & event, const edm::EventS
     nBranches_->ph_superCluster_eta    .push_back(pho->superCluster()->eta());
     nBranches_->ph_superCluster_phi    .push_back(pho->superCluster()->phi());
     nBranches_->ph_mass                .push_back(pho->mass());
-    nBranches_->ph_px                  .push_back(pho->px());
-    nBranches_->ph_py                  .push_back(pho->py());
-    nBranches_->ph_pz                  .push_back(pho->pz());
     nBranches_->ph_pt                  .push_back(pho->pt());
     nBranches_->ph_et                  .push_back(pho->et());
     nBranches_->ph_Corr                .push_back(pho->userFloat("ecalEnergyPostCorr") / pho->energy());
