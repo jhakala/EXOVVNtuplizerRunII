@@ -11,8 +11,8 @@ TriggersNtuplizer::TriggersNtuplizer( edm::EDGetTokenT<edm::TriggerResults> toke
                                       edm::EDGetTokenT<pat::TriggerObjectStandAloneCollection> object,
 				      edm::EDGetTokenT<pat::PackedTriggerPrescales> prescale,
 				      edm::EDGetTokenT<edm::TriggerResults> noiseFilterToken,
-				      edm::EDGetTokenT<bool> HBHENoiseFilterLooseResultToken,
-				      edm::EDGetTokenT<bool> HBHENoiseFilterTightResultToken,
+				      //edm::EDGetTokenT<bool> HBHENoiseFilterLooseResultToken,
+				      //edm::EDGetTokenT<bool> HBHENoiseFilterTightResultToken,
 				      edm::EDGetTokenT<bool> HBHENoiseIsoFilterResultToken,
 				      NtupleBranches* nBranches,
 				      const edm::ParameterSet& iConfig,
@@ -22,8 +22,8 @@ TriggersNtuplizer::TriggersNtuplizer( edm::EDGetTokenT<edm::TriggerResults> toke
 , triggerObjects_	( object )
 , triggerPrescales_	( prescale )
 , noiseFilterToken_	( noiseFilterToken )
-, HBHENoiseFilterLoose_Selector_( HBHENoiseFilterLooseResultToken )
-, HBHENoiseFilterTight_Selector_( HBHENoiseFilterTightResultToken )
+//, HBHENoiseFilterLoose_Selector_( HBHENoiseFilterLooseResultToken )
+//, HBHENoiseFilterTight_Selector_( HBHENoiseFilterTightResultToken )
 , HBHENoiseIsoFilter_Selector_( HBHENoiseIsoFilterResultToken )
 , doTriggerDecisions_( runFlags["doTriggerDecisions"] )
 , doTriggerObjects_	( runFlags["doTriggerObjects"] )
@@ -32,33 +32,33 @@ TriggersNtuplizer::TriggersNtuplizer( edm::EDGetTokenT<edm::TriggerResults> toke
 {
 
   HBHENoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_HBHENoiseFilter");
-  CSCHaloNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_CSCTightHaloFilter");
-  CSCTightHalo2015Filter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_CSCTightHalo2015Filter");
-  HCALlaserNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_hcalLaserEventFilter");
+  //CSCHaloNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_CSCTightHaloFilter");
+  //CSCTightHalo2015Filter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_CSCTightHalo2015Filter");
+  //HCALlaserNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_hcalLaserEventFilter");
   ECALDeadCellNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_EcalDeadCellTriggerPrimitiveFilter");
   GoodVtxNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_goodVertices");
-  TrkFailureNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_trackingFailureFilter");
+  //TrkFailureNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_trackingFailureFilter");
   EEBadScNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_eeBadScFilter");
-  ECALlaserNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_ecalLaserCorrFilter");
-  TrkPOGNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_trkPOGFilters");
-  TrkPOG_manystrip_NoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_trkPOG_manystripclus53X");
-  TrkPOG_toomanystrip_NoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_trkPOG_toomanystripclus53X");
-  TrkPOG_logError_NoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_trkPOG_logErrorTooManyClusters");
-  METFilters_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_metFilters");
+  //ECALlaserNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_ecalLaserCorrFilter");
+  //TrkPOGNoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_trkPOGFilters");
+  //TrkPOG_manystrip_NoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_trkPOG_manystripclus53X");
+  //TrkPOG_toomanystrip_NoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_trkPOG_toomanystripclus53X");
+  //TrkPOG_logError_NoiseFilter_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_trkPOG_logErrorTooManyClusters");
+  //METFilters_Selector_ =  iConfig.getParameter<std::string> ("noiseFilterSelection_metFilters");
 
   //NEW FOR ICHEP
-  CSCTightHaloTrkMuUnvetoFilter_Selector_       =  iConfig.getParameter<std::string> ("noiseFilterSelection_CSCTightHaloTrkMuUnvetoFilter");
-  globalTightHalo2016Filter_Selector_           =  iConfig.getParameter<std::string> ("noiseFilterSelection_globalTightHalo2016Filter");
+  //CSCTightHaloTrkMuUnvetoFilter_Selector_       =  iConfig.getParameter<std::string> ("noiseFilterSelection_CSCTightHaloTrkMuUnvetoFilter");
+  //globalTightHalo2016Filter_Selector_           =  iConfig.getParameter<std::string> ("noiseFilterSelection_globalTightHalo2016Filter");
   globalSuperTightHalo2016Filter_Selector_      =  iConfig.getParameter<std::string> ("noiseFilterSelection_globalSuperTightHalo2016Filter");
-  HcalStripHaloFilter_Selector_                 =  iConfig.getParameter<std::string> ("noiseFilterSelection_HcalStripHaloFilter");
-  chargedHadronTrackResolutionFilter_Selector_  =  iConfig.getParameter<std::string> ("noiseFilterSelection_chargedHadronTrackResolutionFilter");
-  muonBadTrackFilter_Selector_                  =  iConfig.getParameter<std::string> ("noiseFilterSelection_muonBadTrackFilter");
+  //HcalStripHaloFilter_Selector_                 =  iConfig.getParameter<std::string> ("noiseFilterSelection_HcalStripHaloFilter");
+  //chargedHadronTrackResolutionFilter_Selector_  =  iConfig.getParameter<std::string> ("noiseFilterSelection_chargedHadronTrackResolutionFilter");
+  //muonBadTrackFilter_Selector_                  =  iConfig.getParameter<std::string> ("noiseFilterSelection_muonBadTrackFilter");
   
   //NEW FOR MORIOND
 
-  badMuons_Selector_  =  iConfig.getParameter<std::string> ("noiseFilterSelection_badMuonsFilter");
-  duplicateMuons_Selector_  =  iConfig.getParameter<std::string> ("noiseFilterSelection_duplicateMuonsFilter");
-  nobadMuons_Selector_  =  iConfig.getParameter<std::string> ("noiseFilterSelection_nobadMuonsFilter");
+  //badMuons_Selector_  =  iConfig.getParameter<std::string> ("noiseFilterSelection_badMuonsFilter");
+  //duplicateMuons_Selector_  =  iConfig.getParameter<std::string> ("noiseFilterSelection_duplicateMuonsFilter");
+  //nobadMuons_Selector_  =  iConfig.getParameter<std::string> ("noiseFilterSelection_nobadMuonsFilter");
 
 }
 
@@ -404,76 +404,76 @@ void TriggersNtuplizer::fillBranches( edm::Event const & event, const edm::Event
     for (unsigned int i = 0, n = noiseFilterBits_->size(); i < n; ++i) {
       if (names.triggerName(i) == HBHENoiseFilter_Selector_)
         nBranches_->passFilter_HBHE_ = noiseFilterBits_->accept(i);
-      if (names.triggerName(i) == CSCHaloNoiseFilter_Selector_)
-        nBranches_->passFilter_CSCHalo_ = noiseFilterBits_->accept(i); // DEPRECATED
-      if (names.triggerName(i) == CSCTightHalo2015Filter_Selector_)
-        nBranches_->passFilter_CSCTightHalo2015_ = noiseFilterBits_->accept(i); // TO BE USED
-      if (names.triggerName(i) == HCALlaserNoiseFilter_Selector_)
-        nBranches_->passFilter_HCALlaser_ = noiseFilterBits_->accept(i); // DEPRECATED
-      if (names.triggerName(i) == ECALDeadCellNoiseFilter_Selector_)
-        nBranches_->passFilter_ECALDeadCell_ = noiseFilterBits_->accept(i); // under scrutiny
+      //if (names.triggerName(i) == CSCHaloNoiseFilter_Selector_)
+      //  nBranches_->passFilter_CSCHalo_ = noiseFilterBits_->accept(i); // DEPRECATED
+      //if (names.triggerName(i) == CSCTightHalo2015Filter_Selector_)
+      //  nBranches_->passFilter_CSCTightHalo2015_ = noiseFilterBits_->accept(i); // TO BE USED
+      //if (names.triggerName(i) == HCALlaserNoiseFilter_Selector_)
+      //  nBranches_->passFilter_HCALlaser_ = noiseFilterBits_->accept(i); // DEPRECATED
+      //if (names.triggerName(i) == ECALDeadCellNoiseFilter_Selector_)
+      //  nBranches_->passFilter_ECALDeadCell_ = noiseFilterBits_->accept(i); // under scrutiny
       if (names.triggerName(i) == GoodVtxNoiseFilter_Selector_)
         nBranches_->passFilter_GoodVtx_ = noiseFilterBits_->accept(i); // TO BE USED
-      if (names.triggerName(i) == TrkFailureNoiseFilter_Selector_)
-        nBranches_->passFilter_TrkFailure_ = noiseFilterBits_->accept(i); // DEPRECATED
+      //if (names.triggerName(i) == TrkFailureNoiseFilter_Selector_)
+      //  nBranches_->passFilter_TrkFailure_ = noiseFilterBits_->accept(i); // DEPRECATED
       if (names.triggerName(i) == EEBadScNoiseFilter_Selector_)
         nBranches_->passFilter_EEBadSc_ = noiseFilterBits_->accept(i); // under scrutiny
-      if (names.triggerName(i) == ECALlaserNoiseFilter_Selector_)
-        nBranches_->passFilter_ECALlaser_ = noiseFilterBits_->accept(i); // DEPRECATED
-      if (names.triggerName(i) == TrkPOGNoiseFilter_Selector_)
-        nBranches_->passFilter_TrkPOG_ = noiseFilterBits_->accept(i); // DEPRECATED
-      if (names.triggerName(i) == TrkPOG_manystrip_NoiseFilter_Selector_)
-        nBranches_->passFilter_TrkPOG_manystrip_ = noiseFilterBits_->accept(i); // DEPRECATED
-      if (names.triggerName(i) == TrkPOG_toomanystrip_NoiseFilter_Selector_)
-        nBranches_->passFilter_TrkPOG_toomanystrip_ = noiseFilterBits_->accept(i); // DEPRECATED
-      if (names.triggerName(i) == TrkPOG_logError_NoiseFilter_Selector_)
-        nBranches_->passFilter_TrkPOG_logError_ = noiseFilterBits_->accept(i); // DEPRECATED
-      if (names.triggerName(i) == METFilters_Selector_)
-        nBranches_->passFilter_METFilters_ = noiseFilterBits_->accept(i); // DEPRECATED
-      //NEW FOR ICHEP
-      if (names.triggerName(i) == CSCTightHaloTrkMuUnvetoFilter_Selector_)
-        nBranches_->passFilter_CSCTightHaloTrkMuUnvetoFilter_ = noiseFilterBits_->accept(i);
-      if (names.triggerName(i) == globalTightHalo2016Filter_Selector_           )
-        nBranches_->passFilter_globalTightHalo2016_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
+      //if (names.triggerName(i) == ECALlaserNoiseFilter_Selector_)
+      //  nBranches_->passFilter_ECALlaser_ = noiseFilterBits_->accept(i); // DEPRECATED
+      //if (names.triggerName(i) == TrkPOGNoiseFilter_Selector_)
+      //  nBranches_->passFilter_TrkPOG_ = noiseFilterBits_->accept(i); // DEPRECATED
+      //if (names.triggerName(i) == TrkPOG_manystrip_NoiseFilter_Selector_)
+      //  nBranches_->passFilter_TrkPOG_manystrip_ = noiseFilterBits_->accept(i); // DEPRECATED
+      //if (names.triggerName(i) == TrkPOG_toomanystrip_NoiseFilter_Selector_)
+      //  nBranches_->passFilter_TrkPOG_toomanystrip_ = noiseFilterBits_->accept(i); // DEPRECATED
+      //if (names.triggerName(i) == TrkPOG_logError_NoiseFilter_Selector_)
+      //  nBranches_->passFilter_TrkPOG_logError_ = noiseFilterBits_->accept(i); // DEPRECATED
+      //if (names.triggerName(i) == METFilters_Selector_)
+      //  nBranches_->passFilter_METFilters_ = noiseFilterBits_->accept(i); // DEPRECATED
+      ////NEW FOR ICHEP
+      //if (names.triggerName(i) == CSCTightHaloTrkMuUnvetoFilter_Selector_)
+      //  nBranches_->passFilter_CSCTightHaloTrkMuUnvetoFilter_ = noiseFilterBits_->accept(i);
+      //if (names.triggerName(i) == globalTightHalo2016Filter_Selector_           )
+      //  nBranches_->passFilter_globalTightHalo2016_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
       if (names.triggerName(i) == globalSuperTightHalo2016Filter_Selector_           )
         nBranches_->passFilter_globalSuperTightHalo2016_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
-      if (names.triggerName(i) == HcalStripHaloFilter_Selector_                 )
-        nBranches_->passFilter_HcalStripHalo_ = noiseFilterBits_->accept(i);
-      if (names.triggerName(i) == chargedHadronTrackResolutionFilter_Selector_  )
-        nBranches_->passFilter_chargedHadronTrackResolution_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
-      if (names.triggerName(i) == muonBadTrackFilter_Selector_                  )
-        nBranches_->passFilter_muonBadTrack_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
-      //NEW FOR MORIOND
-      if (names.triggerName(i) == badMuons_Selector_                  )
-        nBranches_->flag_badMuons_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
+      //if (names.triggerName(i) == HcalStripHaloFilter_Selector_                 )
+      //  nBranches_->passFilter_HcalStripHalo_ = noiseFilterBits_->accept(i);
+      //if (names.triggerName(i) == chargedHadronTrackResolutionFilter_Selector_  )
+      //  nBranches_->passFilter_chargedHadronTrackResolution_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
+      //if (names.triggerName(i) == muonBadTrackFilter_Selector_                  )
+      //  nBranches_->passFilter_muonBadTrack_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
+      ////NEW FOR MORIOND
+      //if (names.triggerName(i) == badMuons_Selector_                  )
+      //  nBranches_->flag_badMuons_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
 
-      if (names.triggerName(i) == duplicateMuons_Selector_                  )
-        nBranches_->flag_duplicateMuons_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
+      //if (names.triggerName(i) == duplicateMuons_Selector_                  )
+      //  nBranches_->flag_duplicateMuons_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
 
-      if (names.triggerName(i) == nobadMuons_Selector_                  )
-        nBranches_->flag_nobadMuons_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
+      //if (names.triggerName(i) == nobadMuons_Selector_                  )
+      //  nBranches_->flag_nobadMuons_ = noiseFilterBits_->accept(i); // TO BE USED FOR ICHEP 2016
 
     }
 
     //if( !runOnMC_ /*&& event.id().run() < 251585*/ ){
 
-    edm::Handle<bool> HBHENoiseFilterLooseResultHandle;
-    event.getByToken(HBHENoiseFilterLoose_Selector_, HBHENoiseFilterLooseResultHandle);
-    bool HBHENoiseFilterLooseResult = *HBHENoiseFilterLooseResultHandle;
-    if (!HBHENoiseFilterLooseResultHandle.isValid()) {
-      LogDebug("") << "CaloTowerAnalyzer: Could not find HBHENoiseFilterResult" << std::endl;
-    }
+    //edm::Handle<bool> HBHENoiseFilterLooseResultHandle;
+    //event.getByToken(HBHENoiseFilterLoose_Selector_, HBHENoiseFilterLooseResultHandle);
+    //bool HBHENoiseFilterLooseResult = *HBHENoiseFilterLooseResultHandle;
+    //if (!HBHENoiseFilterLooseResultHandle.isValid()) {
+    //  LogDebug("") << "CaloTowerAnalyzer: Could not find HBHENoiseFilterResult" << std::endl;
+    //}
 
-    nBranches_->passFilter_HBHELoose_ = HBHENoiseFilterLooseResult;
+    //nBranches_->passFilter_HBHELoose_ = HBHENoiseFilterLooseResult;
 
-    edm::Handle<bool> HBHENoiseFilterTightResultHandle;
-    event.getByToken(HBHENoiseFilterTight_Selector_, HBHENoiseFilterTightResultHandle);
-    bool HBHENoiseFilterTightResult = *HBHENoiseFilterTightResultHandle;
-    if (!HBHENoiseFilterTightResultHandle.isValid()) {
-      LogDebug("") << "CaloTowerAnalyzer: Could not find HBHENoiseFilterResult" << std::endl;
-    }
+    //edm::Handle<bool> HBHENoiseFilterTightResultHandle;
+    //event.getByToken(HBHENoiseFilterTight_Selector_, HBHENoiseFilterTightResultHandle);
+    //bool HBHENoiseFilterTightResult = *HBHENoiseFilterTightResultHandle;
+    //if (!HBHENoiseFilterTightResultHandle.isValid()) {
+    //  LogDebug("") << "CaloTowerAnalyzer: Could not find HBHENoiseFilterResult" << std::endl;
+    //}
 
-    nBranches_->passFilter_HBHETight_ = HBHENoiseFilterTightResult;
+    //nBranches_->passFilter_HBHETight_ = HBHENoiseFilterTightResult;
 
     edm::Handle<bool> HBHENoiseIsoFilterResultHandle;
     event.getByToken(HBHENoiseIsoFilter_Selector_, HBHENoiseIsoFilterResultHandle);

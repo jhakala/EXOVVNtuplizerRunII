@@ -12,8 +12,8 @@ public:
                      edm::EDGetTokenT<pat::TriggerObjectStandAloneCollection> object, 
 		     edm::EDGetTokenT<pat::PackedTriggerPrescales> prescale, 
 		     edm::EDGetTokenT<edm::TriggerResults> noiseFilterToken,
-		     edm::EDGetTokenT<bool> HBHENoiseFilterLooseResultToken, 
-		     edm::EDGetTokenT<bool> HBHENoiseFilterTightResultToken, 
+		     //edm::EDGetTokenT<bool> HBHENoiseFilterLooseResultToken, 
+		     //edm::EDGetTokenT<bool> HBHENoiseFilterTightResultToken, 
 		     edm::EDGetTokenT<bool> HBHENoiseIsoFilterResultToken, 
 		     NtupleBranches* nBranches, 
 		     const edm::ParameterSet& iConfig, 
@@ -37,33 +37,33 @@ private:
    
    // HLT Noise Filter names
    std::string HBHENoiseFilter_Selector_;
-   edm::EDGetTokenT<bool> HBHENoiseFilterLoose_Selector_;
-   edm::EDGetTokenT<bool> HBHENoiseFilterTight_Selector_;
+   //edm::EDGetTokenT<bool> HBHENoiseFilterLoose_Selector_;
+   //edm::EDGetTokenT<bool> HBHENoiseFilterTight_Selector_;
    edm::EDGetTokenT<bool> HBHENoiseIsoFilter_Selector_;
-   std::string CSCHaloNoiseFilter_Selector_;
-   std::string CSCTightHalo2015Filter_Selector_;
-   std::string HCALlaserNoiseFilter_Selector_;
+   //std::string CSCHaloNoiseFilter_Selector_;
+   //std::string CSCTightHalo2015Filter_Selector_;
+   //std::string HCALlaserNoiseFilter_Selector_;
    std::string ECALDeadCellNoiseFilter_Selector_;
    std::string GoodVtxNoiseFilter_Selector_;
-   std::string TrkFailureNoiseFilter_Selector_;
+   //std::string TrkFailureNoiseFilter_Selector_;
    std::string EEBadScNoiseFilter_Selector_;
-   std::string ECALlaserNoiseFilter_Selector_;
-   std::string TrkPOGNoiseFilter_Selector_;
-   std::string TrkPOG_manystrip_NoiseFilter_Selector_;
-   std::string TrkPOG_toomanystrip_NoiseFilter_Selector_;
-   std::string TrkPOG_logError_NoiseFilter_Selector_;
-   std::string METFilters_Selector_;
-   // NEW FOR ICHEP
-   std::string CSCTightHaloTrkMuUnvetoFilter_Selector_  ;
-   std::string globalTightHalo2016Filter_Selector_  ;
+   //std::string ECALlaserNoiseFilter_Selector_;
+   //std::string TrkPOGNoiseFilter_Selector_;
+   //std::string TrkPOG_manystrip_NoiseFilter_Selector_;
+   //std::string TrkPOG_toomanystrip_NoiseFilter_Selector_;
+   //std::string TrkPOG_logError_NoiseFilter_Selector_;
+   //std::string METFilters_Selector_;
+   //// NEW FOR ICHEP
+   //std::string CSCTightHaloTrkMuUnvetoFilter_Selector_  ;
+   //std::string globalTightHalo2016Filter_Selector_  ;
    std::string globalSuperTightHalo2016Filter_Selector_  ;
-   std::string HcalStripHaloFilter_Selector_  ;
-   std::string chargedHadronTrackResolutionFilter_Selector_ ;
-   std::string muonBadTrackFilter_Selector_ ;
-   // NEW for Moriond 
-   std::string badMuons_Selector_;
-   std::string duplicateMuons_Selector_;
-   std::string nobadMuons_Selector_;
+   //std::string HcalStripHaloFilter_Selector_  ;
+   //std::string chargedHadronTrackResolutionFilter_Selector_ ;
+   //std::string muonBadTrackFilter_Selector_ ;
+   //// NEW for Moriond 
+   //std::string badMuons_Selector_;
+   //std::string duplicateMuons_Selector_;
+   //std::string nobadMuons_Selector_;
    
    bool doTriggerDecisions_;
    bool doTriggerObjects_;

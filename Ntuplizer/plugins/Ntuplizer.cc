@@ -36,8 +36,8 @@ Ntuplizer::Ntuplizer(const edm::ParameterSet& iConfig):
 	triggerObjects_	      	    (consumes<pat::TriggerObjectStandAloneCollection>(iConfig.getParameter<edm::InputTag>("triggerobjects"))),
 	triggerPrescales_     	    (consumes<pat::PackedTriggerPrescales>(iConfig.getParameter<edm::InputTag>("triggerprescales"))),
         noiseFilterToken_     	    (consumes<edm::TriggerResults>(iConfig.getParameter<edm::InputTag>("noiseFilter"))),
-        HBHENoiseFilterLooseResultToken_(consumes<bool>(iConfig.getParameter<edm::InputTag>("noiseFilterSelection_HBHENoiseFilterLoose"))),
-        HBHENoiseFilterTightResultToken_(consumes<bool>(iConfig.getParameter<edm::InputTag>("noiseFilterSelection_HBHENoiseFilterTight"))),
+        //HBHENoiseFilterLooseResultToken_(consumes<bool>(iConfig.getParameter<edm::InputTag>("noiseFilterSelection_HBHENoiseFilterLoose"))),
+        //HBHENoiseFilterTightResultToken_(consumes<bool>(iConfig.getParameter<edm::InputTag>("noiseFilterSelection_HBHENoiseFilterTight"))),
         HBHENoiseIsoFilterResultToken_(consumes<bool>(iConfig.getParameter<edm::InputTag>("noiseFilterSelection_HBHENoiseIsoFilter")))
 
 {
@@ -100,9 +100,9 @@ Ntuplizer::Ntuplizer(const edm::ParameterSet& iConfig):
 
     jetToken_             	    =consumes<pat::JetCollection>(iConfig.getParameter<edm::InputTag>("jets"));
     fatjetToken_          	    =consumes<pat::JetCollection>(iConfig.getParameter<edm::InputTag>("fatjets"));
-    prunedjetToken_	      	    =consumes<pat::JetCollection>(iConfig.getParameter<edm::InputTag>("prunedjets"));
+    //prunedjetToken_	      	    =consumes<pat::JetCollection>(iConfig.getParameter<edm::InputTag>("prunedjets"));
     softdropjetToken_     	    =consumes<pat::JetCollection>(iConfig.getParameter<edm::InputTag>("softdropjets"));
-    trimmedjetToken_	            =consumes<pat::JetCollection>(iConfig.getParameter<edm::InputTag>("trimmedjets"));
+    //trimmedjetToken_	            =consumes<pat::JetCollection>(iConfig.getParameter<edm::InputTag>("trimmedjets"));
     puppijetToken_	            =consumes<pat::JetCollection>(iConfig.getParameter<edm::InputTag>("puppijets"));
     genJetToken_	      	    =consumes<reco::GenJetCollection>(iConfig.getParameter<edm::InputTag>("genJets"));
     genJetAK8Token_	      	    =consumes<pat::JetCollection>(iConfig.getParameter<edm::InputTag>("genJetsAK8"));	
@@ -111,9 +111,9 @@ Ntuplizer::Ntuplizer(const edm::ParameterSet& iConfig):
     std::vector<edm::EDGetTokenT<pat::JetCollection>> jetTokens;
     jetTokens.push_back( jetToken_ 	   );
     jetTokens.push_back( fatjetToken_ 	   );
-    jetTokens.push_back( prunedjetToken_   );
+    //jetTokens.push_back( prunedjetToken_   );
     jetTokens.push_back( softdropjetToken_ );
-    jetTokens.push_back( trimmedjetToken_  );
+    //jetTokens.push_back( trimmedjetToken_  );
     jetTokens.push_back( puppijetToken_    );
     //jetTokens.push_back( flavourToken_	 );  
   
@@ -305,8 +305,8 @@ Ntuplizer::Ntuplizer(const edm::ParameterSet& iConfig):
                                                      triggerObjects_, 
 						     triggerPrescales_,
                                                      noiseFilterToken_,
-						     HBHENoiseFilterLooseResultToken_,
-						     HBHENoiseFilterTightResultToken_,
+						     //HBHENoiseFilterLooseResultToken_,
+						     //HBHENoiseFilterTightResultToken_,
 						     HBHENoiseIsoFilterResultToken_,
 						     nBranches_,
                                                      iConfig,
@@ -370,7 +370,6 @@ Ntuplizer::~Ntuplizer()
 void Ntuplizer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup){
 
   _hCounter->Fill(0.,1);
-  
   nBranches_->reset();
 
   edm::Handle<reco::VertexCollection> vertices;

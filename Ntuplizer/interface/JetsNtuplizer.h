@@ -56,9 +56,9 @@ public:
 
   edm::EDGetTokenT<pat::JetCollection> 		       jetInputToken_	       ;
   edm::EDGetTokenT<pat::JetCollection> 		       fatjetInputToken_       ;
-  edm::EDGetTokenT<pat::JetCollection> 		       prunedjetInputToken_    ;
+  //edm::EDGetTokenT<pat::JetCollection> 		       prunedjetInputToken_    ;
   edm::EDGetTokenT<pat::JetCollection> 		       softdropjetInputToken_  ;
-  edm::EDGetTokenT<pat::JetCollection>                 trimmedjetInputToken_   ;
+  //edm::EDGetTokenT<pat::JetCollection>                 trimmedjetInputToken_   ;
   edm::EDGetTokenT<pat::JetCollection>                 puppijetInputToken_     ;
   edm::EDGetTokenT<reco::JetFlavourMatchingCollection> flavourToken_	       ;
   edm::EDGetTokenT<double> 		   	       rhoToken_	       ;
@@ -66,9 +66,9 @@ public:
   
   edm::Handle<pat::JetCollection>      		       jets_		       ;
   edm::Handle<pat::JetCollection>      		       fatjets_ 	       ;
-  edm::Handle<pat::JetCollection>      		       prunedjets_	       ;
+  //edm::Handle<pat::JetCollection>      		       prunedjets_	       ;
   edm::Handle<pat::JetCollection>      		       softdropjets_	       ;
-  edm::Handle<pat::JetCollection>                      trimmedjets_	       ;
+  //edm::Handle<pat::JetCollection>                      trimmedjets_	       ;
   edm::Handle<pat::JetCollection>                      puppijets_	       ;
   
   edm::Handle<reco::JetFlavourMatchingCollection>      jetMC		       ;
