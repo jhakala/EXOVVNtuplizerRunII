@@ -1,8 +1,8 @@
 from CRABClient.UserUtilities import config, getUsernameFromCRIC
 config = config()
 
-config.General.requestName = 'HZgamma94XSinglePhoton_%s_2017C'%"Apr8"
-config.General.workArea = 'crab_jobs_2017C_photon%s'%"Apr8"
+config.General.requestName = 'HZgamma94XSinglePhoton_%s_2017C'%"Apr20"
+config.General.workArea = 'crab_jobs_2017C_photon%s'%"Apr20"
 config.General.transferOutputs = True
 config.General.transferLogs = True
 
@@ -20,5 +20,5 @@ config.Data.unitsPerJob = 3
 config.Data.lumiMask='JSON/Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSONv1.txt'
 config.Data.outLFNDirBase = '/store/user/%s/' % (getUsernameFromCRIC())
 config.Data.publication = False
-config.Data.outputDatasetTag = 'HZgamma94XSinglePhoton_%s_2017C'%"Apr8"
-config.Site.storageSite = 'T3_US_Brown'
+config.Data.outputDatasetTag = 'HZgamma94XSinglePhoton_%s_2017C'%"Apr20"
+config.Site.storageSite = 'T3_US_FNALLPC'

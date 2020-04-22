@@ -11,20 +11,36 @@ process.TFileService = cms.Service("TFileService",
                                     fileName = cms.string('flatTuple.root')
                                    )
 
-from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data2017_cfi import config
-#from VgammaTuplizer.Ntuplizer.ntuplizerOptions_generic_cfi import config
+#from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data_cfi import config
+from VgammaTuplizer.Ntuplizer.ntuplizerOptions_generic_cfi import config
 
 				   
 ####### Config parser ##########
+
 import FWCore.ParameterSet.VarParsing as VarParsing
 
 options = VarParsing.VarParsing ('analysis')
-options.maxEvents = -1
+options.register ('mass',
+                  1000, # default value
+                  VarParsing.VarParsing.multiplicity.singleton, # singleton or list
+                  VarParsing.VarParsing.varType.int,          # string, int, or float
+                  "Hg mass")
 
-#data file
-options.inputFiles = ('file://4C7D1F73-9637-E811-B89B-0023AEEEB79C.root')
-                     
+options.maxEvents = -1
 options.parseArguments()
+print options
+
+# collect Zg sample files from eos directory
+from subprocess import check_output
+from shlex import split
+#dirList = check_output(split("xrdfs root://cmseos.fnal.gov ls /store/user/jhakala/ZGamma_M%i_W0.00014_v2"%options.mass))
+dirList = check_output(split("xrdfs root://cmseos.fnal.gov ls /store/user/jhakala/ZpHgamma_%i_v2"%options.mass))
+miniAODs = []
+for fileName in dirList.splitlines():
+  if "mini" in fileName:
+    miniAODs.append("root://cmseos.fnal.gov/"+fileName)
+
+inputTuple = tuple(miniAODs)
 
 process.options  = cms.untracked.PSet( 
                      wantSummary = cms.untracked.bool(True),
@@ -35,7 +51,9 @@ process.options  = cms.untracked.PSet(
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(options.maxEvents) )
 
 process.source = cms.Source("PoolSource",
-                            fileNames = cms.untracked.vstring(options.inputFiles),
+                            fileNames = cms.untracked.vstring(inputTuple),
+                            noEventSort = cms.untracked.bool(True),
+                            duplicateCheckMode = cms.untracked.string('noDuplicateCheck'),
 #                            eventsToProcess = cms.untracked.VEventRange('282917:76757818-282917:76757820'),
 #                            lumisToProcess = cms.untracked.VLuminosityBlockRange('282917:126'),
 #                            skipEvents = cms.untracked.uint32(25385),
@@ -72,7 +90,7 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 
 GT = ''
 if config["RUNONMC"]: GT = '94X_mc2017_realistic_v14'
-elif config["RUNONReReco"]: GT = '94X_dataRun2_ReReco_EOY17_v6'
+elif config["RUNONReReco"]: GT = '94X_dataRun2_v6'
 elif config["RUNONPromptReco"]: GT = '92X_dataRun2_2017Prompt_v11'
 
 print "*************************************** GLOBAL TAG *************************************************" 
@@ -105,9 +123,9 @@ if not(config["RUNONMC"]) and config["USEJSON"]:
   if config["FILTEREVENTS"]:
   
    fname = ""
-   if (options.inputFiles)[0].find("SingleMuon") != -1: fname = "RunLumiEventLists/SingleMuon_csc2015_Nov14.txt"
-   elif (options.inputFiles)[0].find("SingleElectron") != -1: fname = "RunLumiEventLists/SingleElectron_csc2015_Nov14.txt"
-   elif (options.inputFiles)[0].find("JetHT") != -1: fname = "RunLumiEventLists/JetHT_csc2015_Nov27.txt"
+   if (inputTuple)[0].find("SingleMuon") != -1: fname = "RunLumiEventLists/SingleMuon_csc2015_Nov14.txt"
+   elif (inputTuple)[0].find("SingleElectron") != -1: fname = "RunLumiEventLists/SingleElectron_csc2015_Nov14.txt"
+   elif (inputTuple)[0].find("JetHT") != -1: fname = "RunLumiEventLists/JetHT_csc2015_Nov27.txt"
    else:
     print "** WARNING: EVENT LIST NOT FOUND! exiting... "
     sys.exit()
@@ -390,7 +408,12 @@ if config["BUNCHSPACING"] == 25 and config["RUNONMC"] :
 
 elif config["BUNCHSPACING"] == 25 and not(config["RUNONMC"]):
 
-   JEC_runDependent_suffix= "F"
+   JEC_runDependent_suffix= ""
+   if any("Run2017B" in s for s in  inputTuple): JEC_runDependent_suffix= "B"
+   elif any("Run2017C" in s for s in  inputTuple): JEC_runDependent_suffix= "C"
+   elif any("Run2017D" in s for s in  inputTuple): JEC_runDependent_suffix= "DE"
+   elif any("Run2017E" in s for s in  inputTuple): JEC_runDependent_suffix= "DE"
+   elif any("Run2017F" in s for s in  inputTuple): JEC_runDependent_suffix= "F"
   
    JECprefix = "Fall17_17Nov2017"+JEC_runDependent_suffix+"_V32"
    jecAK8chsUncFile = "JEC/%s_DATA_Uncertainty_AK8PFPuppi.txt"%(JECprefix)

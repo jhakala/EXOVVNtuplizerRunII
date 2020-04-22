@@ -288,7 +288,8 @@ bTagDiscriminators=[  'pfBoostedDoubleSecondaryVertexAK8BJetTags',  'pfDeepDoubl
 
 process.slimmedJetsAK8Good = cms.EDFilter("PATJetSelector",
       src = cms.InputTag("slimmedJetsAK8"),
-      cut = cms.string("isPFJet && abs(daughter(0).energy)!=exp(1000)"),
+      cut = cms.string("pt>175 && isPFJet && abs(daughter(0).energy)!=exp(1000)"),
+      #cut = cms.string("isPFJet && abs(daughter(0).energy)!=exp(1000)"),
 )
 fixedJets = cms.InputTag('slimmedJetsAK8Good')
 
