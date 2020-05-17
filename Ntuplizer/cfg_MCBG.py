@@ -11,8 +11,7 @@ process.TFileService = cms.Service("TFileService",
                                     fileName = cms.string('flatTuple.root')
                                    )
 
-#from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data_cfi import config
-from VgammaTuplizer.Ntuplizer.ntuplizerOptions_generic_cfi import config
+from VgammaTuplizer.Ntuplizer.ntuplizerOptions_mc2017_cfi import config
 
 				   
 ####### Config parser ##########
@@ -103,9 +102,8 @@ process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_condD
 from Configuration.AlCa.GlobalTag import GlobalTag
 
 GT = ''
-if config["RUNONMC"]: GT = '94X_mc2017_realistic_v14'
-elif config["RUNONReReco"]: GT = '94X_dataRun2_v6'
-elif config["RUNONPromptReco"]: GT = '92X_dataRun2_2017Prompt_v11'
+if config["RUNONMC"]: GT = '102X_mc2017_realistic_v7'
+#elif config["RUNONdata"]: GT = '102X_dataRun2_v12' ## change me for 2018D: 102X_dataRun2_Prompt_v15
 
 print "*************************************** GLOBAL TAG *************************************************" 
 print GT
@@ -297,9 +295,19 @@ if config["ADDAK8GENJETS"]:
 #### NEW NEW  JCH 3/24/20 ####
 ################# Update jets with b-tagging ######################
 from PhysicsTools.PatAlgos.tools.jetTools import *
-from RecoBTag.MXNet.pfDeepBoostedJet_cff import _pfDeepBoostedJetTagsAll, _pfDeepBoostedJetTagsProbs, _pfDeepBoostedJetTagsMetaDiscrs, _pfMassDecorrelatedDeepBoostedJetTagsProbs, _pfMassDecorrelatedDeepBoostedJetTagsMetaDiscrs
 
 bTagDiscriminators=[  'pfBoostedDoubleSecondaryVertexAK8BJetTags',  'pfDeepDoubleBJetTags:probQ',  'pfDeepDoubleBJetTags:probH',  'pfDeepDoubleBvLJetTags:probQCD',  'pfDeepDoubleBvLJetTags:probHbb',  'pfDeepDoubleCvLJetTags:probQCD',  'pfDeepDoubleCvLJetTags:probHcc',  'pfDeepDoubleCvBJetTags:probHbb',  'pfDeepDoubleCvBJetTags:probHcc',  'pfMassIndependentDeepDoubleBvLJetTags:probQCD',  'pfMassIndependentDeepDoubleBvLJetTags:probHbb',  'pfMassIndependentDeepDoubleCvLJetTags:probQCD',  'pfMassIndependentDeepDoubleCvLJetTags:probHcc',  'pfMassIndependentDeepDoubleCvBJetTags:probHbb',  'pfMassIndependentDeepDoubleCvBJetTags:probHcc'  ]
+
+from RecoBTag.MXNet.pfDeepBoostedJet_cff import pfDeepBoostedJetTags, pfMassDecorrelatedDeepBoostedJetTags, _pfDeepBoostedJetTagsAll
+
+from RecoBTag.MXNet.Parameters.V02.pfDeepBoostedJetPreprocessParams_cfi import pfDeepBoostedJetPreprocessParams as pfDeepBoostedJetPreprocessParamsV02
+from RecoBTag.MXNet.Parameters.V02.pfMassDecorrelatedDeepBoostedJetPreprocessParams_cfi import pfMassDecorrelatedDeepBoostedJetPreprocessParams as pfMassDecorrelatedDeepBoostedJetPreprocessParamsV02
+pfDeepBoostedJetTags.preprocessParams = pfDeepBoostedJetPreprocessParamsV02
+pfDeepBoostedJetTags.model_path = 'RecoBTag/Combined/data/DeepBoostedJet/V02/full/resnet-symbol.json'
+pfDeepBoostedJetTags.param_path = 'RecoBTag/Combined/data/DeepBoostedJet/V02/full/resnet-0000.params'
+pfMassDecorrelatedDeepBoostedJetTags.preprocessParams = pfMassDecorrelatedDeepBoostedJetPreprocessParamsV02
+pfMassDecorrelatedDeepBoostedJetTags.model_path = 'RecoBTag/Combined/data/DeepBoostedJet/V02/decorrelated/resnet-symbol.json'
+pfMassDecorrelatedDeepBoostedJetTags.param_path = 'RecoBTag/Combined/data/DeepBoostedJet/V02/decorrelated/resnet-0000.params'
 
 process.slimmedJetsAK8Good = cms.EDFilter("PATJetSelector",
       src = cms.InputTag("slimmedJetsAK8"),

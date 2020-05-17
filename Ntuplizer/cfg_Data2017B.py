@@ -80,7 +80,7 @@ print "*************************************************************************
 process.GlobalTag = GlobalTag(process.GlobalTag, GT)
 
 from RecoEgamma.EgammaTools.EgammaPostRecoTools import setupEgammaPostRecoSeq
-setupEgammaPostRecoSeq(process, era='2017-Nov17ReReco')  
+setupEgammaPostRecoSeq(process,era='2017-Nov17ReReco')  
 
 jetcorr_levels=[]
 jetcorr_levels_groomed=[]
