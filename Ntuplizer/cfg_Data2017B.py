@@ -11,7 +11,7 @@ process.TFileService = cms.Service("TFileService",
                                     fileName = cms.string('flatTuple.root')
                                    )
 
-from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data2018_cfi import config
+from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data2017_cfi import config
 #from VgammaTuplizer.Ntuplizer.ntuplizerOptions_generic_cfi import config
 
 				   
@@ -22,7 +22,7 @@ options = VarParsing.VarParsing ('analysis')
 options.maxEvents = -1
 
 #data file
-options.inputFiles = ('file://4C7D1F73-9637-E811-B89B-0023AEEEB79C.root')
+options.inputFiles = ('file://D6EFD6B4-B437-E811-8ED5-0025905A48C0.root')
                      
 options.parseArguments()
 
@@ -80,9 +80,7 @@ print "*************************************************************************
 process.GlobalTag = GlobalTag(process.GlobalTag, GT)
 
 from RecoEgamma.EgammaTools.EgammaPostRecoTools import setupEgammaPostRecoSeq
-setupEgammaPostRecoSeq(process,
-                       runVID=False, #saves CPU time by not needlessly re-running VID, if you want the Fall17V2 IDs, set this to True or remove (default is True)
-                       era='2017-Nov17ReReco')  
+setupEgammaPostRecoSeq(process, era='2017-Nov17ReReco')  
 
 jetcorr_levels=[]
 jetcorr_levels_groomed=[]
