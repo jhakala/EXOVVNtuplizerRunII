@@ -551,6 +551,24 @@ void NtupleBranches::branch( std::map< std::string, bool >& runFlags ){
       tree_->Branch( "jetAK8_akx_probZcc"    , &jetAK8_akx_probZcc      );
       tree_->Branch( "jetAK8_akx_probZqq"    , &jetAK8_akx_probZqq      );
       tree_->Branch( "jetAK8_akx_probHbb"    , &jetAK8_akx_probHbb      );
+
+      tree_->Branch( "jetAK8_akxDec_H4qvsQCD"  , &jetAK8_akxDec_H4qvsQCD    );
+      tree_->Branch( "jetAK8_akxDec_HbbvsQCD"  , &jetAK8_akxDec_HbbvsQCD    );
+      tree_->Branch( "jetAK8_akxDec_WvsQCD"    , &jetAK8_akxDec_WvsQCD      );
+      tree_->Branch( "jetAK8_akxDec_ZHbbvsQCD" , &jetAK8_akxDec_ZHbbvsQCD   );
+      tree_->Branch( "jetAK8_akxDec_ZHccvsQCD" , &jetAK8_akxDec_ZHccvsQCD   );
+      tree_->Branch( "jetAK8_akxDec_ZbbvsQCD"  , &jetAK8_akxDec_ZbbvsQCD    );
+      tree_->Branch( "jetAK8_akxDec_ZvsQCD"    , &jetAK8_akxDec_ZvsQCD      );
+      tree_->Branch( "jetAK8_akxDec_bbvsLight" , &jetAK8_akxDec_bbvsLight   );
+      tree_->Branch( "jetAK8_akxDec_probHbb"   , &jetAK8_akxDec_probHbb     );
+      tree_->Branch( "jetAK8_akxDec_probHcc"   , &jetAK8_akxDec_probHcc     );
+      tree_->Branch( "jetAK8_akxDec_probHqqqq" , &jetAK8_akxDec_probHqqqq   );
+      tree_->Branch( "jetAK8_akxDec_probWcq"   , &jetAK8_akxDec_probWcq     );
+      tree_->Branch( "jetAK8_akxDec_probWqq"   , &jetAK8_akxDec_probWqq     );
+      tree_->Branch( "jetAK8_akxDec_probZbb"   , &jetAK8_akxDec_probZbb     );
+      tree_->Branch( "jetAK8_akxDec_probZcc"   , &jetAK8_akxDec_probZcc     );
+      tree_->Branch( "jetAK8_akxDec_probZqq"   , &jetAK8_akxDec_probZqq     );
+
     }
     tree_->Branch( "jetAK8_tau1"	     , &jetAK8_tau1		 );
     tree_->Branch( "jetAK8_tau2"	     , &jetAK8_tau2      	 );
@@ -1226,7 +1244,7 @@ void NtupleBranches::reset( void ){
   jetAK8_nbHadrons.clear();
   jetAK8_ncHadrons.clear();
   jetAK8_HbbtagOLD.clear();
-  jetAK8_csv.clear();   
+  jetAK8_csv.clear(); 
   jetAK8_DDB.clear();
   jetAK8_decDDB.clear();
   jetAK8_deep_csv_b.clear();
@@ -1244,11 +1262,27 @@ void NtupleBranches::reset( void ){
   jetAK8_akx_probZcc.clear();
   jetAK8_akx_probZqq.clear();
   jetAK8_akx_probHbb.clear();
-  jetAK8_pull1.clear();   
-  jetAK8_pull2.clear();   
+  jetAK8_akxDec_H4qvsQCD.clear();
+  jetAK8_akxDec_HbbvsQCD.clear();
+  jetAK8_akxDec_WvsQCD.clear();
+  jetAK8_akxDec_ZHbbvsQCD.clear();
+  jetAK8_akxDec_ZHccvsQCD.clear();
+  jetAK8_akxDec_ZbbvsQCD.clear();
+  jetAK8_akxDec_ZvsQCD.clear();
+  jetAK8_akxDec_bbvsLight.clear();
+  jetAK8_akxDec_probHbb.clear();
+  jetAK8_akxDec_probHcc.clear();
+  jetAK8_akxDec_probHqqqq.clear();
+  jetAK8_akxDec_probWcq.clear();
+  jetAK8_akxDec_probWqq.clear();
+  jetAK8_akxDec_probZbb.clear();
+  jetAK8_akxDec_probZcc.clear();
+  jetAK8_akxDec_probZqq.clear();
+  jetAK8_pull1.clear(); 
+  jetAK8_pull2.clear(); 
   jetAK8_tau1.clear();
   jetAK8_tau2.clear();
-  jetAK8_tau3.clear();    
+  jetAK8_tau3.clear();
   jetAK8_softdrop_mass.clear();
   jetAK8_softdrop_massCorr.clear();
   jetAK8_softdrop_jecDown.clear();

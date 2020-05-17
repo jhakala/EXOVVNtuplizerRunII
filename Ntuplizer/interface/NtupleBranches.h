@@ -602,9 +602,22 @@ public:
   std::vector<float>          jetAK8_akx_probHbb       ;
 
 
-
-
-
+  std::vector<float>          jetAK8_akxDec_H4qvsQCD   ;
+  std::vector<float>          jetAK8_akxDec_HbbvsQCD   ;
+  std::vector<float>          jetAK8_akxDec_WvsQCD     ;
+  std::vector<float>          jetAK8_akxDec_ZHbbvsQCD  ;
+  std::vector<float>          jetAK8_akxDec_ZHccvsQCD  ;
+  std::vector<float>          jetAK8_akxDec_ZbbvsQCD   ;
+  std::vector<float>          jetAK8_akxDec_ZvsQCD     ;
+  std::vector<float>          jetAK8_akxDec_bbvsLight  ;
+  std::vector<float>          jetAK8_akxDec_probHbb    ;
+  std::vector<float>          jetAK8_akxDec_probHcc    ;
+  std::vector<float>          jetAK8_akxDec_probHqqqq  ;
+  std::vector<float>          jetAK8_akxDec_probWcq    ;
+  std::vector<float>          jetAK8_akxDec_probWqq    ;
+  std::vector<float>          jetAK8_akxDec_probZbb    ;
+  std::vector<float>          jetAK8_akxDec_probZcc    ;
+  std::vector<float>          jetAK8_akxDec_probZqq    ;
 
   std::vector<float>  	      jetAK8_tau1              ;
   std::vector<float>  	      jetAK8_tau2              ;

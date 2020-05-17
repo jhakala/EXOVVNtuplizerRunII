@@ -22,7 +22,7 @@ options = VarParsing.VarParsing ('analysis')
 options.maxEvents = -1
 
 #data file
-options.inputFiles = ('file://4C7D1F73-9637-E811-B89B-0023AEEEB79C.root')
+options.inputFiles = ('file://7AD20C58-263B-D646-9C54-105898A457F9.root')
                      
 options.parseArguments()
 
@@ -264,9 +264,19 @@ if config["ADDAK8GENJETS"]:
 #### NEW NEW  JCH 3/24/20 ####
 ################# Update jets with b-tagging ######################
 from PhysicsTools.PatAlgos.tools.jetTools import *
-from RecoBTag.MXNet.pfDeepBoostedJet_cff import _pfDeepBoostedJetTagsAll, _pfDeepBoostedJetTagsProbs, _pfDeepBoostedJetTagsMetaDiscrs, _pfMassDecorrelatedDeepBoostedJetTagsProbs, _pfMassDecorrelatedDeepBoostedJetTagsMetaDiscrs
 
 bTagDiscriminators=[  'pfBoostedDoubleSecondaryVertexAK8BJetTags',  'pfDeepDoubleBJetTags:probQ',  'pfDeepDoubleBJetTags:probH',  'pfDeepDoubleBvLJetTags:probQCD',  'pfDeepDoubleBvLJetTags:probHbb',  'pfDeepDoubleCvLJetTags:probQCD',  'pfDeepDoubleCvLJetTags:probHcc',  'pfDeepDoubleCvBJetTags:probHbb',  'pfDeepDoubleCvBJetTags:probHcc',  'pfMassIndependentDeepDoubleBvLJetTags:probQCD',  'pfMassIndependentDeepDoubleBvLJetTags:probHbb',  'pfMassIndependentDeepDoubleCvLJetTags:probQCD',  'pfMassIndependentDeepDoubleCvLJetTags:probHcc',  'pfMassIndependentDeepDoubleCvBJetTags:probHbb',  'pfMassIndependentDeepDoubleCvBJetTags:probHcc'  ]
+
+from RecoBTag.MXNet.pfDeepBoostedJet_cff import pfDeepBoostedJetTags, pfMassDecorrelatedDeepBoostedJetTags, _pfDeepBoostedJetTagsAll
+
+from RecoBTag.MXNet.Parameters.V02.pfDeepBoostedJetPreprocessParams_cfi import pfDeepBoostedJetPreprocessParams as pfDeepBoostedJetPreprocessParamsV02
+from RecoBTag.MXNet.Parameters.V02.pfMassDecorrelatedDeepBoostedJetPreprocessParams_cfi import pfMassDecorrelatedDeepBoostedJetPreprocessParams as pfMassDecorrelatedDeepBoostedJetPreprocessParamsV02
+pfDeepBoostedJetTags.preprocessParams = pfDeepBoostedJetPreprocessParamsV02
+pfDeepBoostedJetTags.model_path = 'RecoBTag/Combined/data/DeepBoostedJet/V02/full/resnet-symbol.json'
+pfDeepBoostedJetTags.param_path = 'RecoBTag/Combined/data/DeepBoostedJet/V02/full/resnet-0000.params'
+pfMassDecorrelatedDeepBoostedJetTags.preprocessParams = pfMassDecorrelatedDeepBoostedJetPreprocessParamsV02
+pfMassDecorrelatedDeepBoostedJetTags.model_path = 'RecoBTag/Combined/data/DeepBoostedJet/V02/decorrelated/resnet-symbol.json'
+pfMassDecorrelatedDeepBoostedJetTags.param_path = 'RecoBTag/Combined/data/DeepBoostedJet/V02/decorrelated/resnet-0000.params'
 
 process.slimmedJetsAK8Good = cms.EDFilter("PATJetSelector",
       src = cms.InputTag("slimmedJetsAK8"),
@@ -380,7 +390,7 @@ jecLevelsAK8Puppi = []
 jecLevelsForMET = []
 
 if config["BUNCHSPACING"] == 25 and config["RUNONMC"] :
-   JECprefix = "Fall17_17Nov2017_V32"
+   JECprefix = "Autumn18_V19_MC"
    jecAK8chsUncFile = "JEC/%s_MC_Uncertainty_AK8PFPuppi.txt"%(JECprefix)
    #jecAK4chsUncFile = "JEC/%s_MC_Uncertainty_AK4PFchs.txt"%(JECprefix)
    jecAK4chsUncFile = "JEC/%s_MC_Uncertainty_AK4PFPuppi.txt"%(JECprefix)
@@ -516,33 +526,9 @@ process.ntuplizer = cms.EDAnalyzer("Ntuplizer",
     muons = cms.InputTag("slimmedMuons"),
     photons = cms.InputTag("slimmedPhotons"),
     phoIdVerbose = cms.bool(False),
-    #phoLooseIdMap  = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-loose"),
-    #phoMediumIdMap = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-medium"),
-    #phoTightIdMap  = cms.InputTag("egmPhotonIDs:cutBasedPhotonID-Fall17-94X-V2-tight"),
-    #phoMvaValuesMap = cms.InputTag("photonMVAValueMapProducer:PhotonMVAEstimatorRunIIFall17v2Values"),
-    #phoMvaCategoriesMap = cms.InputTag("photonMVAValueMapProducer:PhotonMVAEstimatorRunIIFall17v2Categories"),
     electrons = cms.InputTag("slimmedElectrons"),
     ebRecHits = cms.InputTag("reducedEgamma","reducedEBRecHits"),
 
-#    eleHEEPId51Map = cms.InputTag("egmGsfElectronIDs:heepElectronID-HEEPV51"),
-#    eleHEEPIdMap = cms.InputTag("egmGsfElectronIDs:heepElectronID-HEEPV60"),
-#    eleVetoIdMap = cms.InputTag("egmGsfElectronIDs:cutBasedElectronID-Spring15-25ns-V1-standalone-veto"),
-#    eleLooseIdMap = cms.InputTag("egmGsfElectronIDs:cutBasedElectronID-Spring15-25ns-V1-standalone-loose"),
-#    eleMediumIdMap = cms.InputTag("egmGsfElectronIDs:cutBasedElectronID-Spring15-25ns-V1-standalone-medium"),
-#    eleTightIdMap = cms.InputTag("egmGsfElectronIDs:cutBasedElectronID-Spring15-25ns-V1-standalone-tight"),
-
-    #eleVetoIdMap = cms.InputTag("egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-veto"),
-    #eleLooseIdMap = cms.InputTag("egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-loose"),
-    #eleMediumIdMap = cms.InputTag("egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-medium"),
-    #eleTightIdMap = cms.InputTag("egmGsfElectronIDs:cutBasedElectronID-Fall17-94X-V1-tight"),
-
-    #eleHLTIdMap = cms.InputTag("egmGsfElectronIDs:cutBasedElectronHLTPreselection-Summer16-V1"), 
-    #eleHEEPIdMap = cms.InputTag("egmGsfElectronIDs:heepElectronID-HEEPV70"),
-                                   
-    #eleMVAMediumIdMap = cms.InputTag("egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-wp90"),
-    #eleMVATightIdMap  = cms.InputTag("egmGsfElectronIDs:mvaEleID-Fall17-noIso-V1-wp80"),
-    #mvaValuesMap     = cms.InputTag("electronMVAValueMapProducer:ElectronMVAEstimatorRun2Fall17NoIsoV1Values"),
-    #mvaCategoriesMap = cms.InputTag("electronMVAValueMapProducer:ElectronMVAEstimatorRun2Spring16GeneralPurposeV1Categories"),
     dupCluster          = cms.InputTag("particleFlowEGammaGSFixed:dupECALClusters"),
     hitsNotReplaced     = cms.InputTag("ecalMultiAndGSGlobalRecHitEB:hitsNotReplaced"),
     taus = cms.InputTag(TAUS),
