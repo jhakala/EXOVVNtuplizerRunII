@@ -11,7 +11,7 @@ process.TFileService = cms.Service("TFileService",
                                     fileName = cms.string('flatTuple.root')
                                    )
 
-from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data2017_cfi import config
+from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data2018_cfi import config
 #from VgammaTuplizer.Ntuplizer.ntuplizerOptions_generic_cfi import config
 
 				   
