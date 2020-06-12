@@ -399,7 +399,7 @@ if config["BUNCHSPACING"] == 25 and config["RUNONMC"] :
 
 elif config["BUNCHSPACING"] == 25 and not(config["RUNONMC"]):
 
-   JEC_runDependent_suffix= "B"
+   JEC_runDependent_suffix= "A"
   
    JECprefix = "Autumn18_Run"+JEC_runDependent_suffix+"_V19"
    jecAK8chsUncFile = "JEC/%s_DATA_Uncertainty_AK8PFPuppi.txt"%(JECprefix)

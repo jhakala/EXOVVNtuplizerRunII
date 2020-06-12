@@ -22,7 +22,7 @@ options = VarParsing.VarParsing ('analysis')
 options.maxEvents = -1
 
 #data file
-options.inputFiles = ('file://7AD20C58-263B-D646-9C54-105898A457F9.root')
+options.inputFiles = ('file://D60B3467-771A-3547-8570-E363B6CD7E5D.root')
                      
 options.parseArguments()
 
@@ -399,7 +399,7 @@ if config["BUNCHSPACING"] == 25 and config["RUNONMC"] :
 
 elif config["BUNCHSPACING"] == 25 and not(config["RUNONMC"]):
 
-   JEC_runDependent_suffix= "B"
+   JEC_runDependent_suffix= "C"
   
    JECprefix = "Autumn18_Run"+JEC_runDependent_suffix+"_V19"
    jecAK8chsUncFile = "JEC/%s_DATA_Uncertainty_AK8PFPuppi.txt"%(JECprefix)

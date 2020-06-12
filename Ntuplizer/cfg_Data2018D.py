@@ -22,7 +22,7 @@ options = VarParsing.VarParsing ('analysis')
 options.maxEvents = -1
 
 #data file
-options.inputFiles = ('file://7AD20C58-263B-D646-9C54-105898A457F9.root')
+options.inputFiles = ('file://AFCBB1AD-406E-8A45-984C-930620D8D0E6.root')
                      
 options.parseArguments()
 
@@ -72,7 +72,7 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 
 GT = ''
 if config["RUNONMC"]: GT = '102X_upgrade2018_realistic_v20'
-elif config["RUNONdata"]: GT = '102X_dataRun2_v13' ## change me for 2018D: 102X_dataRun2_Prompt_v16
+elif config["RUNONdata"]: GT = '102X_dataRun2_Prompt_v16' ## change me for 2018ABC: 102X_dataRun2_v13
 
 print "*************************************** GLOBAL TAG *************************************************" 
 print GT
@@ -399,7 +399,7 @@ if config["BUNCHSPACING"] == 25 and config["RUNONMC"] :
 
 elif config["BUNCHSPACING"] == 25 and not(config["RUNONMC"]):
 
-   JEC_runDependent_suffix= "B"
+   JEC_runDependent_suffix= "D"
   
    JECprefix = "Autumn18_Run"+JEC_runDependent_suffix+"_V19"
    jecAK8chsUncFile = "JEC/%s_DATA_Uncertainty_AK8PFPuppi.txt"%(JECprefix)
