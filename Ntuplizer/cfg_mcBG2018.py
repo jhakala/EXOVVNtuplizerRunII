@@ -428,6 +428,7 @@ if config["BUNCHSPACING"] == 25 and config["RUNONMC"] :
 
 
 
+elif config["BUNCHSPACING"] == 25 and not(config["RUNONMC"]):
    JEC_runDependent_suffix= ""
    if any("Run2018A" in s for s in  options.inputFiles): JEC_runDependent_suffix= "A"
    elif any("Run2018B" in s for s in  options.inputFiles): JEC_runDependent_suffix= "B"
