@@ -36,7 +36,7 @@ dirList = check_output(split("xrdfs root://cmseos.fnal.gov ls /store/user/jhakal
 miniAODs = []
 for fileName in dirList.splitlines():
   if "mini" in fileName:
-    miniAODs.append("root://cmseos.fnal.gov/"+fileName)
+    miniAODs.append("root://cmsxrootd.fnal.gov/"+fileName)
 
 inputTuple = tuple(miniAODs)
 

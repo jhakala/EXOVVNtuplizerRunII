@@ -36,7 +36,7 @@ dirList = check_output(split("xrdfs root://cmseos.fnal.gov ls /store/group/lpcbo
 miniAODs = []
 for fileName in dirList.splitlines():
   if "mini" in fileName:
-    miniAODs.append("root://cmseos.fnal.gov/"+fileName)
+    miniAODs.append("root://cmsxrootd.fnal.gov/"+fileName)
 
 inputTuple = tuple(miniAODs)
 
@@ -54,9 +54,7 @@ process.source = cms.Source("PoolSource",
                             duplicateCheckMode = cms.untracked.string('noDuplicateCheck'),
 #                            eventsToProcess = cms.untracked.VEventRange('282917:76757818-282917:76757820'),
 #                            lumisToProcess = cms.untracked.VLuminosityBlockRange('282917:126'),
-#                            skipEvents = cms.untracked.uint32(25385),
                             )                     
-
 
 print " process source filenames %s" %(process.source) 
 ######## Sequence settings ##########
@@ -414,7 +412,6 @@ if config["BUNCHSPACING"] == 25 and config["RUNONMC"] :
 
 
 elif config["BUNCHSPACING"] == 25 and not(config["RUNONMC"]):
-
    JEC_runDependent_suffix= ""
    if any("Run2018A" in s for s in  options.inputFiles): JEC_runDependent_suffix= "A"
    elif any("Run2018B" in s for s in  options.inputFiles): JEC_runDependent_suffix= "B"
