@@ -11,51 +11,20 @@ process.TFileService = cms.Service("TFileService",
                                     fileName = cms.string('flatTuple.root')
                                    )
 
-from VgammaTuplizer.Ntuplizer.ntuplizerOptions_mc2016_cfi import config
+from VgammaTuplizer.Ntuplizer.ntuplizerOptions_data2016_cfi import config
+#from VgammaTuplizer.Ntuplizer.ntuplizerOptions_generic_cfi import config
 
 				   
 ####### Config parser ##########
-
 import FWCore.ParameterSet.VarParsing as VarParsing
 
 options = VarParsing.VarParsing ('analysis')
-options.register ('inputList',
-                  "", # default value
-                  VarParsing.VarParsing.multiplicity.singleton, # singleton or list
-                  VarParsing.VarParsing.varType.string,          # string, int, or float
-                  "input file containing samples list")
-options.register ('chunkSize',
-                  5, # default value
-                  VarParsing.VarParsing.multiplicity.singleton, # singleton or list
-                  VarParsing.VarParsing.varType.int,          # string, int, or float
-                  "number of files to process per job")
-options.register ('jobIndex',
-                  -1,
-                  VarParsing.VarParsing.multiplicity.singleton, # singleton or list
-                  VarParsing.VarParsing.varType.int,          # string, int, or float
-                  "index of job")
-
 options.maxEvents = -1
+
+#data file
+#options.inputFiles = ('file://7AD20C58-263B-D646-9C54-105898A457F9.root')
+                     
 options.parseArguments()
-print options
-
-# collect MC BG sample files from input list
-lines = []
-miniAODs = []
-with open(options.inputList) as f:
-  lines = [line.rstrip('\n') for line in f]
-
-iFileInChunk = 0
-iChunk = 0
-for line in lines:
-  iFileInChunk += 1
-  if iChunk == options.jobIndex:
-    miniAODs.append("root://cmsxrootd.fnal.gov/"+line)
-  if iFileInChunk == options.chunkSize:
-    iChunk += 1
-    iFileInChunk = 0
-
-inputTuple = tuple(miniAODs)
 
 process.options  = cms.untracked.PSet( 
                      wantSummary = cms.untracked.bool(True),
@@ -66,13 +35,12 @@ process.options  = cms.untracked.PSet(
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(options.maxEvents) )
 
 process.source = cms.Source("PoolSource",
-                            fileNames = cms.untracked.vstring(inputTuple),
-                            noEventSort = cms.untracked.bool(True),
-                            duplicateCheckMode = cms.untracked.string('noDuplicateCheck'),
-#                            skipEvents=cms.untracked.uint32(22000)
+                            fileNames = cms.untracked.vstring(options.inputFiles),
 #                            eventsToProcess = cms.untracked.VEventRange('282917:76757818-282917:76757820'),
 #                            lumisToProcess = cms.untracked.VLuminosityBlockRange('282917:126'),
+#                            skipEvents = cms.untracked.uint32(25385),
                             )                     
+
 
 print " process source filenames %s" %(process.source) 
 ######## Sequence settings ##########
@@ -117,7 +85,6 @@ setupEgammaPostRecoSeq(process,
                        runEnergyCorrections=False, #no point in re-running them, they are already fine
                        era='2016-Legacy')  #era is new to select between 2016 / 2017,  it defaults to 2017
 
-
 jetcorr_levels=[]
 jetcorr_levels_groomed=[]
 if config["RUNONMC"]:
@@ -140,9 +107,9 @@ if not(config["RUNONMC"]) and config["USEJSON"]:
   if config["FILTEREVENTS"]:
   
    fname = ""
-   if (inputTuple)[0].find("SingleMuon") != -1: fname = "RunLumiEventLists/SingleMuon_csc2015_Nov14.txt"
-   elif (inputTuple)[0].find("SingleElectron") != -1: fname = "RunLumiEventLists/SingleElectron_csc2015_Nov14.txt"
-   elif (inputTuple)[0].find("JetHT") != -1: fname = "RunLumiEventLists/JetHT_csc2015_Nov27.txt"
+   if (options.inputFiles)[0].find("SingleMuon") != -1: fname = "RunLumiEventLists/SingleMuon_csc2015_Nov14.txt"
+   elif (options.inputFiles)[0].find("SingleElectron") != -1: fname = "RunLumiEventLists/SingleElectron_csc2015_Nov14.txt"
+   elif (options.inputFiles)[0].find("JetHT") != -1: fname = "RunLumiEventLists/JetHT_csc2015_Nov27.txt"
    else:
     print "** WARNING: EVENT LIST NOT FOUND! exiting... "
     sys.exit()
@@ -435,7 +402,7 @@ if config["BUNCHSPACING"] == 25 and config["RUNONMC"] :
 
 elif config["BUNCHSPACING"] == 25 and not(config["RUNONMC"]):
 
-   JEC_runDependent_suffix= ""
+   JEC_runDependent_suffix= "BCD"
   
    JECprefix = "Summer16_07Aug2017"+JEC_runDependent_suffix+"_V11"
    jecAK8chsUncFile = "JEC/%s_DATA_Uncertainty_AK8PFPuppi.txt"%(JECprefix)

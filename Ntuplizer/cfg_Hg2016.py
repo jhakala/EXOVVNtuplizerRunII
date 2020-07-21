@@ -19,41 +19,24 @@ from VgammaTuplizer.Ntuplizer.ntuplizerOptions_mc2016_cfi import config
 import FWCore.ParameterSet.VarParsing as VarParsing
 
 options = VarParsing.VarParsing ('analysis')
-options.register ('inputList',
-                  "", # default value
-                  VarParsing.VarParsing.multiplicity.singleton, # singleton or list
-                  VarParsing.VarParsing.varType.string,          # string, int, or float
-                  "input file containing samples list")
-options.register ('chunkSize',
-                  5, # default value
+options.register ('mass',
+                  1000, # default value
                   VarParsing.VarParsing.multiplicity.singleton, # singleton or list
                   VarParsing.VarParsing.varType.int,          # string, int, or float
-                  "number of files to process per job")
-options.register ('jobIndex',
-                  -1,
-                  VarParsing.VarParsing.multiplicity.singleton, # singleton or list
-                  VarParsing.VarParsing.varType.int,          # string, int, or float
-                  "index of job")
+                  "Hg mass")
 
 options.maxEvents = -1
 options.parseArguments()
 print options
 
-# collect MC BG sample files from input list
-lines = []
+# collect Zg sample files from eos directory
+from subprocess import check_output
+from shlex import split
+dirList = check_output(split("xrdfs root://cmseos.fnal.gov ls /store/group/lpcboostres/ZpHgamma_2016_%i_v2"%options.mass))
 miniAODs = []
-with open(options.inputList) as f:
-  lines = [line.rstrip('\n') for line in f]
-
-iFileInChunk = 0
-iChunk = 0
-for line in lines:
-  iFileInChunk += 1
-  if iChunk == options.jobIndex:
-    miniAODs.append("root://cmsxrootd.fnal.gov/"+line)
-  if iFileInChunk == options.chunkSize:
-    iChunk += 1
-    iFileInChunk = 0
+for fileName in dirList.splitlines():
+  if "mini" in fileName:
+    miniAODs.append("root://cmseos.fnal.gov/"+fileName)
 
 inputTuple = tuple(miniAODs)
 
@@ -69,10 +52,11 @@ process.source = cms.Source("PoolSource",
                             fileNames = cms.untracked.vstring(inputTuple),
                             noEventSort = cms.untracked.bool(True),
                             duplicateCheckMode = cms.untracked.string('noDuplicateCheck'),
-#                            skipEvents=cms.untracked.uint32(22000)
 #                            eventsToProcess = cms.untracked.VEventRange('282917:76757818-282917:76757820'),
 #                            lumisToProcess = cms.untracked.VLuminosityBlockRange('282917:126'),
+#                            skipEvents = cms.untracked.uint32(25385),
                             )                     
+
 
 print " process source filenames %s" %(process.source) 
 ######## Sequence settings ##########

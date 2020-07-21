@@ -1,0 +1,1 @@
+/store/mc/RunIISummer16MiniAODv3/GluGluSpin0ToZGamma_ZToQQ_W_10-p-0_M_5000_TuneCUEP8M1_13TeV_pythia8/MINIAODSIM/PUMoriond17_94X_mcRun2_asymptotic_v3-v2/70000/66363BB5-7391-E911-A613-0242AC1C0501.root

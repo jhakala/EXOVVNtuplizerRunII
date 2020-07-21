@@ -2,3 +2,4 @@ python/__init__.py
 crab.log
 *.root
 crab_jobs_*
+data/*

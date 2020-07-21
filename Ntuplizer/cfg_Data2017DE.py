@@ -72,7 +72,7 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 
 GT = ''
 if config["RUNONMC"]: GT = '102X_mc2017_realistic_v7'
-elif config["RUNONdata"]: GT = '102X_dataRun2_v12' ## change me for 2018D: 102X_dataRun2_Prompt_v15
+elif config["RUNONdata"]: GT = '102X_dataRun2_v13' ## change me for 2018D: 102X_dataRun2_Prompt_v15
 
 print "*************************************** GLOBAL TAG *************************************************" 
 print GT
