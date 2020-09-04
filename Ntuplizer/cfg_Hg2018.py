@@ -32,7 +32,7 @@ print options
 # collect Zg sample files from eos directory
 from subprocess import check_output
 from shlex import split
-dirList = check_output(split("xrdfs root://cmseos.fnal.gov ls /store/group/lpcboostres/ZpHgamma_2018_%i_v2"%options.mass))
+dirList = check_output(split("xrdfs root://cmseos.fnal.gov ls /store/group/lpcboostres/ZpHgamma_2018_%i_v3"%options.mass))
 miniAODs = []
 for fileName in dirList.splitlines():
   if "mini" in fileName:
